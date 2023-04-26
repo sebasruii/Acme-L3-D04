@@ -1,0 +1,11 @@
+lecturer.dashboard.form.title.general-indicators = General indicators for your courses and lectures
+lecturer.dashboard.form.label.number-theory-lectures = Number of theory lectures
+lecturer.dashboard.form.label.number-hands-on-lectures =  Number of hands-on lectures
+lecturer.dashboard.form.label.average-learning-time-lectures = Average learning time of lectures (in hours)
+lecturer.dashboard.form.label.max-learning-time-lectures = Maximum learning time of lectures (in hours)
+lecturer.dashboard.form.label.min-learning-time-lectures = Minimum learning time of lectures (in hours)
+lecturer.dashboard.form.label.stdev-learning-time-lectures = Standard deviation of learning time of lectures (in hours)
+lecturer.dashboard.form.label.average-learning-time-courses = Average learning time of courses (in hours)
+lecturer.dashboard.form.label.max-learning-time-courses = Maximum learning time of courses (in hours)
+lecturer.dashboard.form.label.min-learning-time-courses = Minimum learning time of courses (in hours)
+lecturer.dashboard.form.label.stdev-learning-time-courses = Standard deviation of learning time of courses (in hours)

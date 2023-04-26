@@ -1,0 +1,12 @@
+lecturer.lectureCourse.form.label.select-lecture = Selecciona la lección a añadir
+lecturer.lectureCourse.form.label.course = Código de curso
+lecturer.lectureCourse.form.label.lecture = Título de la lección
+
+lecturer.lecture.form.button.delete = Borrar
+lecturer.lecture.form.button.add = Añadir
+
+lecturer.lecture-course.form.error.no-lecture-selected = Debes seleccionar una lección para añadir
+lecturer.lecture-course.form.error.not-your-lecture = Debes seleccionar una lección creada por ti
+lecturer.lecture-course.form.error.already-added = La lección seleccionada ya era parte del curso
+lecturer.lecture-course.form.error.published = El curso ya está publicado, y no puede editarse
+lecturer.lecture-course.form.error.no-course-selected = Debes seleccionar el curso del que eliminar la lección

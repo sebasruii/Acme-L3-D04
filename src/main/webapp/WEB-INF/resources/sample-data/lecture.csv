@@ -1,0 +1,16 @@
+key,title,summary,estimated-learning-time,body,lecture-type,link,draft-mode,key:lecturer
+lecture-01,lecture-title-01,lecture-abstract-01,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-02,l,lecture-abstract-01,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-03,le,lecture-abstract-01,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend.",lecture-abstract-01,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-05,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend",lecture-abstract-01,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-06,lecture-title-01,l,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-07,lecture-title-01,le,2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-08,lecture-title-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros.",2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-01
+lecture-09,lecture-title-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros",2.5,lecture-body-01,THEORY,https:\\www.lecture-01.com,false,lecturer-02
+lecture-10,lecture-title-01,lecture-abstract-01,2.5,l,THEORY,https:\\www.lecture-01.com,false,lecturer-02
+lecture-11,lecture-title-01,lecture-abstract-01,2.5,le,THEORY,https:\\www.lecture-01.com,false,lecturer-02
+lecture-12,lecture-title-01,lecture-abstract-01,2.5,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros.",THEORY,https:\\www.lecture-01.com,false,lecturer-02
+lecture-13,lecture-title-01,lecture-abstract-01,2.5,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros",THEORY,https:\\www.lecture-01.com,false,lecturer-02
+lecture-14,lecture-title-01,lecture-abstract-01,2.5,lecture-body-01,HANDS_ON,https:\\www.lecture-01.com,false,lecturer-02
+lecture-15,lecture-title-01,lecture-abstract-01,2.5,lecture-body-01,BALANCED,https:\\www.lecture-01.com,false,lecturer-02

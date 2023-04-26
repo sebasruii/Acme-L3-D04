@@ -1,0 +1,30 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.auditingRecord.form.label.subject = Subject
+auditor.auditingRecord.form.label.assessment = Assessment
+auditor.auditingRecord.form.label.startDate = Start Date
+auditor.auditingRecord.form.label.finishDate = Finish Date
+auditor.auditingRecord.form.label.mark = Mark
+auditor.auditingRecord.form.label.link = Link
+auditor.auditingRecord.form.label.correction = Correction
+auditor.audit.form.label.draftMode = Draft
+
+auditor.auditingrecord.label.subject = Subject
+auditor.auditingrecord.label.mark = Mark
+auditor.auditingrecord.label.draft = Draft
+
+auditor.auditingRecord.form.button.update = Update Record
+auditor.auditingRecord.form.button.delete = Delete Record
+auditor.auditingRecord.form.button.create = Create Record
+auditor.auditingrecord.form.button.publish = Publish Record
+
+auditor.auditingrecord.error.date.startAfterFinish = The finish date cannot be before the start date.
+auditor.auditingrecord.error.date.shortPeriod = The duration must be at least an hour.

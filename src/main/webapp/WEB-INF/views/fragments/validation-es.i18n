@@ -1,0 +1,4 @@
+validation.configuration.code1= La moneda por defecto debe ser una cadena de 3 letras
+validation.configuration.code2= Las monedas aceptadas deben ser cadenas de 3 letras separadas por coma
+validation.code1= El codigo debe ser una cadena formada por: de 1 a 3 letras seguida de cuatro digitos
+validation.code= El codigo debe ser una cadena formada por: de 1 a 3 letras seguida de tres digitos

@@ -1,0 +1,27 @@
+lecturer.course.list.label.code = Código
+lecturer.course.list.label.title = Título
+lecturer.course.list.label.price = Precio
+lecturer.course.list.button.create = Crear
+
+lecturer.course.form.label.code = Código
+lecturer.course.form.label.title = Título
+lecturer.course.form.label.summary = Resumen
+lecturer.course.form.label.price = Precio
+lecturer.course.form.label.link = Más información
+lecturer.course.form.label.courseType = Tipo de curso
+
+lecturer.course.form.button.lectures = Ver lecciones
+lecturer.course.form.button.update = Actualizar
+lecturer.course.form.button.delete = Borrar
+lecturer.course.form.button.publish = Publicar
+lecturer.course.form.button.create = Crear
+
+lecturer.course.form.error.duplicated = Este código ya está en uso, prueba con otro código
+lecturer.course.form.error.negative-price = El precio debe ser cero o una cantidad positiva
+lecturer.course.form.error.emptyLectures = El curso no tiene niguna lección. Añade al menos una.
+lecturer.course.form.error.unpublishedLectures = Todas las lecciones deben estar publicadas antes de publicar un curso.
+lecturer.course.form.error.allLecturesAreTheory = Los cursos no pueden ser puramente teóricos.
+lecturer.course.form.error.currency = Esta moneda no es aceptada por el sistema
+
+lecturer.course.form.error.max-price = El precio máximo para un curso es 1000
+

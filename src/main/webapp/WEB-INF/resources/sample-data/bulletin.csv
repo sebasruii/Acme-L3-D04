@@ -1,0 +1,17 @@
+key,instantiation,title,message,critical,link
+bulletin-01,2022/07/30 00:00,Title 1,Message 1,true,null
+bulletin-02,2022/07/30 00:00,T,Message 1,true,null
+bulletin-03,2022/07/30 00:00,Title 1,M,true,null
+bulletin-04,2022/06/30 00:00,Title 1,M,true,null
+bulletin-05,2022/07/30 00:00,Title 1,M,false,null
+bulletin-06,2022/07/30 00:00,Title 1,M,false,http:/www.us.es
+bulletin-07,2022/07/30 00:00,Title 1,But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was bo,false,null
+bulletin-08,2022/07/30 00:00,Title 1,But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was b,false,null
+bulletin-09,2022/07/30 00:00,But I must explain to you how all this mistaken idea of denouncing pleasure,M,false,null
+bulletin-10,2022/07/30 00:00,But I must explain to you how all this mistaken idea of denouncing pleasur,M,false,null
+bulletin-11,2022/07/30 00:00,<h1>My First Heading</h1>,M,false,null
+bulletin-12,2022/07/30 00:00,Title 1,<h1>My First Heading</h1>,false,null
+bulletin-13,2022/07/30 00:00,CREATE TABLE employee,M,false,null
+bulletin-14,2022/07/30 00:00,Title 1,CREATE TABLE employee,false,null
+bulletin-15,2022/07/30 00:00,무지개,M,false,null
+bulletin-16,2022/07/30 00:00,Title 1,무지개,false,null

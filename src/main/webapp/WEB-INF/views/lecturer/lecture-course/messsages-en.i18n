@@ -1,0 +1,14 @@
+lecturer.lectureCourse.form.label.select-lecture = Select the lecture to add
+lecturer.lectureCourse.form.label.course = Course code
+lecturer.lectureCourse.form.label.lecture = Lecture title
+
+
+
+lecturer.lecture.form.button.delete = Delete
+lecturer.lecture.form.button.add = Add
+
+lecturer.lecture-course.form.error.no-course-selected = You need to select a lecture to add to the course
+lecturer.lecture-course.form.error.not-your-lecture = You can only add your lectures
+lecturer.lecture-course.form.error.already-added = This lecture is already part of the course
+lecturer.lecture-course.form.error.published = The course is already published and cannot be edited
+lecturer.lecture-course.form.error.no-course-selected = You need to select the course from which the lecture will be removed

@@ -1,0 +1,134 @@
+# menu-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.menu #################################################################
+
+master.menu.home = Inicio
+master.menu.sign-up = Registrarse
+master.menu.sign-in = Entrar
+master.menu.sign-out = Salir
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autentificado
+master.menu.authenticated.bulletin.list = Listar Boletines
+master.menu.authenticated.auditor.create = Convertirse en Auditor
+master.menu.authenticated.auditor.update = Actualizar Perfil
+master.menu.authenticated.audit.list = Listar Auditorías
+
+# master.menu.auditor #######################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list = Listar Auditorías
+master.menu.auditor.create = Crear Auditorías
+
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anónimo
+master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.all-courses = Ver cursos
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autentificado
+master.menu.authenticated.note.list = Notas
+master.menu.authenticated.note.create = Publicar una nota
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrador
+master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.user-accounts = Cuentas de usuario
+
+master.menu.administrator.list-offer = Listar Ofertas
+master.menu.administrator.create-offer = Create Oferta
+
+master.menu.administrator.create-bulletin = Crear Boletín
+
+master.menu.administrator.banner = Carteles
+master.menu.administrator.banner.button.create = Crear Carteles
+
+
+master.menu.administrator.populate-initial = Poblar BD (inicial)
+master.menu.administrator.populate-sample = Poblar BD (ejemplos)
+master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.configuration = Mostrar configuración del sistema
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Proveedor
+master.menu.provider.favourite-link = Enlace favorito
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumidor
+master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Cuenta
+master.menu.user-account.general-data = Datos generales
+master.menu.user-account.provider = Datos de proveedor
+master.menu.user-account.become-provider = Hazte proveedor
+master.menu.user-account.become-assistant = Hazte asistente
+master.menu.user-account.update-assistant = Actualiza tu rol de asistente
+master.menu.user-account.consumer = Datos de consumidor
+master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-company = Hazte una compañía
+master.menu.user-account.company= Datos de la compañía
+master.menu.user-account.become-lecturer = Hazte profesor
+master.menu.user-account.lecturer= Datos de profesor
+
+# master.menu.lecturer ##########################################################
+master.menu.lecturer = Profesor
+master.menu.lecturer.list = Mis cursos
+master.menu.lecturer.create = Crear un Curso
+master.menu.company.my-practica = Mis prácticas
+master.menu.lecturer.dashboard = Panel de indicadores
+
+
+# master.menu.company ###################################################
+
+master.menu.company= Prácticas
+master.menu.authenticated.company.practicum.list-mine = Mis prácticas
+master.menu.authenticated.company.practicum.list-all = Todas las prácticas
+
+
+
+
+
+# master.menu.student ##########################################################
+
+master.menu.student = Estudiante
+master.menu.student.studentCourseList = Listado de Cursos
+master.menu.student.studentEnrolmentList = Listado de Matriculas
+
+
+# master.menu.peep ##########################################################
+
+master.menu.anonymous.peep = Peeps
+# master.menu.practicum ##########################################################
+master.menu.practicum= Practicas
+authenticated.practicum.form.button.list= Practicas
+
+
+
+master.menu.lecturer = Profesor
+master.menu.lecturer.course.list = Mis cursos
+master.menu.lecturer.course.create = Crear un Curso
+master.menu.lecturer.lecture.list = Mis lecciones
+master.menu.lecturer.favourite-link = Favourite link
+
+
+# master.menu.assistant ###########################################################
+master.menu.assistant = Asistente
+master.menu.assistant.list = Lista de Tutorias
+master.menu.assistant.create = Crear Tutoria

@@ -1,0 +1,11 @@
+lecturer.dashboard.form.title.general-indicators = Indicadores generales de sus cursos y lecciones
+lecturer.dashboard.form.label.number-theory-lectures = Número de lecciones de teoría
+lecturer.dashboard.form.label.number-hands-on-lectures = Número de lecciones prácticas
+lecturer.dashboard.form.label.average-learning-time-lectures = Tiempo de aprendizaje medio de lecciones
+lecturer.dashboard.form.label.max-learning-time-lectures = Tiempo de aprendizaje máximo de lecciones
+lecturer.dashboard.form.label.min-learning-time-lectures = Tiempo de aprendizaje mínimo de lecciones
+lecturer.dashboard.form.label.stdev-learning-time-lectures = Desviación típica del tiempo de aprendizaje de lecciones
+lecturer.dashboard.form.label.average-learning-time-courses = Tiempo de aprendizaje medio de cursos
+lecturer.dashboard.form.label.max-learning-time-courses = Tiempo de aprendizaje máximo de cursos
+lecturer.dashboard.form.label.min-learning-time-courses = Tiempo de aprendizaje mínimo de cursos
+lecturer.dashboard.form.label.stdev-learning-time-courses = Desviación típica del tiempo de aprendizaje de cursos

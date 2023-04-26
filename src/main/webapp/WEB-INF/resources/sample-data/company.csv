@@ -1,0 +1,3 @@
+key,name,VAT,summary,link,key:userAccount
+company-01,"Universidad de Sevilla","Sin iva","Universidad pública",https://www.us.es/,user-account-company-01
+company-02,"Other company","21%","Other",,user-account-company-02

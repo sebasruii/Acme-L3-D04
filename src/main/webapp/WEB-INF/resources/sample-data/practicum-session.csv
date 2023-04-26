@@ -1,0 +1,15 @@
+key,title,summary,start-date,finish-date,link,key:practicum
+practicum-session-01,T,summary-01,2024/01/01 08:00,2024/01/07 09:00,https://www.google.com,practicum-01
+practicum-session-02,Ti,summary-02,2024/02/01 08:00,2024/02/07 09:00,null,practicum-02
+practicum-session-03,Probando un titulo que tenga como maximo 74 caracteres para el campo title,summary-03,2024/03/01 08:00,2024/03/07 09:00,https://www.google.com,practicum-03
+practicum-session-04,Probando un titulo que tenga como maximo 75 caracteres para el campo title.,summary-04,2024/04/01 08:00,2024/04/07 09:00,null,practicum-03
+practicum-session-05,무지개,summary-05,2024/05/01 08:00,2024/05/07 09:00,https://www.google.com,practicum-05
+practicum-session-06,<title>ExampleHTML</title>,summary-06,2024/06/01 08:00,2024/06/07 09:00,https://www.google.com,practicum-06
+practicum-session-07,<script>alert('exampleJS');</script>,summary-07,2024/07/01 08:00,2024/07/07 09:00,https://www.google.com,practicum-07
+practicum-session-08,title-01,A,2024/08/01 08:00,2024/08/07 09:00,null,practicum-08
+practicum-session-09,title-02,AA,2024/09/01 08:00,2024/09/07 09:00,null,practicum-09
+practicum-session-10,title-03,Esto es un resumen de maximo 99 caracteres para abstractPracticum el campo summary del archivo csv.,2024/10/01 08:00,2024/10/07 09:00,,practicum-10
+practicum-session-11,title-04,Esto es un resumen de maximo 100 caracteres para abstractPracticum el campo summary del archivo csv,2024/11/01 08:00,2024/11/07 09:00,,practicum-11
+practicum-session-12,title-05,무지개,2024/12/01 08:00,2024/12/07 09:00,null,practicum-12
+practicum-session-13,title-06,<title>ExampleHTML</title>,2025/01/01 08:00,2025/01/07 09:00,,practicum-13
+practicum-session-14,title-07,<script>alert('exampleJS');</script>,2025/02/01 08:00,2025/02/07 09:00,,practicum-14

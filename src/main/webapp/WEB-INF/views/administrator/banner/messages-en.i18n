@@ -1,0 +1,28 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes. The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+ administrator.banner.list.label.startDate = Start date
+ administrator.banner.list.label.finishDate = Finish date
+ administrator.banner.list.label.instantiation = Instantiation
+ administrator.banner.list.label.slogan = Slogan
+ administrator.banner.list.button.create = Create banner
+ 
+ administrator.banner.form.label.startDate = Start date
+ administrator.banner.form.label.finishDate = Finish date
+ administrator.banner.form.label.instantiation = Instantiation
+ administrator.banner.form.label.imageLink = Image URL
+ administrator.banner.form.label.slogan = Slogan
+ administrator.banner.form.label.link = Web link
+ administrator.banner.form.button.create = Create banner
+ administrator.banner.form.button.update = Update banner
+ administrator.banner.form.button.delete = Delete banner
+
+ administrator.banner.form.error.endPeriod-too-soon = The finish date must be one week after start date or more
+ 

@@ -1,0 +1,16 @@
+
+authenticated.note.list.label.instantiation = Date
+authenticated.note.list.label.author = Author
+authenticated.note.list.label.title = Title
+
+authenticated.note.form.label.instantiation = Date
+authenticated.note.form.label.author = Author
+authenticated.note.form.label.title = Title
+authenticated.note.form.label.message = Message
+authenticated.note.form.label.email = E-mail
+authenticated.note.form.label.link = More information
+
+authenticated.note.form.button.create = Publish
+
+authenticated.note.form.confirmation = Confirmation
+authenticated.note.form.confirmation-required = Publishing a note requires confirmation

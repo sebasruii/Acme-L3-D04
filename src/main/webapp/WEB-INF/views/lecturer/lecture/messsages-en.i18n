@@ -1,0 +1,24 @@
+lecturer.lecture.list.label.title = Title
+lecturer.lecture.list.label.estimatedLearningTime = Estimated learning time (in hours)
+lecturer.lecture.list.label.lectureType = Type
+lecturer.lecture.list.button.create = Create
+
+
+lecturer.lecture.form.label.title = Title
+lecturer.lecture.form.label.summary = Summary
+lecturer.lecture.form.label.link = More information
+lecturer.lecture.form.label.lectureType = Lecture Type
+lecturer.lecture.form.label.estimatedLearningTime
+lecturer.lecture.form.label.body = Body
+
+lecturer.lecture.form.button.update = Update
+lecturer.lecture.form.button.delete = Delete
+lecturer.lecture.form.button.publish = Publish
+lecturer.lecture.form.button.create = Create
+lecturer.lecture.form.button.delete-from-course = Remove from a Course
+
+
+lecturer.lectureCourse.form.button.add = Add lecture
+lecturer.lectureCourse.form.button.delete = Delete lecture
+
+lecturer.lecture.lectureType-invalid = A lecture must be theorical or hands-on

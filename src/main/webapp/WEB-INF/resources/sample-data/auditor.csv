@@ -1,0 +1,21 @@
+key,key:userAccount,firm,professional_id,certifications,link
+auditor-01,user-account-auditor-01,Firm 1,Id 1,Certifications 1,null
+auditor-02,user-account-auditor-02,F,Id 1,Certifications 1,null
+auditor-03,user-account-auditor-02,Firm 1,I,Certifications 1,null
+auditor-04,user-account-auditor-02,Firm 1,Id 1,C,null
+auditor-05,user-account-auditor-02,F,I,C,http:/www.us.es
+auditor-06,user-account-auditor-02,But I must explain to you how all this mistaken idea of denouncing pleasure,I,C,null
+auditor-07,user-account-auditor-02,F,But I must explain to you,C,null
+auditor-08,user-account-auditor-02,F,I,But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was bo,null
+auditor-09,user-account-auditor-02,But I must explain to you how all this mistaken idea of denouncing pleasur,I,C,null
+auditor-10,user-account-auditor-02,F,But I must explain to yo,c,null
+auditor-11,user-account-auditor-02,F,I,But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was b,null
+auditor-12,user-account-auditor-02,<h1>My First Heading</h1>,I,C,null
+auditor-13,user-account-auditor-02,F,<h1>My First Heading</h1>,C,null
+auditor-14,user-account-auditor-02,F,I,<h1>My First Heading</h1>,null
+auditor-15,user-account-auditor-02,INSERT INTO call_outcome (outcome_text) VALUES ('call started');,I,C,null
+auditor-16,user-account-auditor-02,F,INSERT INTO call_outcome,C,null
+auditor-17,user-account-auditor-02,F,I,INSERT INTO call_outcome (outcome_text) VALUES ('call started');,null
+auditor-18,user-account-auditor-02,猫,I,C,null
+auditor-20,user-account-auditor-02,F,猫,C,null
+auditor-21,user-account-auditor-02,F,I,猫,null

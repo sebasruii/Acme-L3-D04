@@ -1,0 +1,32 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+company.practicum-session.list.label.title = Título
+company.practicum-session.list.label.start-period = Fecha de inicio
+company.practicum-session.list.label.end-period = Fecha de fin
+
+company.practicum-session.list.button.create = Crear
+company.practicum-session.list.button.create-exceptional = Crear sesión excepcional
+
+company.practicum-session.form.label.title = Título:
+company.practicum-session.form.label.abstract$ = Resumen:
+company.practicum-session.form.label.start-period = Fecha de inicio:
+company.practicum-session.form.label.end-period = Fecha de fin:
+company.practicum-session.form.label.further-information-link = Más información: (Opcional)
+company.practicum-session.form.label.confirmation = Confirmar sesión de práctica excepcional
+
+company.practicum-session.form.button.create = Crear
+company.practicum-session.form.button.create-exceptional = Crear sesión excepcional
+company.practicum-session.form.button.update = Actualizar
+company.practicum-session.form.button.delete = Eliminar
+
+company.practicum-session.form.error.start-period = La fecha de inicio debe estar al menos una semana por delante del momento actual
+company.practicum-session.form.error.end-period = La fecha de fin debe estar al menos una semana por delante de la fecha de inicio

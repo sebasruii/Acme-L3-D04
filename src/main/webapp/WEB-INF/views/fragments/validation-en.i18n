@@ -1,0 +1,4 @@
+validation.configuration.code1= The default currency must be a 3-letter string
+validation.configuration.code2= Accepted coins must be 3-letter strings separated by commas
+validation.code1= The code must be a string consisting of: 1 to 3 letters followed by four digits
+validation.code= The code must be a string consisting of: 1 to 3 letters followed by three digits

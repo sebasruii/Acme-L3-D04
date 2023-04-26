@@ -1,0 +1,9 @@
+# messages-en.i18n
+
+
+authenticated.offer.list = Offer List
+authenticated.offer.list.label.heading = Heading
+authenticated.offer.list.label.startDate = Start Date
+authenticated.offer.list.label.finishDate = Finish Date
+authenticated.offer.list.label.price = Price
+authenticated.offer.list.label.link = Link

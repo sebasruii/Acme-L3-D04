@@ -1,0 +1,24 @@
+lecturer.lecture.list.label.title = Título
+lecturer.lecture.list.label.estimatedLearningTime = Tiempo de aprendizaje estimado (en horas) 
+lecturer.lecture.list.label.lectureType = Tipo
+lecturer.lecture.list.button.create = Crear
+
+
+lecturer.lecture.form.label.title = Título
+lecturer.lecture.form.label.summary = Resumen
+lecturer.lecture.form.label.link = Más información
+lecturer.lecture.form.label.lectureType = Tipo de lección
+lecturer.lecture.form.label.estimatedLearningTime = Tiempo de aprendizaje estimado (en horas)
+lecturer.lecture.form.label.body = Cuerpo
+
+lecturer.lecture.form.button.update = Actualizar
+lecturer.lecture.form.button.delete = Borrar
+lecturer.lecture.form.button.publish = Publicar
+lecturer.lecture.form.button.create = Crear
+lecturer.lecture.form.button.delete-from-course = Borrar de un curso
+
+
+lecturer.lectureCourse.form.button.add = Añadir lección
+lecturer.lectureCourse.form.button.delete = Borrar lección
+
+lecturer.lecture.lectureType-invalid = Una lección debe ser teórica (THEORY) o práctica (HANDS-ON)

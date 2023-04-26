@@ -1,0 +1,16 @@
+
+authenticated.note.list.label.instantiation = Fecha
+authenticated.note.list.label.author = Autor
+authenticated.note.list.label.title = Título
+
+authenticated.note.form.label.instantiation = Fecha
+authenticated.note.form.label.author = Autor
+authenticated.note.form.label.title = Título
+authenticated.note.form.label.message = Mensaje
+authenticated.note.form.label.email = E-mail
+authenticated.note.form.label.link = Más información
+
+authenticated.note.form.button.create = Publicar
+
+authenticated.note.form.confirmation = Confirmación
+authenticated.note.form.confirmation-required = Para publicar una nota se requiere confirmar

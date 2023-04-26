@@ -1,0 +1,30 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.audit.label.code = Code
+auditor.audit.label.course = Course
+auditor.audit.label.courseCode = Course Code
+auditor.audit.label.strongPoints = Strong Points
+auditor.audit.label.weakPoints = Weak Points
+auditor.audit.label.conclusion = Conclusion
+auditor.audit.label.marks = Marks
+auditor.audit.label.draftMode = Draft
+
+auditor.audit.form.button.audits = Show Audit
+auditor.audit.form.button.update = Update Audit
+auditor.audit.form.button.delete = Delete Audit
+auditor.audit.form.button.publish = Publish Audit
+auditor.audit.form.button.create = Create Audit
+auditor.audit.form.button.auditingRecords = Auditing Records
+auditor.audit.form.button.createAuditingrecord = Add Auditing Record
+auditor.audit.form.button.addCorrection = Add Correction
+
+auditor.audit.error.code.duplicated = The code is duplicated, try a different one.
+auditor.audit.error.course.draft = You cannot add an audit for an unpublished course.
