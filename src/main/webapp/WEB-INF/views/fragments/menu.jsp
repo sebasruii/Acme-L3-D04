@@ -93,7 +93,7 @@
 
 
 		
-		<acme:menu-option code="master.menu.anonymous.peep" action="/any/peep/list" access="isAnonymous()"/>
+		<acme:menu-option code="master.menu.anonymous.peep" action="/any/peep/list"/>
 
 		<acme:menu-option code="authenticated.practicum.form.button.list" action="/authenticated/practicum/list" access="hasRole('Company')"/>
 
