@@ -62,6 +62,8 @@
 			<acme:menu-suboption code="master.menu.authenticated.auditor.update" action="authenticated/auditor/update" access="hasRole('Auditor')"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.audit.list" action="/authenticated/audit/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="authenticated.practicum.form.button.list" action="/authenticated/practicum/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
@@ -94,8 +96,6 @@
 
 		
 		<acme:menu-option code="master.menu.anonymous.peep" action="/any/peep/list"/>
-
-		<acme:menu-option code="authenticated.practicum.form.button.list" action="/authenticated/practicum/list" access="hasRole('Company')"/>
 
 
 	</acme:menu-left>

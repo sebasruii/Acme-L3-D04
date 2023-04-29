@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import acme.entities.courses.Course;
+import acme.features.authenticated.practicum.AuthenticatedPracticumListService;
 import acme.framework.components.accounts.Any;
 import acme.framework.controllers.AbstractController;
 
@@ -14,10 +15,13 @@ import acme.framework.controllers.AbstractController;
 public class AnyCourseController extends AbstractController<Any, Course> {
 
 	@Autowired
-	AnyCourseListService	listService;
+	AnyCourseListService						listService;
 
 	@Autowired
-	AnyCourseShowService	showService;
+	AnyCourseShowService						showService;
+
+	@Autowired
+	protected AuthenticatedPracticumListService	listPracticumService;
 
 
 	@PostConstruct

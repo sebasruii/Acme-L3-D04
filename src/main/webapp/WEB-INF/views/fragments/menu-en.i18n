@@ -115,7 +115,8 @@ master.menu.anonymous.peep = Peeps
 
 # master.menu.practicum ##########################################################
 master.menu.practicum= Practicum
-authenticated.practicum.form.button.list= Practicum
+authenticated.practicum.form.button.list= List Practicums
+authenticated.practicum.form.label.course= Course
 
 master.menu.lecturer.dashboard = Dashboard
 master.menu.lecturer.course.list = My courses

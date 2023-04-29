@@ -117,8 +117,8 @@ master.menu.student.studentEnrolmentList = Listado de Matriculas
 master.menu.anonymous.peep = Peeps
 # master.menu.practicum ##########################################################
 master.menu.practicum= Practicas
-authenticated.practicum.form.button.list= Practicas
-
+authenticated.practicum.form.button.list= Lista de practicas
+authenticated.practicum.form.label.course= Curso
 
 
 master.menu.lecturer = Profesor

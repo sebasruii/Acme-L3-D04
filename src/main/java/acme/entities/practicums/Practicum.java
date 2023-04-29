@@ -48,10 +48,15 @@ public class Practicum extends AbstractEntity {
 	protected Company			company;
 
 	@NotNull
+	protected Boolean			draftMode;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+
+	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Course				course;
 
-	@NotNull
-	protected Boolean			draftMode;
 }
