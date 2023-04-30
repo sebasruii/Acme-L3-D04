@@ -29,3 +29,6 @@ company.practicum-session.form.button.delete = Delete
 
 company.practicum-session.form.error.start-period = The start date must be at least one week ahead from the current date
 company.practicum-session.form.error.end-period = The end date must be at least one week ahead of the start date
+
+company.practicum-session.form.label.start-date = Start Date
+company.practicum-session.form.label.finish-date = Finish Date

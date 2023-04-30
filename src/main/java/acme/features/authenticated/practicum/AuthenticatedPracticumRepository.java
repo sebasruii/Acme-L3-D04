@@ -23,7 +23,7 @@ public interface AuthenticatedPracticumRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = ?1")
 	UserAccount findOneUserAccountById(int userAccountId);
 
-	@Query("select p from Practicum p where p.course.id =:id")
+	@Query("select p from Practicum p where p.course.id =:id and p.draftMode = false")
 	Collection<Practicum> findManyPracticumByCourseId(int id);
 
 	@Query("select p from Practicum p where p.code = :code")

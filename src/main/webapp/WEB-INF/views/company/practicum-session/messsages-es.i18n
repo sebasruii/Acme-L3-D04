@@ -30,3 +30,6 @@ company.practicum-session.form.button.delete = Eliminar
 
 company.practicum-session.form.error.start-period = La fecha de inicio debe estar al menos una semana por delante del momento actual
 company.practicum-session.form.error.end-period = La fecha de fin debe estar al menos una semana por delante de la fecha de inicio
+
+company.practicum-session.form.label.start-date = Fecha de inicio
+company.practicum-session.form.label.finish-date = Fecha de fin

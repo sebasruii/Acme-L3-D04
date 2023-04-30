@@ -6,10 +6,10 @@
 
 <acme:form>
 	<acme:input-textbox code="company.practicum-session.form.label.title" path="title"/>
-	<acme:input-textbox code="company.practicum-session.form.label.abstract$" path="abstract$"/>
-	<acme:input-moment code="company.practicum-session.form.label.start-period" path="startPeriod"/>
-	<acme:input-moment code="company.practicum-session.form.label.end-period" path="endPeriod"/>
-	<acme:input-url code="company.practicum-session.form.label.further-information-link" path="furtherInformationLink"/>
+	<acme:input-textbox code="company.practicum-session.form.label.abstract$" path="summary"/>
+	<acme:input-moment code="company.practicum-session.form.label.start-date" path="startDate"/>
+	<acme:input-moment code="company.practicum-session.form.label.finish-date" path="finishDate"/>
+	<acme:input-url code="company.practicum-session.form.label.further-information-link" path="link"/>
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">

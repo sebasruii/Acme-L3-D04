@@ -17,16 +17,21 @@ import acme.roles.Company;
 @Service
 public class CompanyPracticumSessionCreateService extends AbstractService<Company, PracticumSession> {
 
+	// Constants -------------------------------------------------------------
+
+	public static final int						ONE_WEEK	= 1;
+
+	// Internal state ---------------------------------------------------------
 	@Autowired
-	protected CompanyPracticumSessionRepository repository;
+	private CompanyPracticumSessionRepository	repository;
+
+	// AbstractService Interface ----------------------------------------------
 
 
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("masterId", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
@@ -39,74 +44,87 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		practicumId = super.getRequest().getData("masterId", int.class);
 		practicum = this.repository.findPracticumById(practicumId);
 		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
-
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		PracticumSession object;
+		PracticumSession PracticumSession;
+		int practicumId;
+		Practicum practicum;
+		boolean draftMode;
+
+		practicumId = super.getRequest().getData("masterId", int.class);
+		practicum = this.repository.findPracticumById(practicumId);
+		draftMode = practicum.getDraftMode();
+
+		PracticumSession = new PracticumSession();
+		PracticumSession.setPracticum(practicum);
+
+		if (!draftMode)
+			PracticumSession.setExceptional(true);
+		else
+			PracticumSession.setExceptional(false);
+
+		super.getBuffer().setData(PracticumSession);
+	}
+
+	@Override
+	public void bind(final PracticumSession PracticumSession) {
+		assert PracticumSession != null;
+
 		int practicumId;
 		Practicum practicum;
 
 		practicumId = super.getRequest().getData("masterId", int.class);
 		practicum = this.repository.findPracticumById(practicumId);
 
-		object = new PracticumSession();
-		object.setPracticum(practicum);
+		super.bind(PracticumSession, "title", "summary", "startDate", "finishDate", "link");
+		PracticumSession.setPracticum(practicum);
 
-		super.getBuffer().setData(object);
 	}
 
 	@Override
-	public void bind(final PracticumSession object) {
-		assert object != null;
+	public void validate(final PracticumSession PracticumSession) {
+		assert PracticumSession != null;
 
-		super.bind(object, "title", "summary", "startDate", "finishDate", "link");
-	}
+		if (!super.getBuffer().getErrors().hasErrors("startDate") || !super.getBuffer().getErrors().hasErrors("finishDate")) {
+			Date startDate;
+			Date finishDate;
+			Date inAWeekFromNow;
+			Date inAWeekFromStart;
 
-	@Override
-	public void validate(final PracticumSession object) {
-		assert object != null;
+			startDate = PracticumSession.getStartDate();
+			finishDate = PracticumSession.getFinishDate();
+			inAWeekFromNow = MomentHelper.deltaFromCurrentMoment(CompanyPracticumSessionCreateService.ONE_WEEK, ChronoUnit.WEEKS);
+			inAWeekFromStart = MomentHelper.deltaFromMoment(startDate, CompanyPracticumSessionCreateService.ONE_WEEK, ChronoUnit.WEEKS);
 
-		boolean confirmation;
-
-		confirmation = object.getPracticum().getDraftMode() ? true : super.getRequest().getData("confirmation", boolean.class);
-		super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
-
-		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
-			Date minimumStartDate;
-			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getStartDate(), minimumStartDate), "startDate", "company.practicum-session.form.error.start-period");
+			if (!super.getBuffer().getErrors().hasErrors("startDate"))
+				super.state(MomentHelper.isAfter(startDate, inAWeekFromNow), "startDate", "company.session-practicum.error.start-after-now");
+			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+				super.state(MomentHelper.isAfter(finishDate, inAWeekFromStart), "finishDate", "company.session-practicum.error.end-after-start");
 		}
-
-		if (!super.getBuffer().getErrors().hasErrors("finishDate")) {
-			Date minimumEndDate;
-			minimumEndDate = MomentHelper.deltaFromMoment(object.getStartDate(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "endDate", "company.practicum-session.form.error.end-period");
-		}
-
 	}
 
 	@Override
-	public void perform(final PracticumSession object) {
-		assert object != null;
+	public void perform(final PracticumSession PracticumSession) {
+		assert PracticumSession != null;
 
-		this.repository.save(object);
+		this.repository.save(PracticumSession);
 	}
 
 	@Override
-	public void unbind(final PracticumSession object) {
-		assert object != null;
+	public void unbind(final PracticumSession PracticumSession) {
+		assert PracticumSession != null;
 
+		Practicum practicum;
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link");
-		tuple.put("masterId", super.getRequest().getData("masterId", int.class));
-		tuple.put("draftMode", object.getPracticum().getDraftMode());
-		tuple.put("confirmation", false);
+		practicum = PracticumSession.getPracticum();
+		tuple = super.unbind(PracticumSession, "title", "summary", "startDate", "finishDate", "link");
+		tuple.put("masterId", practicum.getId());
+		tuple.put("draftMode", practicum.getDraftMode());
 
 		super.getResponse().setData(tuple);
 	}
-
 }
