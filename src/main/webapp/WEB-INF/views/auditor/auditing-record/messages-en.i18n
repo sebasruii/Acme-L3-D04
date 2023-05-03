@@ -25,7 +25,7 @@ auditor.auditingrecord.label.draft = Draft
 auditor.auditingRecord.form.button.update = Update Record
 auditor.auditingRecord.form.button.delete = Delete Record
 auditor.auditingRecord.form.button.create = Create Record
-auditor.auditingrecord.form.button.publish = Publish Record
+auditor.auditingRecord.form.button.publish = Publish Record
 
 auditor.auditingrecord.error.date.startAfterFinish = The finish date cannot be before the start date.
 auditor.auditingrecord.error.date.shortPeriod = The duration must be at least an hour.

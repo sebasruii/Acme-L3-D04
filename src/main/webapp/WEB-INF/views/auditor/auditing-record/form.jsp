@@ -8,14 +8,14 @@
 	<acme:input-moment code="auditor.auditingRecord.form.label.finishDate" path="finishDate"/>
 	<acme:input-textbox code="auditor.auditingRecord.form.label.mark" path="mark"/>
 	<acme:input-url code="auditor.auditingRecord.form.label.link" path="link"/>
-	<jstl:choose>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') }">
+	<jstl:choose>	 
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish')}">
 			<acme:submit code="auditor.auditingRecord.form.button.update" action="/auditor/auditing-record/update"/>
 			<acme:submit code="auditor.auditingRecord.form.button.delete" action="/auditor/auditing-record/delete"/>
-			<acme:submit code="auditor.auditingrecord.form.button.publish" action="/auditor/auditing-record/publish"/>	
+			<acme:submit code="auditor.auditingRecord.form.button.publish" action="/auditor/auditing-record/publish"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="auditor.auditingRecord.form.button.create" action="/auditor/auditing-record/create?auditId=${auditId}"/>
+			<acme:submit code="auditor.auditingRecord.form.button.create" action="/auditor/auditing-record/create"/>
 		</jstl:when>		
-	</jstl:choose>		
+	</jstl:choose>	
 </acme:form>
