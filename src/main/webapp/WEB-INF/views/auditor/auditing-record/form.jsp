@@ -8,7 +8,6 @@
 	<acme:input-moment code="auditor.auditingRecord.form.label.finishDate" path="finishDate"/>
 	<acme:input-textbox code="auditor.auditingRecord.form.label.mark" path="mark"/>
 	<acme:input-url code="auditor.auditingRecord.form.label.link" path="link"/>
-	<acme:input-checkbox code="auditor.audit.form.label.draftMode" path="draftMode" />
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') }">
 			<acme:submit code="auditor.auditingRecord.form.button.update" action="/auditor/auditing-record/update"/>

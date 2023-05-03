@@ -32,8 +32,10 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	@Override
 	public void authorise() {
 
+		int id;
+		id = super.getRequest().getData("auditId", int.class);
 		boolean status;
-		final Audit audit = this.repository.findOneAuditById(super.getRequest().getData("auditId", int.class));
+		final Audit audit = this.repository.findOneAuditById(id);
 		status = super.getRequest().getPrincipal().hasRole(audit.getAuditor()) && audit.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
@@ -76,6 +78,7 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	@Override
 	public void perform(final AuditingRecord object) {
 		assert object != null;
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 

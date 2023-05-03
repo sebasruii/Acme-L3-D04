@@ -57,7 +57,7 @@ public class AuditorAuditingRecordCorrectService extends AbstractService<Auditor
 		super.bind(object, "subject", "assessment", "link", "startDate", "finishDate");
 		object.setMark(mark);
 		object.setAudit(audit);
-		object.setDraftMode(false);
+		object.setDraftMode(true);
 		object.setCorrection(true);
 	}
 
@@ -78,6 +78,7 @@ public class AuditorAuditingRecordCorrectService extends AbstractService<Auditor
 	@Override
 	public void perform(final AuditingRecord object) {
 		assert object != null;
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 
