@@ -9,7 +9,7 @@
 	<acme:input-textbox code="auditor.auditingRecord.form.label.mark" path="mark"/>
 	<acme:input-url code="auditor.auditingRecord.form.label.link" path="link"/>
 	<jstl:choose>	 
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish')}">
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="auditor.auditingRecord.form.button.update" action="/auditor/auditing-record/update"/>
 			<acme:submit code="auditor.auditingRecord.form.button.delete" action="/auditor/auditing-record/delete"/>
 			<acme:submit code="auditor.auditingRecord.form.button.publish" action="/auditor/auditing-record/publish"/>
