@@ -57,15 +57,13 @@ public class AuditorAuditingRecordCorrectService extends AbstractService<Auditor
 		super.bind(object, "subject", "assessment", "link", "startDate", "finishDate");
 		object.setMark(mark);
 		object.setAudit(audit);
-		object.setDraftMode(false);
+		object.setDraftMode(true);
 		object.setCorrection(true);
 	}
 
 	@Override
 	public void validate(final AuditingRecord object) {
 		assert object != null;
-		final Boolean confirm = super.getRequest().getData("confirm", boolean.class);
-		super.state(confirm, "*", "auditor.auditingrecord.correction.confirmation");
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("startDate"))
 			if (!MomentHelper.isBefore(object.getStartDate(), object.getFinishDate()))
@@ -78,6 +76,7 @@ public class AuditorAuditingRecordCorrectService extends AbstractService<Auditor
 	@Override
 	public void perform(final AuditingRecord object) {
 		assert object != null;
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 
@@ -86,6 +85,7 @@ public class AuditorAuditingRecordCorrectService extends AbstractService<Auditor
 		assert object != null;
 
 		final Tuple tuple;
+
 		tuple = super.unbind(object, "subject", "assessment", "link", "mark", "startDate", "finishDate");
 		tuple.put("auditId", super.getRequest().getData("auditId", int.class));
 
