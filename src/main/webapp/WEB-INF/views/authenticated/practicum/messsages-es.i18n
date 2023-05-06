@@ -21,3 +21,4 @@ authenticated.practicum.list.label.title = Título
 authenticated.practicum.list.label.summary = Resumen
 authenticated.practicum.list.label.abstractPracticum = Resumen práctica
 authenticated.practicum.list.label.course= Código del curso
+authenticated.practicum.form.label.estimatedTotalTime= Tiempo total estimado

@@ -35,3 +35,5 @@ company.practicum.list.label.practicum-code = Código
 
 company.practicum.form.label.practicum-title = Título
 company.practicum.list.label.practicum-title = Título
+
+company.practicum.form.label.estimatedTotalTime= Tiempo total estimado

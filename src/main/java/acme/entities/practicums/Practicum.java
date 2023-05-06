@@ -52,6 +52,9 @@ public class Practicum extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+	// In hours
+	protected String			estimatedTotalTime;
+
 	// Relationships ----------------------------------------------------------
 
 	@NotNull

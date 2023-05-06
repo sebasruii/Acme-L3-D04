@@ -70,7 +70,11 @@ public class AnyPeepUpdateService extends AbstractService<Any, Peep> {
 	@Override
 	public void perform(final Peep object) {
 		assert object != null;
-
+		if (object.getNick() == null || object.getNick().trim().length() == 0)
+			if (super.getRequest().getPrincipal().isAnonymous())
+				object.setNick("anonymous");
+			else
+				object.setNick(super.getRequest().getPrincipal().getUsername());
 		this.repository.save(object);
 	}
 

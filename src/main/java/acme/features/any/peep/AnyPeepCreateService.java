@@ -3,7 +3,6 @@ package acme.features.any.peep;
 
 import java.util.Date;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,15 +50,7 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 		instantiation = MomentHelper.getCurrentMoment();
 		object.setInstantiation(instantiation);
 
-		if (StringUtils.isBlank(object.getNick())) {
-			if (super.getRequest().getPrincipal().isAnonymous())
-				object.setNick("anonymous");
-			else
-				object.setNick(super.getRequest().getPrincipal().getUsername());
-
-			super.bind(object, "title", "message", "email", "link");
-		} else
-			super.bind(object, "title", "nick", "message", "email", "link");
+		super.bind(object, "title", "nick", "message", "email", "link");
 	}
 
 	@Override
@@ -70,6 +61,11 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 	@Override
 	public void perform(final Peep object) {
 		assert object != null;
+		if (object.getNick() == null || object.getNick().trim().length() == 0)
+			if (super.getRequest().getPrincipal().isAnonymous())
+				object.setNick("anonymous");
+			else
+				object.setNick(super.getRequest().getPrincipal().getUsername());
 
 		this.repository.save(object);
 	}

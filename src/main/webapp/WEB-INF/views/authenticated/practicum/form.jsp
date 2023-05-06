@@ -21,6 +21,7 @@
   <acme:input-textarea code="authenticated.practicum.form.label.summary" path="summary"/>
   <acme:input-textbox code="authenticated.practicum.form.label.nameCompany" path="nameCompany"/>
   <acme:input-textbox code="authenticated.practicum.form.label.course" path="courseCode"/>
+  <acme:input-textbox code="authenticated.practicum.form.label.estimatedTotalTime" path="estimatedTotalTime"/>
 
   <acme:submit test="${_command == 'list'}" code="authenticated.practicum.form.button.list" action="/authenticated/practicum/list?masterId=${id}"/>
 

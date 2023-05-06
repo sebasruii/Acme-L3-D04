@@ -1,0 +1,43 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Practicum
+
+company.dashboard.form.title.num-practicum-per-month = Número total de prácticas por mes
+
+company.dashboard.form.title.practicum-statistics = Estadísticas de prácticas
+company.dashboard.form.label.practicum-statistics.count = Número total
+company.dashboard.form.label.practicum-statistics.average = Duración media
+company.dashboard.form.label.practicum-statistics.stDev = Desviación
+company.dashboard.form.label.practicum-statistics.minimum = Duración mínima
+company.dashboard.form.label.practicum-statistics.maximum = Duración máxima
+
+
+# PracticumSessions
+company.dashboard.form.title.session-statistics = Estadísticas de sesiones de prácticas
+company.dashboard.form.label.session-statistics.count = Número total
+company.dashboard.form.label.session-statistics.average = Duración media
+company.dashboard.form.label.session-statistics.stDev = Desviación
+company.dashboard.form.label.session-statistics.minimum = Duración mínima
+company.dashboard.form.label.session-statistics.maximum = Duración máxima
+
+#Meses
+company.dashboard.form.label.january = ENERO
+company.dashboard.form.label.february = FEBRERO
+company.dashboard.form.label.march = MARZO
+company.dashboard.form.label.april = ABRIL
+company.dashboard.form.label.may = MAYO
+company.dashboard.form.label.june = JUNIO
+company.dashboard.form.label.july = JULIO
+company.dashboard.form.label.august = AGOSTO
+company.dashboard.form.label.september = SEPTIEMBRE
+company.dashboard.form.label.october = OCTUBRE
+company.dashboard.form.label.november = NOVIEMBRE
+company.dashboard.form.label.december = DICIEMBRE

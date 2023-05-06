@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.courses.Course;
+import acme.entities.practicumSessions.PracticumSession;
 import acme.entities.practicums.Practicum;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
@@ -79,7 +81,17 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 	@Override
 	public void perform(final Practicum object) {
 		assert object != null;
+		long TotalTime = 0L;
+		final String estimatedTotalTime;
+		double tenPercent = 0.0;
 
+		final Collection<PracticumSession> pss = this.repository.findPracticumSessionsByPracticumId(object.getId());
+		for (final PracticumSession ps : pss)
+			TotalTime += MomentHelper.computeDuration(ps.getStartDate(), ps.getFinishDate()).toHours();
+			
+		tenPercent = 0.1 * TotalTime;
+		estimatedTotalTime = "" + TotalTime + "±" + tenPercent;
+		object.setEstimatedTotalTime(estimatedTotalTime);
 		object.setDraftMode(false);
 		this.repository.save(object);
 	}

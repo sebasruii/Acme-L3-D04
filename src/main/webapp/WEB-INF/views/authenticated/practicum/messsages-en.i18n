@@ -23,3 +23,4 @@ authenticated.practicum.list.label.title = Title
 authenticated.practicum.list.label.summary = Abstract 
 authenticated.practicum.list.label.abstractPracticum = Abstract practicum
 authenticated.practicum.list.label.course= Course code
+authenticated.practicum.form.label.estimatedTotalTime= Estimated Total Time

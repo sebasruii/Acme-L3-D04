@@ -54,7 +54,7 @@ public class AuthenticatedPracticumShowService extends AbstractService<Authentic
 		assert practicum != null;
 
 		Tuple tuple;
-		tuple = super.unbind(practicum, "code", "title", "summary", "goals");
+		tuple = super.unbind(practicum, "code", "title", "summary", "goals", "estimatedTotalTime");
 		tuple.put("courseCode", practicum.getCourse().getCode());
 		tuple.put("nameCompany", practicum.getCompany().getName());
 
