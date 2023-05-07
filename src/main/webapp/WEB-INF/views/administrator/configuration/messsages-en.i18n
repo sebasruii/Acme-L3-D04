@@ -11,3 +11,5 @@
 administrator.configuration.form.label.defaultCurrency = Default currency:
 administrator.configuration.form.label.aceptedCurrencies = Accepted currencies:
 administrator.configuration.form.button.update = Update
+administrator.configuration.form.error.defaultCurrency = The default currency must be a accepted currency
+administrator.configuration.form.error.acceptedCurrencies = You can not erase a currency which is already in use

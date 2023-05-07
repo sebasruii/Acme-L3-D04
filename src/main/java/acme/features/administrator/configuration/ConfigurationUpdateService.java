@@ -1,6 +1,8 @@
 
 package acme.features.administrator.configuration;
 
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,6 +49,20 @@ public class ConfigurationUpdateService extends AbstractService<Administrator, C
 	@Override
 	public void validate(final Configuration object) {
 		assert object != null;
+
+		if (!super.getBuffer().getErrors().hasErrors("defaultCurrency")) {
+			super.state(object.getAcceptedCurrencies().contains(object.getDefaultCurrency()), "defaultCurrency", "administrator.configuration.form.error.defaultCurrency");
+			System.out.println(object.getAcceptedCurrencies().contains(object.getDefaultCurrency()));
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("acceptedCurrencies")) {
+			final Set<String> allCurrenciesUsed = this.repository.findManyCurrenciesFromCourses();
+			boolean eraseAUsedCurrency = false;
+			for (final String currency : allCurrenciesUsed)
+				if (!object.getAcceptedCurrencies().contains(currency))
+					eraseAUsedCurrency = true;
+			super.state(!eraseAUsedCurrency, "acceptedCurrencies", "administrator.configuration.form.error.acceptedCurrencies");
+		}
 	}
 
 	@Override

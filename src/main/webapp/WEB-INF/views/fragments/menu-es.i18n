@@ -98,12 +98,8 @@ master.menu.lecturer.dashboard = Panel de indicadores
 # master.menu.company ###################################################
 
 master.menu.company= Prácticas
-master.menu.authenticated.company.practicum.list-mine = Mis prácticas
-master.menu.authenticated.company.practicum.list-all = Todas las prácticas
-
-
-
-
+master.menu.company.my-practica = Mis prácticas
+master.menu.company.dashboard = Estadísticas de las Prácticas
 
 # master.menu.student ##########################################################
 
@@ -117,8 +113,8 @@ master.menu.student.studentEnrolmentList = Listado de Matriculas
 master.menu.anonymous.peep = Peeps
 # master.menu.practicum ##########################################################
 master.menu.practicum= Practicas
-authenticated.practicum.form.button.list= Practicas
-
+authenticated.practicum.form.button.list= Lista de practicas
+authenticated.practicum.form.label.course= Curso
 
 
 master.menu.lecturer = Profesor
