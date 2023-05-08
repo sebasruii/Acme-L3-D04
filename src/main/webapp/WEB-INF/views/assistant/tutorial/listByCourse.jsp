@@ -19,5 +19,3 @@
 	<acme:list-column code="assistant.tutorial.list.label.title" path="title" width="10%"/>
 	<acme:list-column code="assistant.tutorial.list.label.summary" path="summary" width="90%"/>
 </acme:list>
-
-<acme:button  code="assistant.tutorial.list.button.create" action="/assistant/tutorial/create"/>
