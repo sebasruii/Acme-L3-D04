@@ -16,22 +16,25 @@ public class AssistantTutorialsController extends AbstractController<Assistant, 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AssistantTutorialListService		listService;
+	protected AssistantTutorialListService			listService;
 
 	@Autowired
-	protected AssistantTutorialShowService		showService;
+	protected AssistantTutorialListByCourseService	listByCourseService;
 
 	@Autowired
-	protected AssistantTutorialCreateService	createService;
+	protected AssistantTutorialShowService			showService;
 
 	@Autowired
-	protected AssistantTutorialDeleteService	deleteService;
+	protected AssistantTutorialCreateService		createService;
 
 	@Autowired
-	protected AssistantTutorialUpdateService	updateService;
+	protected AssistantTutorialDeleteService		deleteService;
 
 	@Autowired
-	protected AssistantTutorialPublishService	publishService;
+	protected AssistantTutorialUpdateService		updateService;
+
+	@Autowired
+	protected AssistantTutorialPublishService		publishService;
 
 	// Constructors -----------------------------------------------------------
 
