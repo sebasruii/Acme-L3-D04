@@ -37,7 +37,7 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 	public void authorise() {
 		final int id = super.getRequest().getData("id", int.class);
 		final Tutorial tutorial = this.repository.findTutorialById(id);
-		final boolean status = tutorial != null && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant());
+		final boolean status = tutorial != null && (super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) || tutorial.isDraftMode() == false);
 		super.getResponse().setAuthorised(status);
 	}
 
