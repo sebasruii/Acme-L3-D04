@@ -14,9 +14,9 @@ tutorial-12,LZZ444,title1,this is a summary with a 99 character to test pppppppp
 tutorial-13,XZZ444,title1,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,assistant-01,course-01,False
 tutorial-14,ZAZ444,title1,サンプルテキスト,goals1,assistant-01,course-01,False
 tutorial-15,ZSZ444,title1,<script>alert('exampleJS');</script>,goals1,assistant-01,course-01,False
-tutorial-16,ZDZ444,title1,summary1,g,assistant-01,course-01,False
-tutorial-17,ZFZ444,title1,summary1,go,assistant-01,course-01,False
+tutorial-16,ZDZ444,title1,summary1,g,assistant-02,course-01,False
+tutorial-17,ZFZ444,title1,summary1,go,assistant-02,course-01,False
 tutorial-18,ZGZ444,title1,summary1,goal1 with 99 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,assistant-01,course-01,False
 tutorial-19,ZHZ444,title1,summary1,goal1 with 100 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,assistant-01,course-01,False
 tutorial-20,ZJZ444,title1,summary1,サンプルテキスト,assistant-01,course-01,False
-tutorial-21,ZKZ444,title1,summary1,<script>alert('exampleJS');</script>,assistant-01,course-01,False
+tutorial-21,ZKZ444,title1,summary1,<script>alert('exampleJS');</script>,assistant-02,course-01,False
