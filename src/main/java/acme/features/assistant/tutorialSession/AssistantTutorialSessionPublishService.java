@@ -1,6 +1,9 @@
 
 package acme.features.assistant.tutorialSession;
 
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +11,7 @@ import acme.entities.NatureType.NatureType;
 import acme.entities.tutorialSessions.TutorialSession;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
 
@@ -64,6 +68,23 @@ public class AssistantTutorialSessionPublishService extends AbstractService<Assi
 	@Override
 	public void validate(final TutorialSession object) {
 		assert object != null;
+
+		if (!super.getBuffer().getErrors().hasErrors("startDate") || !super.getBuffer().getErrors().hasErrors("finishDate")) {
+			Date startDate;
+			Date finishDate;
+			Date inADayFromNow;
+			Date inFiveHourFromStart;
+
+			startDate = object.getStartDate();
+			finishDate = object.getFinishDate();
+			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
+			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 5, ChronoUnit.HOURS);
+
+			if (!super.getBuffer().getErrors().hasErrors("startDate"))
+				super.state(MomentHelper.isAfter(startDate, inADayFromNow), "startDate", "assistant.session-tutorial.error.start-1Day-after-now");
+			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+				super.state(MomentHelper.isAfter(finishDate, inFiveHourFromStart), "finishDate", "assistant.session-tutorial.error.end-5Hours-after-start");
+		}
 	}
 
 	@Override
