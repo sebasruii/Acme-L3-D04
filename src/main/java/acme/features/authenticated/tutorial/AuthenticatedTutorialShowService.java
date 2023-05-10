@@ -1,5 +1,5 @@
 
-package acme.features.assistant.tutorial;
+package acme.features.authenticated.tutorial;
 
 import java.util.List;
 
@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.courses.Course;
 import acme.entities.tutorials.Tutorial;
+import acme.features.assistant.tutorial.AssistantTutorialRepository;
+import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
-import acme.roles.Assistant;
 
 @Service
-public class AssistantTutorialShowService extends AbstractService<Assistant, Tutorial> {
+public class AuthenticatedTutorialShowService extends AbstractService<Authenticated, Tutorial> {
 
 	//Internal	state ------------------------------------------------------------------------
 
@@ -37,7 +38,7 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 	public void authorise() {
 		final int id = super.getRequest().getData("id", int.class);
 		final Tutorial tutorial = this.repository.findTutorialById(id);
-		final boolean status = tutorial != null && (super.getRequest().getPrincipal().hasRole(tutorial.getAssistant()) || tutorial.isDraftMode() == false);
+		final boolean status = tutorial != null && super.getRequest().getPrincipal().isAuthenticated() && tutorial.isDraftMode() == false;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -61,7 +62,8 @@ public class AssistantTutorialShowService extends AbstractService<Assistant, Tut
 		final List<Course> courses = this.repository.findAllPublishedCourses();
 		final SelectChoices choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode", "estimatedTotalTime");
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode");
+		tuple.put("assistant", object.getAssistant().getSupervisor());
 		tuple.put("course", object.getCourse().getCode());
 		tuple.put("courses", choices);
 

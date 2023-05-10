@@ -13,12 +13,11 @@ assistant.tutorial.list.label.summary = Resumen
 assistant.tutorial.list.label.code = Codigo
 assistant.tutorial.list.label.goals = Objetivos
 assistant.tutorial.list.label.course = Curso
-assistant.tutorial.list.label.estimatedTotalTime = Tiempo Estimado
+assistant.tutorial.form.label.assistant=Asistente
 
 assistant.tutorial.label.draftMode = Modo Borrador
 assistant.tutorial.form.label.course = Curso
 
-assistant.tutorial.list.button.create = Crear
 assistant.tutorial.form.button.create = Crear
 assistant.tutorial.form.button.delete = Borrar
 assistant.tutorial.form.button.update = Actualizar
