@@ -23,3 +23,5 @@ assistant.tutorial.form.button.update = Actualizar
 assistant.tutorial.form.button.publish = Publicar
 assistant.tutorial.form.button.tutorials = Tutorias
 assistant.tutorial.form.button.tutorialSessions = Sesiones de la Tutoria
+
+assistant.tutorial.form.error.duplicated=Este código ya esta en uso

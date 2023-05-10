@@ -26,3 +26,6 @@ assistant.tutorialSession.form.button.update = Update
 assistant.tutorialSession.form.button.publish = Publish
 assistant.tutorialSession.form.button.delete = Delete
 
+assistant.session-tutorial.error.start-1Day-after-now=The session must be created at least one day in advance
+assistant.session-tutorial.error.end-5Hours-after-start=The session must last at least five hours
+
