@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.NatureType.NatureType;
 import acme.entities.tutorialSessions.TutorialSession;
+import acme.entities.tutorials.Tutorial;
+import acme.features.assistant.tutorial.AssistantTutorialRepository;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.helpers.MomentHelper;
@@ -20,7 +22,10 @@ public class AssistantTutorialSessionPublishService extends AbstractService<Assi
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AssistantTutorialSessionRepository repository;
+	protected AssistantTutorialSessionRepository	repository;
+
+	@Autowired
+	protected AssistantTutorialRepository			tutorialRepository;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -91,7 +96,24 @@ public class AssistantTutorialSessionPublishService extends AbstractService<Assi
 	public void perform(final TutorialSession object) {
 		assert object != null;
 
+		final Tutorial tutorial;
+		String estimatedTotalTime;
+		long actuallyTime;
+		final long estimatedSessionTime;
+		final double tenPercent;
+
+		tutorial = object.getTutorial();
+		estimatedTotalTime = tutorial.getEstimatedTotalTime();
+		estimatedSessionTime = MomentHelper.computeDuration(object.getStartDate(), object.getFinishDate()).toHours();
+		final String[] ls = estimatedTotalTime.split("±");
+		actuallyTime = Long.valueOf(ls[0].trim());
+		actuallyTime += estimatedSessionTime;
+		tenPercent = actuallyTime * 0.1;
+		estimatedTotalTime = actuallyTime + "±" + tenPercent;
+
 		object.setDraftMode(false);
+		tutorial.setEstimatedTotalTime(estimatedTotalTime);
+		this.tutorialRepository.save(tutorial);
 		this.repository.save(object);
 	}
 

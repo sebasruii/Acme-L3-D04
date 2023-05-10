@@ -21,10 +21,5 @@
 	<acme:input-textbox code="assistant.tutorial.list.label.summary" path="summary"/>
 	<acme:input-textarea code="assistant.tutorial.list.label.goals" path="goals"/>
 	<acme:input-select code="assistant.tutorial.form.label.course" path="course" choices="${courses}"/>
-
-	<jstl:choose>	 
-	       <jstl:when test="${_command == 'show' && draftMode == false}">
-            <acme:button code="assistant.tutorial.form.button.tutorialSessions" action="/assistant/tutorial-session/list?masterId=${id}"/>
-        </jstl:when>		
-	</jstl:choose>
+	<acme:input-textbox code="assistant.tutorial.form.label.assistant" path="assistant"/>
 </acme:form>

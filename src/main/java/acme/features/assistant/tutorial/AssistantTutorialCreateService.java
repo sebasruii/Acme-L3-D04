@@ -40,6 +40,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 	public void load() {
 		final Tutorial object = new Tutorial();
 		object.setDraftMode(true);
+		object.setEstimatedTotalTime("0");
 		super.getBuffer().setData(object);
 	}
 

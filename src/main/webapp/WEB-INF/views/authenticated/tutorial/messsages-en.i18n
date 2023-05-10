@@ -13,9 +13,11 @@ assistant.tutorial.list.label.summary = Summary
 assistant.tutorial.list.label.code = Code
 assistant.tutorial.list.label.goals = Goals
 assistant.tutorial.list.label.course = Course
+assistant.tutorial.form.label.assistant=Assistant
 
 assistant.tutorial.label.draftMode = Draft Mode
 assistant.tutorial.form.label.course = Course
+
 
 assistant.tutorial.form.button.create = Create
 assistant.tutorial.form.button.delete = Delete
