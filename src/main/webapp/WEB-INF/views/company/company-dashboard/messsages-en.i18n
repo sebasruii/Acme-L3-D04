@@ -1,0 +1,44 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Practicum
+
+company.dashboard.form.title.num-practicum-per-month = Total number of practicum per month
+
+company.dashboard.form.title.practicum-statistics = Practicum Statistics
+company.dashboard.form.label.practicum-statistics.count = Total number of practicum
+company.dashboard.form.label.practicum-statistics.average = Average length
+company.dashboard.form.label.practicum-statistics.stDev = Deviation
+company.dashboard.form.label.practicum-statistics.minimum = Minimum length
+company.dashboard.form.label.practicum-statistics.maximum = Maximum length
+
+
+#PracticumSessions
+company.dashboard.form.title.session-statistics = Practicum Session Statistics
+company.dashboard.form.label.session-statistics.count = Total number of practicum sessions
+company.dashboard.form.label.session-statistics.average = Average length
+company.dashboard.form.label.session-statistics.stDev = Deviation
+company.dashboard.form.label.session-statistics.minimum = Minimum length
+company.dashboard.form.label.session-statistics.maximum = Maximum length
+
+#Months
+company.dashboard.form.label.january = JANUARY
+company.dashboard.form.label.february = FEBRUARY
+company.dashboard.form.label.march = MARCH
+company.dashboard.form.label.april = APRIL
+company.dashboard.form.label.may = MAY
+company.dashboard.form.label.june = JUNE
+company.dashboard.form.label.july = JULY
+company.dashboard.form.label.august = AUGUST
+company.dashboard.form.label.september = SEPTEMBER
+company.dashboard.form.label.october = OCTOBER
+company.dashboard.form.label.november = NOVEMBER
+company.dashboard.form.label.december = DECEMBER
+

@@ -13,9 +13,12 @@ authenticated.practicum.form.label.code = Código
 authenticated.practicum.form.label.title = Título
 authenticated.practicum.form.label.abstractPracticum = Resumen práctica
 authenticated.practicum.form.label.nameComapny = Nombre de la compañía
+authenticated.practicum.form.label.course= Código del curso
 
 # Messages for label in list
 authenticated.practicum.list.label.code = Código
 authenticated.practicum.list.label.title = Título
 authenticated.practicum.list.label.summary = Resumen
 authenticated.practicum.list.label.abstractPracticum = Resumen práctica
+authenticated.practicum.list.label.course= Código del curso
+authenticated.practicum.form.label.estimatedTotalTime= Tiempo total estimado

@@ -82,7 +82,8 @@
 		</acme:menu-option>
 
     <acme:menu-option code="master.menu.company" access="hasRole('Company')">			
-			<acme:menu-suboption code="master.menu.company.my-practica" action="/company/practicum/list"/>			
+			<acme:menu-suboption code="master.menu.company.my-practica" action="/company/practicum/list"/>
+			<acme:menu-suboption code="master.menu.company.dashboard" action="/company/company-dashboard/show"/>			
 		</acme:menu-option>
 
 		
@@ -92,9 +93,7 @@
 
 
 		
-		<acme:menu-option code="master.menu.anonymous.peep" action="/any/peep/list" access="isAnonymous()"/>
-
-		<acme:menu-option code="authenticated.practicum.form.button.list" action="/authenticated/practicum/list" access="hasRole('Company')"/>
+		<acme:menu-option code="master.menu.anonymous.peep" action="/any/peep/list"/>
 
 
 	</acme:menu-left>

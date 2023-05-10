@@ -14,8 +14,8 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedPracticumRepository extends AbstractRepository {
 
-	@Query("select p from Practicum p where p.company.userAccount.id = ?1 or p.draftMode = false")
-	Collection<Practicum> findManyByUserAccountId(int userAccountId);
+	@Query("select p from Practicum p where p.draftMode = false")
+	Collection<Practicum> findManyPracticum();
 
 	@Query("select p from Practicum p where p.id = ?1")
 	Practicum findOnePracticumById(int id);
@@ -23,7 +23,13 @@ public interface AuthenticatedPracticumRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = ?1")
 	UserAccount findOneUserAccountById(int userAccountId);
 
-	@Query("select c from Course c")
-	Collection<Course> findAllCourses();
+	@Query("select p from Practicum p where p.course.id =:id and p.draftMode = false")
+	Collection<Practicum> findManyPracticumByCourseId(int id);
+
+	@Query("select p from Practicum p where p.code = :code")
+	Practicum findPracticumByCode(String code);
+
+	@Query("select c from Course c where c.id= :id")
+	Course findCourseById(int id);
 
 }
