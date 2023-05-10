@@ -1,5 +1,5 @@
 
-package acme.features.assistant.tutorial;
+package acme.features.authenticated.tutorial;
 
 import java.util.Collection;
 
@@ -7,33 +7,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tutorials.Tutorial;
+import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
-import acme.roles.Assistant;
 
 @Service
-public class AssistantTutorialListByCourseService extends AbstractService<Assistant, Tutorial> {
+public class AuthenticatedTutorialListService extends AbstractService<Authenticated, Tutorial> {
 
 	//Internal	state ------------------------------------------------------------------------
 	@Autowired
-	protected AssistantTutorialRepository repository;
+	protected AuthenticatedTutorialRepository repository;
 
 
 	//AbstractService Interface -------------------------------------------------------------
 	@Override
 	public void check() {
-		boolean status;
 
-		status = super.getRequest().hasData("masterId", int.class);
-
-		super.getResponse().setChecked(status);
+		super.getResponse().setChecked(true);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = super.getRequest().getPrincipal().hasRole(Assistant.class);
+		status = super.getRequest().getPrincipal().isAuthenticated();
 
 		super.getResponse().setAuthorised(status);
 
@@ -46,8 +43,7 @@ public class AssistantTutorialListByCourseService extends AbstractService<Assist
 		final int courseId;
 
 		courseId = super.getRequest().getData("masterId", int.class);
-		assistantId = super.getRequest().getPrincipal().getActiveRoleId();
-		object = this.repository.findManyPracticumByCourseIdAssistantId(courseId, assistantId);
+		object = this.repository.findManyPracticumByCourseId(courseId);
 
 		super.getBuffer().setData(object);
 	}
@@ -60,5 +56,4 @@ public class AssistantTutorialListByCourseService extends AbstractService<Assist
 
 		super.getResponse().setData(tuple);
 	}
-
 }
