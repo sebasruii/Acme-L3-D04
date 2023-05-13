@@ -1,0 +1,7 @@
+record-index,code,course,title,summary,goals
+0,A1111,A111,title-01,abstractPracticum-01,goal-01
+1,BB2222,A111,title-02,abstractPracticum-02,goal-02
+2,CCC3333,A111,title-03,abstractPracticum-03,goal-03
+3,DDD4444,A111,T,abstractPracticum-04,goal-04
+4,EEE5555,AA111,Ti,abstractPracticum-05,goal-05
+5,FFF6666,AA111,Probando un titulo que tenga como maximo 74 caracteres para el campo title,abstractPracticum-06,goal-08

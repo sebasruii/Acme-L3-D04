@@ -79,7 +79,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		practicumId = super.getRequest().getData("masterId", int.class);
 		practicum = this.repository.findPracticumById(practicumId);
 
-		super.bind(PracticumSession, "title", "summary", "startDate", "finishDate", "link");
+		super.bind(PracticumSession, "title", "summary", "startDate", "finishDate", "link", "exceptional");
 		PracticumSession.setPracticum(practicum);
 
 	}
@@ -88,21 +88,16 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 	public void validate(final PracticumSession PracticumSession) {
 		assert PracticumSession != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("startDate") || !super.getBuffer().getErrors().hasErrors("finishDate")) {
-			Date startDate;
-			Date finishDate;
-			Date inAWeekFromNow;
-			Date inAWeekFromStart;
+		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
+			Date minimumStartDate;
+			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
+			super.state(MomentHelper.isAfterOrEqual(PracticumSession.getStartDate(), minimumStartDate), "startDate", "company.practicum-session.form.error.start-date");
+		}
 
-			startDate = PracticumSession.getStartDate();
-			finishDate = PracticumSession.getFinishDate();
-			inAWeekFromNow = MomentHelper.deltaFromCurrentMoment(CompanyPracticumSessionCreateService.ONE_WEEK, ChronoUnit.WEEKS);
-			inAWeekFromStart = MomentHelper.deltaFromMoment(startDate, CompanyPracticumSessionCreateService.ONE_WEEK, ChronoUnit.WEEKS);
-
-			if (!super.getBuffer().getErrors().hasErrors("startDate"))
-				super.state(MomentHelper.isAfter(startDate, inAWeekFromNow), "startDate", "company.session-practicum.error.start-after-now");
-			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
-				super.state(MomentHelper.isAfter(finishDate, inAWeekFromStart), "finishDate", "company.session-practicum.error.end-after-start");
+		if (!super.getBuffer().getErrors().hasErrors("finishDate")) {
+			Date minimumEndDate;
+			minimumEndDate = MomentHelper.deltaFromMoment(PracticumSession.getStartDate(), 7, ChronoUnit.DAYS);
+			super.state(MomentHelper.isAfterOrEqual(PracticumSession.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.end-date");
 		}
 	}
 
@@ -121,7 +116,7 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		Tuple tuple;
 
 		practicum = PracticumSession.getPracticum();
-		tuple = super.unbind(PracticumSession, "title", "summary", "startDate", "finishDate", "link");
+		tuple = super.unbind(PracticumSession, "title", "summary", "startDate", "finishDate", "link", "exceptional");
 		tuple.put("masterId", practicum.getId());
 		tuple.put("draftMode", practicum.getDraftMode());
 

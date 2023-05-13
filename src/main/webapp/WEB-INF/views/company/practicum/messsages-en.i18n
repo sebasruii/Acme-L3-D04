@@ -34,3 +34,8 @@ company.practicum.list.label.practicum-code = Code
 company.practicum.form.label.practicum-title = Title
 company.practicum.list.label.practicum-title = Title
 company.practicum.form.label.estimatedTotalTime= Estimated total time
+
+company.practicum.list.label.course-code = Course code
+company.practicum-session.form.label.exceptional= Exceptional Practicum Session
+company.practicum.form.error.noPracticumSessions= Practicum must have at least one practicum session for being published
+company.practicum.error.draftMode.published.update= A published practicum can not be updated

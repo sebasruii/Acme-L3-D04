@@ -1,0 +1,23 @@
+record-index,code,course,title,summary,goals
+0,,---,,,
+0,,B111,title-02,abstractPracticum-02,goal-02
+0,,---,title-02,abstractPracticum-02,goal-02
+0,A1654,B111,,abstractPracticum-03,goal-03
+0,A1654,B111,title-01,,goal-04
+0,A1654,B111,title-01,abstractPracticum-05,
+0,   ,B111,title-01,abstractPracticum-05,
+0,A1654,B111,    ,abstractPracticum-07,573854
+0,A1654,B111,title-01,     ,goal-08
+0,A1654,B111,title-01,abstractPracticum-09,
+0,3333,B111,title-01,abstractPracticum-10,goal-10
+0,A,B111,title-01,abstractPracticum-10,goal-10
+0,A45682,B111,title-01,abstractPracticum-10,goal-10
+0,A452,B111,title-01,abstractPracticum-10,goal-10
+0,ABEF5452,B111,title-01,abstractPracticum-10,goal-10
+0,abd4852,B111,title-01,abstractPracticum-10,goal-10
+0,A1654,B111,Probando un titulo que tenga como maximo 76 caracteres para el campo title..,abstractPracticum-10,goal-10
+0,A1654,B111,Probando un titulo que tenga como maximo 77 caracteres para el campo title...,abstractPracticum-10,goal-10
+0,A1654,B111,title-01,Esto es un resumen de maximo 101 caracteres para abstractPracticum el campo summary del archivo csv..,goal-10
+0,A1654,B111,title-01,Esto es un resumen de maximo 102 caracteres para abstractPracticum el campo summary del archivo csv...,goal-10
+0,A1654,B111,title-01,abstractPracticum-10,Esto es un goal101 de maximo 101 caracteres para abstractPracticum el campo summary del archivo csv..
+0,A1654,B111,title-01,abstractPracticum-10,Esto es un goal102 de maximo 102 caracteres para abstractPracticum el campo summary del archivo csv...

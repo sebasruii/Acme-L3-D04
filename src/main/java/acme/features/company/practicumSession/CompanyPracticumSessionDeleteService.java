@@ -54,7 +54,7 @@ public class CompanyPracticumSessionDeleteService extends AbstractService<Compan
 	public void bind(final PracticumSession object) {
 		assert object != null;
 
-		super.bind(object, "title", "summary", "startDate", "endDate", "link");
+		super.bind(object, "title", "summary", "startDate", "endDate", "link", "exceptional");
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class CompanyPracticumSessionDeleteService extends AbstractService<Compan
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "summary", "startDate", "endDate", "link");
+		tuple = super.unbind(object, "title", "summary", "startDate", "endDate", "link", "exceptional");
 
 		super.getResponse().setData(tuple);
 	}

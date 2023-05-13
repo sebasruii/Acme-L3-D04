@@ -58,23 +58,23 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 	public void bind(final PracticumSession object) {
 		assert object != null;
 
-		super.bind(object, "title", "summary", "startDate", "finishDate", "link");
+		super.bind(object, "title", "summary", "startDate", "finishDate", "link", "exceptional");
 	}
 
 	@Override
 	public void validate(final PracticumSession object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
+		if (object.getStartDate() != null && !super.getBuffer().getErrors().hasErrors("startDate")) {
 			Date minimumStartDate;
 			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getStartDate(), minimumStartDate), "startDate", "company.practicum-session.form.error.start-period");
+			super.state(MomentHelper.isAfterOrEqual(object.getStartDate(), minimumStartDate), "startDate", "company.practicum-session.form.error.start-date");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("finishDate")) {
+		if (object.getFinishDate() != null && !super.getBuffer().getErrors().hasErrors("finishDate")) {
 			Date minimumEndDate;
 			minimumEndDate = MomentHelper.deltaFromMoment(object.getStartDate(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.end-period");
+			super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.-date");
 		}
 
 	}
@@ -91,8 +91,10 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 		assert object != null;
 
 		Tuple tuple;
+		final Boolean draftMode = true;
 
-		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link");
+		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link", "exceptional");
+		tuple.put("draftMode", draftMode);
 
 		super.getResponse().setData(tuple);
 	}

@@ -97,7 +97,7 @@ master.menu.lecturer.dashboard = Panel de indicadores
 
 # master.menu.company ###################################################
 
-master.menu.company= Prácticas
+master.menu.company= Compañía
 master.menu.company.my-practica = Mis prácticas
 master.menu.company.dashboard = Estadísticas de las Prácticas
 

@@ -1,0 +1,9 @@
+practicumRecordIndex,reference,practicumSessionRecordIndex,title,start-date,finish-date
+0,A1111,1,title-01,2024/01/01 08:00,2024/01/14 09:00
+0,A1111,2,T,2024/01/01 08:00,2024/01/14 09:00
+0,A1111,3,Ti,2024/02/01 08:00,2024/02/14 09:00
+0,A1111,4,Probando un titulo que tenga como maximo 74 caracteres para el campo title,2024/03/01 08:00,2024/03/14 09:00
+0,A1111,5,Probando un titulo que tenga como maximo 75 caracteres para el campo title.,2024/04/01 08:00,2024/04/14 09:00
+0,A1111,6,무지개,2024/05/01 08:00,2024/05/14 09:00
+0,A1111,7,<title>ExampleHTML</title>,2024/06/01 08:00,2024/06/14 09:00
+0,A1111,8,<script>alert('exampleJS');</script>,2024/07/01 08:00,2024/07/14 09:00
