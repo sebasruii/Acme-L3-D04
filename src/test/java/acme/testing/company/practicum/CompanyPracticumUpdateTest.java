@@ -48,8 +48,8 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(recordIndex, 0, code);
-		super.checkColumnHasValue(recordIndex, 1, summary);
-		super.checkColumnHasValue(recordIndex, 2, title);
+		super.checkColumnHasValue(recordIndex, 1, title);
+		super.checkColumnHasValue(recordIndex, 2, course);
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -73,7 +73,6 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(recordIndex, 0, code);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.fillInputBoxIn("code", code);

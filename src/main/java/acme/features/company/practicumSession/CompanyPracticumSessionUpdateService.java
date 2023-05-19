@@ -69,12 +69,11 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 			Date minimumStartDate;
 			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
 			super.state(MomentHelper.isAfterOrEqual(object.getStartDate(), minimumStartDate), "startDate", "company.practicum-session.form.error.start-date");
-		}
-
-		if (object.getFinishDate() != null && !super.getBuffer().getErrors().hasErrors("finishDate")) {
-			Date minimumEndDate;
-			minimumEndDate = MomentHelper.deltaFromMoment(object.getStartDate(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.-date");
+			if (object.getFinishDate() != null && !super.getBuffer().getErrors().hasErrors("finishDate")) {
+				Date minimumEndDate;
+				minimumEndDate = MomentHelper.deltaFromMoment(object.getStartDate(), 7, ChronoUnit.DAYS);
+				super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.-date");
+			}
 		}
 
 	}

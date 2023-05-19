@@ -55,9 +55,8 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 		super.signOut();
 	}
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/company/practicum/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int recordIndex, final String code, final String course, final String title, final String summary, final String goals) {
+	@Test
+	public void test200Negative() {
 
 	}
 
