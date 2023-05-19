@@ -22,3 +22,6 @@ lecturer.lectureCourse.form.button.add = Añadir lección
 lecturer.lectureCourse.form.button.delete = Borrar lección
 
 lecturer.lecture.lectureType-invalid = Una lección debe ser teórica (THEORY) o práctica (HANDS-ON)
+
+lecturer.lecture.estimatedLearningTime-negative = El tiempo de aprendizaje medio debe ser una cantidad positiva
+lecturer.lecture.estimatedLearningTime-exceded = El tiempo de aprendizaje medio máximo es de 100 horas
