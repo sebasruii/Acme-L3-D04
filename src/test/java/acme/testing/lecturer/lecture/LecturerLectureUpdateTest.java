@@ -85,18 +85,51 @@ public class LecturerLectureUpdateTest extends TestHarness {
 				param = String.format("id=%d", lecture.getId());
 
 				super.checkLinkExists("Sign in");
-				super.request("/lecturer/lecture/publish", param);
+				super.request("/lecturer/lecture/update", param);
 				super.checkPanicExists();
 
 				super.signIn("administrator1", "administrator1");
-				super.request("/lecturer/lecture/publish", param);
+				super.request("/lecturer/lecture/update", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("student1", "student1");
-				super.request("/lecturer/lecture/publish", param);
+				super.request("/lecturer/lecture/update", param);
 				super.checkPanicExists();
 				super.signOut();
 			}
+	}
+	@Test
+	public void test301Hacking() {
+		Collection<Lecture> lectures;
+		String param;
+
+		super.signIn("lecturer1", "lecturer1");
+		lectures = this.repository.findLecturesByLecturer("lecturer1");
+		for (final Lecture lecture : lectures)
+			if (!lecture.isDraftMode()) {
+				param = String.format("id=%d", lecture.getId());
+				super.request("/lecturer/lecture/update", param);
+				super.checkPanicExists();
+
+			}
+		super.signOut();
+
+	}
+
+	@Test
+	public void test302Hacking() {
+		Collection<Lecture> lectures;
+		String param;
+
+		super.signIn("lecturer2", "lecturer2");
+		lectures = this.repository.findLecturesByLecturer("lecturer1");
+		for (final Lecture lecture : lectures) {
+			param = String.format("id=%d", lecture.getId());
+			super.request("/lecturer/lecture/update", param);
+			super.checkPanicExists();
+
+		}
+
 	}
 }
