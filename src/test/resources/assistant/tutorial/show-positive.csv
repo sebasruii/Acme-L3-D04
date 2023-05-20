@@ -1,0 +1,6 @@
+key,code,title,summary,goals,key:assistant,key:course,draftMode,estimatedTotalTime
+tutorial-01,A111,title1,summary1,goals1,assistant-01,course-01,True,0
+tutorial-02,BB222,title1,summary1,goals1,assistant-01,course-01,True,0
+tutorial-03,ZZZ444,title1,summary1,goals1,assistant-01,course-01,True,0
+tutorial-04,AZZ444,t,summary1,goals1,assistant-01,course-01,True,0
+tutorial-05,BZZ444,ti,summary1,goals1,assistant-01,course-01,True,0
