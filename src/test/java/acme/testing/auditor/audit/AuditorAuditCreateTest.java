@@ -70,7 +70,7 @@ public class AuditorAuditCreateTest extends TestHarness {
 	}
 
 	@Test
-	public void test300Hacking() {
+	public void test300hacking() {
 
 		super.checkLinkExists("Sign in");
 		super.request("auditor/audit/create");
