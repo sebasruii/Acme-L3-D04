@@ -11,6 +11,7 @@
 assistant.tutorial.list.label.title = Title
 assistant.tutorial.list.label.summary = Summary
 assistant.tutorial.list.label.code = Code
+
 assistant.tutorial.list.label.goals = Goals
 assistant.tutorial.list.label.course = Course
 assistant.tutorial.list.label.estimatedTotalTime = Estimated Time
