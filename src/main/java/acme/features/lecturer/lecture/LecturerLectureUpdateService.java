@@ -71,7 +71,7 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 			super.state(!(object.getEstimatedLearningTime() <= 0.), "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-negative");
 
 		if (!super.getBuffer().getErrors().hasErrors("estimatedLearningTime"))
-			super.state(!(object.getEstimatedLearningTime() < 100.), "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-exceded");
+			super.state(!(object.getEstimatedLearningTime() > 100.), "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-exceded");
 
 	}
 
