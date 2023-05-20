@@ -19,7 +19,7 @@ public class LecturerLecturePublishTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/lecturer/lecture/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String lectureType) {
+	public void test100Positive(final int recordIndex, final String title) {
 		super.signIn("lecturer1", "lecturer1");
 
 		super.clickOnMenu("Lecturer", "My lectures");
@@ -27,7 +27,7 @@ public class LecturerLecturePublishTest extends TestHarness {
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("lectureType", lectureType);
+		super.checkInputBoxHasValue("title", title);
 
 		super.clickOnSubmit("Publish");
 		super.checkNotErrorsExist();
