@@ -76,6 +76,7 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 	@Override
 	public void perform(final AuditingRecord object) {
 		assert object != null;
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 
