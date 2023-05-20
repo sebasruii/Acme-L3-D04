@@ -62,6 +62,13 @@ public class AssistantTutorialShowTest extends TestHarness {
 			super.checkPanicExists();
 			super.signOut();
 
+			if (tutorial.isDraftMode()) {
+				super.signIn("assistant1", "assistant1");
+				super.request("/assistant/tutorial/show", param);
+				super.checkPanicExists();
+				super.signOut();
+			}
+
 		}
 
 	}
