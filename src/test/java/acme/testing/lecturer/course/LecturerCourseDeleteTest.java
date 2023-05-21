@@ -10,12 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.entities.courses.Course;
 import acme.testing.TestHarness;
-import acme.testing.lecturer.lecture.LecturerLectureRepositoryTest;
 
 public class LecturerCourseDeleteTest extends TestHarness {
 
 	@Autowired
-	protected LecturerLectureRepositoryTest repository;
+	protected LecturerCourseRepositoryTest repository;
 
 
 	@ParameterizedTest

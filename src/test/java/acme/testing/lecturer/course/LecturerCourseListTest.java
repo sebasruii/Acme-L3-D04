@@ -7,12 +7,11 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.testing.TestHarness;
-import acme.testing.lecturer.lecture.LecturerLectureRepositoryTest;
 
 public class LecturerCourseListTest extends TestHarness {
 
 	@Autowired
-	protected LecturerLectureRepositoryTest repository;
+	protected LecturerCourseRepositoryTest repository;
 
 
 	@ParameterizedTest
