@@ -23,7 +23,7 @@ public class AssistantTutorialShowTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String title, final String summary, final String goals, final boolean draftMode) {
+	public void test100Positive(final int recordIndex, final String code, final String title, final String summary, final String goals, final boolean draftMode, final String estimatedTotalTime) {
 		// HINT: this test signs in as an employer, then lists the announcements,
 		// HINT+ and checks that the listing shows the expected data.
 
@@ -34,11 +34,11 @@ public class AssistantTutorialShowTest extends TestHarness {
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 
-		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("summary", summary);
 		super.checkInputBoxHasValue("goals", goals);
+		super.checkInputBoxHasValue("estimatedTotalTime", estimatedTotalTime);
 
 		super.signOut();
 	}
