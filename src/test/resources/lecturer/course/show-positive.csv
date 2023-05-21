@@ -1,5 +1,5 @@
 recordIndex,code,title,summary,courseType,price,link
 0,A111,title-01,courseAbstract-01,THEORY,EUR 20.00,https:\www.course-01.com,false
-1,A112,t,courseAbstract-04,THEORY,EUR 20.00,https:\www.course-01.com,true
+1,A112,t,courseAbstract-04,BALANCED,EUR 20.00,https:\www.course-01.com,true
 2,A113,ti,courseAbstract-05,HANDS_ON,EUR 20.00,https:\www.course-01.com,false
 3,A114,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend.",courseAbstract-06,THEORY,EUR 20.00,https:\www.course-01.com,true
