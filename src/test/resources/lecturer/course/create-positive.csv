@@ -14,7 +14,7 @@ recordIndex,code,title,summary,price,link
 12,A013,test-title-07,무지개,EUR 20.00,https:\www.course-01.com
 13,A014,test-title-08,courseAbstract-01,EUR 0.01,https:\www.course-01.com
 14,A015,test-title-09,courseAbstract-01,EUR 1.01,https:\www.course-01.com
-15,A016,test-title-10,courseAbstract-01,EUR 1000.0,https:\www.course-01.com
+15,A016,test-title-10,courseAbstract-01,EUR 1000.00,https:\www.course-01.com
 16,A017,test-title-11,courseAbstract-01,EUR 999.99,https:\www.course-01.com
 17,A018,test-title-01,courseAbstract-01,EUR 20.00,
 18,A019,test-title-01,courseAbstract-01,EUR 20.00,https:\www.course-01.com
