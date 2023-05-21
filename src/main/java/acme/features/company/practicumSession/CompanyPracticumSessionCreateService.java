@@ -88,6 +88,11 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 	public void validate(final PracticumSession PracticumSession) {
 		assert PracticumSession != null;
 
+		boolean confirmation;
+
+		confirmation = PracticumSession.getPracticum().getDraftMode() ? true : super.getRequest().getData("confirmation", boolean.class);
+		super.state(confirmation, "confirmation", "company.practicum-session.form.error.confirmation");
+
 		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
 			Date minimumStartDate;
 			minimumStartDate = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);

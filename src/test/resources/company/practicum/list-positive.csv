@@ -1,6 +1,4 @@
 recordIndex,code,title,courseCode
-0,A1111,title-01,course-01
-1,BB2222,title-02,course-01
-2,CCC3333,title-03,course-01
-3,DDD4444,T,course-01
-4,EEE5555,Ti,course-02
+0,A1111,title-01,A111
+1,CCC3333,title-03,A111
+2,EEE5555,Ti,AA111

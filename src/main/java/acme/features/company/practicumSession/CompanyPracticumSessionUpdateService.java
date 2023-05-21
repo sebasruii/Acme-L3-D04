@@ -72,7 +72,7 @@ public class CompanyPracticumSessionUpdateService extends AbstractService<Compan
 			if (object.getFinishDate() != null && !super.getBuffer().getErrors().hasErrors("finishDate")) {
 				Date minimumEndDate;
 				minimumEndDate = MomentHelper.deltaFromMoment(object.getStartDate(), 7, ChronoUnit.DAYS);
-				super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.-date");
+				super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumEndDate), "finishDate", "company.practicum-session.form.error.end-date");
 			}
 		}
 

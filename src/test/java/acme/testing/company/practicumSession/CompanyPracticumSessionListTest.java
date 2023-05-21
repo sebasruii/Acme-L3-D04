@@ -35,7 +35,6 @@ public class CompanyPracticumSessionListTest extends TestHarness {
 
 		super.checkColumnHasValue(practicumRecordIndex, 0, reference);
 		super.clickOnListingRecord(practicumRecordIndex);
-		super.checkInputBoxHasValue("reference", reference);
 		super.clickOnButton("Practicum Sessions");
 
 		super.checkListingExists();

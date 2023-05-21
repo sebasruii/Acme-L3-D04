@@ -8,7 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.practicumSessions.PracticumSession;
+import acme.entities.practicums.Practicum;
 import acme.testing.TestHarness;
 
 public class CompanyPracticumSessionDeleteTest extends TestHarness {
@@ -62,21 +62,20 @@ public class CompanyPracticumSessionDeleteTest extends TestHarness {
 		// HINT: this test tries to show a duty of a job that is in draft mode or
 		// HINT+ not available, but wasn't published by the principal;
 
-		Collection<PracticumSession> practicumSessions;
+		Collection<Practicum> practicums;
 		String param;
 
-		super.signIn("company1", "company1");
-		practicumSessions = this.repository.findManyPracticumSessionsByCompanyUsername("company2");
-		for (final PracticumSession practicumSession : practicumSessions)
-			if (practicumSession.getPracticum().getDraftMode()) {
-				param = String.format("id=%d", practicumSession.getPracticum().getId());
+		practicums = this.repository.findManyPracticumsByCompanyUsername("Company1");
+		for (final Practicum practicum : practicums)
+			if (practicum.getDraftMode()) {
+				param = String.format("masterId=%d", practicum.getId());
 
 				super.checkLinkExists("Sign in");
 				super.request("/company/practicum-session/delete", param);
 				super.checkPanicExists();
 
 				super.signIn("administrator1", "administrator1");
-				super.request("//company/practicum-session/delete", param);
+				super.request("/company/practicum-session/delete", param);
 				super.checkPanicExists();
 				super.signOut();
 

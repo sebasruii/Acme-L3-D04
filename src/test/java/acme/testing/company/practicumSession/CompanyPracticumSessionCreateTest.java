@@ -43,10 +43,11 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.fillInputBoxIn("finishDate", finishDate);
 		super.fillInputBoxIn("link", link);
 
-		if (practicumRecordIndex == 0)
-			super.clickOnSubmit("Create");
-		else
+		if (practicumRecordIndex == 2)
 			super.clickOnSubmit("Create exceptional session");
+
+		else
+			super.clickOnSubmit("Create");
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -131,7 +132,7 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 
 		super.checkLinkExists("Sign in");
 		super.signIn("company1", "company1");
-		practicums = this.repository.findManyPracticumsByCompanyUsername("company1");
+		practicums = this.repository.findManyPracticumsByCompanyUsername("company2");
 		for (final Practicum practicum : practicums)
 			if (!practicum.getDraftMode()) {
 				param = String.format("masterId=%d", practicum.getId());

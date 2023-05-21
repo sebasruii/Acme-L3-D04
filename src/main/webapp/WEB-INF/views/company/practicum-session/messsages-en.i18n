@@ -35,3 +35,5 @@ company.practicum-session.form.label.finish-date = Finish Date
 
 company.practicum-session.list.label.start-date = Start Date
 company.practicum-session.list.label.finish-date = Finish Date
+
+company.practicum-session.form.error.confirmation = You must check the confirmation box.
