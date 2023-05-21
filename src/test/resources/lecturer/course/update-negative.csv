@@ -1,0 +1,11 @@
+recordIndex,code,title,summary,price,link
+1,AAAA,test-title-01-updated,courseAbstract-01-updated,EUR 30.00,https:\www.course-01-updated.com
+1,A111,test-title-01-updated,courseAbstract-01-updated,EUR 30.00,https:\www.course-01-updated.com
+1,A112,1234567890123456789012345678901234567890123456789012345678901234567890123456,courseAbstract-01-updated,EUR 30.00,https:\www.course-01-updated.com
+1,A112,,courseAbstract-01-updated,EUR 30.00,https:\www.course-01-updated.com
+1,A112,test-title-01-updated,12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901,EUR 30.00,https:\www.course-01-updated.com
+1,A112,test-title-01-updated,,EUR 30.00,https:\www.course-01-updated.com
+1,A112,test-title-01-updated,courseAbstract-01-updated,EUR -30.00,https:\www.course-01-updated.com
+1,A112,test-title-01-updated,courseAbstract-01-updated,XYZ 30.00,https:\www.course-01-updated.com
+1,A112,test-title-01-updated,courseAbstract-01-updated,,https:\www.course-01-updated.com
+1,A112,test-title-01-updated,courseAbstract-01-updated,EUR 30.00,NotAURL
