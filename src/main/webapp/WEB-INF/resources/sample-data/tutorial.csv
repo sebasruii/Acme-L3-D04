@@ -1,5 +1,5 @@
 key,code,title,summary,goals,key:assistant,key:course,draftMode,estimatedTotalTime
-tutorial-01,A111,title1,summary1,goals1,assistant-01,course-01,True,0
+tutorial-01,A111,title1,summary1,goals1,assistant-01,course-01,False,0
 tutorial-02,AZZ444,title1,summary1,goals1,assistant-01,course-01,True,0
 tutorial-03,BB222,title1,summary1,goals1,assistant-01,course-01,True,0
 tutorial-04,BZZ444,t,summary1,goals1,assistant-01,course-01,True,0

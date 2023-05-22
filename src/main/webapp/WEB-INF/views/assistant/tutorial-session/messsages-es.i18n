@@ -19,6 +19,8 @@ assistant.tutorialSession.form.label.link = Link
 assistant.tutorialSession.form.label.draftMode = Modo Borrador
 
 assistant.tutorialSession.list.label.title = Titulo
+assistant.tutorialSession.list.label.startDate = Fecha inicio
+assistant.tutorialSession.list.label.finishDate = Fecha final
 assistant.tutorialSession.list.label.type = Tipo
 assistant.tutorialSession.list.button.create = Crear
 assistant.tutorialSession.form.button.create = Crear
