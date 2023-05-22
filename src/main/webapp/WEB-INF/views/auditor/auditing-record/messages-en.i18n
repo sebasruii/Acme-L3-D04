@@ -16,6 +16,7 @@ auditor.auditingRecord.form.label.mark = Mark
 auditor.auditingRecord.form.label.link = Link
 auditor.auditingRecord.form.label.correction = Correction
 auditor.audit.form.label.draftMode = Draft
+auditor.auditingrecord.label.correction = Correction
 
 
 auditor.auditingrecord.label.subject = Subject
@@ -26,6 +27,7 @@ auditor.auditingRecord.form.button.update = Update Record
 auditor.auditingRecord.form.button.delete = Delete Record
 auditor.auditingRecord.form.button.create = Create Record
 auditor.auditingRecord.form.button.publish = Publish Record
+auditor.auditingRecord.form.button.correct = Correct Record
 
 auditor.auditingrecord.error.date.startAfterFinish = The finish date cannot be before the start date.
 auditor.auditingrecord.error.date.shortPeriod = The duration must be at least an hour.

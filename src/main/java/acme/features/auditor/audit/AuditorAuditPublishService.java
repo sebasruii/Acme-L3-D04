@@ -1,10 +1,13 @@
 
 package acme.features.auditor.audit;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.audits.Audit;
+import acme.entities.audits.AuditingRecord;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Auditor;
@@ -67,6 +70,12 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 
 			existing = this.repository.findOneAuditByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "auditor.audit.form.error.duplicated");
+
+			boolean noRecords = false;
+			final List<AuditingRecord> auditRecords = this.repository.findAllAuditingRecordsByAuditId(object.getId());
+			if (auditRecords == null)
+				noRecords = true;
+			super.state(noRecords, "*", "auditor.audit.error.records.noRecords");
 
 		}
 

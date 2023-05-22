@@ -4,7 +4,7 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>	
 
 <acme:list>
-	<acme:list-column code="audit.label.code" path="code" width="30%"/>
-	<acme:list-column code="audit.label.conclusion" path="conclusion" width="30%"/>
-	<acme:list-column code="audit.label.auditor" path="auditor" width="30%"/>
+	<acme:list-column code="authenticated.audit.form.label.code" path="code" width="20%"/>
+	<acme:list-column code="authenticated.audit.form.label.conclusion" path="conclusion" width="20%"/>
+	<acme:list-column code="authenticated.audit.form.label.auditor" path="auditor" width="20%"/>
 </acme:list>

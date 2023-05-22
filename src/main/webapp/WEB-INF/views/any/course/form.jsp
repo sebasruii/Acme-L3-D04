@@ -16,4 +16,5 @@
 	<acme:input-money code="any.course.form.label.price" path="price"/>
 	<acme:input-url code="any.course.form.label.link" path="link"/>
 
+<acme:button code="any.course.button.audits" action="/authenticated/audit/list?courseId=${id}"/>	
 </acme:form>

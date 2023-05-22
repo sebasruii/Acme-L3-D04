@@ -15,6 +15,7 @@ auditor.auditingRecord.form.label.finishDate = Fecha de fin
 auditor.auditingRecord.form.label.mark = Nota
 auditor.auditingRecord.form.label.link = Link
 auditor.audit.form.label.draftMode = Borrador
+auditor.auditingrecord.label.correction = Corrección
 
 auditor.auditingrecord.label.subject = Tema
 auditor.auditingrecord.label.mark = Nota
@@ -24,6 +25,7 @@ auditor.auditingRecord.form.button.update = Actualizar Registro
 auditor.auditingRecord.form.button.delete = Eliminar Registro
 auditor.auditingRecord.form.button.create = Crear Registro
 auditor.auditingRecord.form.button.publish = Publicar Registro
+auditor.auditingRecord.form.button.correct = Corregir Record
 
 auditor.auditingrecord.error.date.startAfterFinish = La fecha final no puede ser antes que la fecha inicial.
 auditor.auditingrecord.error.date.shortPeriod = La duración debe ser como mínimo de una hora.

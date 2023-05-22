@@ -26,5 +26,6 @@ auditor.audit.form.button.auditingRecords = Auditing Records
 auditor.audit.form.button.createAuditingrecord = Add Auditing Record
 auditor.audit.form.button.addCorrection = Add Correction
 
+auditor.audit.error.records.noRecords = An audit cannot be published without records.
 auditor.audit.error.code.duplicated = The code is duplicated, try a different one.
 auditor.audit.error.course.draft = You cannot add an audit for an unpublished course.

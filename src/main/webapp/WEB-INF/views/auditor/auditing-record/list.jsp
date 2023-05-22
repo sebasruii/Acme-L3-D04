@@ -7,4 +7,5 @@
 	<acme:list-column code="auditor.auditingrecord.label.subject" path="subject" width="20%"/>
 	<acme:list-column code="auditor.auditingrecord.label.mark" path="mark" width="20%"/>
 	<acme:list-column code="auditor.auditingrecord.label.draft" path="draft" width="20%"/>
+	<acme:list-column code="auditor.auditingrecord.label.correction" path="correction" width="20%"/>
 </acme:list>
