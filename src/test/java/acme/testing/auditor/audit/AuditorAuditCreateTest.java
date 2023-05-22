@@ -73,7 +73,7 @@ public class AuditorAuditCreateTest extends TestHarness {
 	public void test300hacking() {
 
 		super.checkLinkExists("Sign in");
-		super.request("auditor/audit/create");
+		super.request("/auditor/audit/create");
 		super.checkPanicExists();
 
 		super.signIn("administrator1", "administrator1");
