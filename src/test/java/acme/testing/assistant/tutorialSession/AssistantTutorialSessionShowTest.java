@@ -27,7 +27,7 @@ public class AssistantTutorialSessionShowTest extends TestHarness {
 		// HINT: this test signs in as an employer, lists his or her jobs, selects
 		// HINT+ one of them and checks that it's as expected.
 
-		super.signIn("assistant1", "assistant1");
+		super.signIn("assistant2", "assistant2");
 
 		super.clickOnMenu("Assistant", "Tutorials List");
 		super.checkListingExists();

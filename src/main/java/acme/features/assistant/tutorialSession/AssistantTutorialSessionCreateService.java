@@ -84,8 +84,8 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 
 			startDate = object.getStartDate();
 			finishDate = object.getFinishDate();
-			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
-			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 5, ChronoUnit.HOURS);
+			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1439, ChronoUnit.MINUTES);
+			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 299, ChronoUnit.MINUTES);
 
 			if (!super.getBuffer().getErrors().hasErrors("startDate"))
 				super.state(MomentHelper.isAfter(startDate, inADayFromNow), "startDate", "assistant.session-tutorial.error.start-1Day-after-now");

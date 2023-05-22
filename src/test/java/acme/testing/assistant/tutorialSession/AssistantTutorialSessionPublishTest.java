@@ -53,53 +53,53 @@ public class AssistantTutorialSessionPublishTest extends TestHarness {
 				param = String.format("id=%d", tutorialSession.getId());
 
 				super.checkLinkExists("Sign in");
-				super.request("/assistant/tutorial/publish", param);
+				super.request("/assistant/tutorial-session/publish", param);
 				super.checkPanicExists();
 
 				super.signIn("administrator1", "administrator1");
-				super.request("/assistant/tutorial/publish", param);
+				super.request("/assistant/tutorial-session/publish", param);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("assistant1", "assistant1");
-				super.request("/assistant/tutorial/publish", param);
+				super.request("/assistant/tutorial-session/publish", param);
 				super.checkPanicExists();
 				super.signOut();
 			}
 	}
 
-	//	@Test
-	//	public void test301Hacking() {
-	//		Collection<Tutorial> tutorials;
-	//		String param;
-	//
-	//		super.signIn("assistant2", "assistant2");
-	//		tutorials = this.repository.findTutorialsByAssistant("assistant2");
-	//		for (final Tutorial tutorial : tutorials)
-	//			if (!tutorial.isDraftMode()) {
-	//				param = String.format("id=%d", tutorial.getId());
-	//				super.request("/assistant/tutorial/publish", param);
-	//				super.checkPanicExists();
-	//
-	//			}
-	//		super.signOut();
-	//
-	//	}
-	//
-	//	@Test
-	//	public void test302Hacking() {
-	//		Collection<Tutorial> tutorials;
-	//		String param;
-	//
-	//		super.signIn("assistant2", "assistant2");
-	//		tutorials = this.repository.findTutorialsByAssistant("assistant1");
-	//		for (final Tutorial tutorial : tutorials) {
-	//			param = String.format("id=%d", tutorial.getId());
-	//			super.request("/assistant/tutorial/publish", param);
-	//			super.checkPanicExists();
-	//
-	//		}
-	//
-	//	}
+	@Test
+	public void test301Hacking() {
+		Collection<TutorialSession> tutorialSessions;
+		String param;
+
+		super.signIn("assistant2", "assistant2");
+		tutorialSessions = this.repository.findManyTutorialSessionsByAssistantUsername("assistant2");
+		for (final TutorialSession ts : tutorialSessions)
+			if (!ts.isDraftMode()) {
+				param = String.format("id=%d", ts.getId());
+				super.request("/assistant/tutorial-session/publish", param);
+				super.checkPanicExists();
+
+			}
+		super.signOut();
+
+	}
+
+	@Test
+	public void test302Hacking() {
+		Collection<TutorialSession> tutorialSessions;
+		String param;
+
+		super.signIn("assistant1", "assistant1");
+		tutorialSessions = this.repository.findManyTutorialSessionsByAssistantUsername("assistant2");
+		for (final TutorialSession ts : tutorialSessions) {
+			param = String.format("id=%d", ts.getId());
+			super.request("/assistant/tutorial-session/publish", param);
+			super.checkPanicExists();
+
+		}
+
+	}
 
 }

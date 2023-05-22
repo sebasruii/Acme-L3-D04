@@ -1,0 +1,9 @@
+tutorialRecordIndex,tutorialSessionRecordIndex,title,summary,type,startDate,finishDate,link
+9,0,,summary,HANDS_ON,2022/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com
+9,0,t,,HANDS_ON,2022/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com
+9,0,t,summary,HANDS_ON,,2023/08/02 23:00,https:\\www.lecture-01.com
+9,0,t,summary,HANDS_ON,2022/08/01 23:00,,https:\\www.lecture-01.com
+9,0,t,summary,HANDS_ON,2022/08/30 23:00,2022/08/30 22:59,
+9,0,t,summary,HANDS_ON,2022/08/30 00:00,2022/08/30 04:59,
+9,0,t,summary,HANDS_ON,2022/08/30 23:00,2022/08/02 23:00,
+9,0,t,summary,HANDS_ON,2022/08/01 00:00,2022/08/30 04:59,
