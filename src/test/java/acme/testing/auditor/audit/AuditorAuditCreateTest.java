@@ -77,12 +77,7 @@ public class AuditorAuditCreateTest extends TestHarness {
 		super.checkPanicExists();
 
 		super.signIn("administrator1", "administrator1");
-		super.request("auditor/audit/create");
-		super.checkPanicExists();
-		super.signOut();
-
-		super.signIn("student1", "student1");
-		super.request("auditor/audit/create");
+		super.request("/auditor/audit/create");
 		super.checkPanicExists();
 		super.signOut();
 

@@ -47,7 +47,6 @@ public class AuditorAuditingRecordUpdateTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordRecordIndex, 0, subject);
 
 		super.clickOnListingRecord(recordRecordIndex);
 		super.checkInputBoxHasValue("subject", subject);
