@@ -77,6 +77,9 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 				noRecords = true;
 			super.state(noRecords, "*", "auditor.audit.error.records.noRecords");
 
+			boolean notPublishedRecords = false;
+			notPublishedRecords = auditRecords.stream().anyMatch(AuditingRecord::getDraftMode);
+			super.state(!notPublishedRecords, "*", "auditor.audit.error.records.notPublished");
 		}
 
 	}

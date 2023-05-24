@@ -36,6 +36,7 @@ public class AuditorAuditUpdateTest extends TestHarness {
 
 		super.checkListingExists();
 		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordIndex, 0, code);
 
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();

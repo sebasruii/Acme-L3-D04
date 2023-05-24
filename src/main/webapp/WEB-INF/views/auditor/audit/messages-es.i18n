@@ -26,6 +26,7 @@ auditor.audit.form.button.auditingRecords = Registros de Auditoría
 auditor.audit.form.button.createAuditingrecord = Añadir Registro
 auditor.audit.form.button.addCorrection = Añadir Corrección
 
+auditor.audit.error.records.notPublished = Una auditoría no puede publicarse si sus registros no están publicados.
 auditor.audit.error.records.noRecords = Una auditoría no puede publicarse sin registros.
 auditor.audit.error.code.duplicated = El código está duplicado, prueba otro.
 auditor.audit.error.course.draft = No puedes añadir una auditoría para un curso sin publicar.

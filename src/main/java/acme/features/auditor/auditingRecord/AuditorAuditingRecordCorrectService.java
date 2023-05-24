@@ -65,11 +65,14 @@ public class AuditorAuditingRecordCorrectService extends AbstractService<Auditor
 	public void validate(final AuditingRecord object) {
 		assert object != null;
 
+		final Boolean confirm = super.getRequest().getData("confirm", boolean.class);
+		super.state(confirm, "*", "auditor.auditingRecord.correction.confirmation");
+
 		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("startDate"))
 			if (!MomentHelper.isBefore(object.getStartDate(), object.getFinishDate()))
-				super.state(false, "startDate", "auditor.auditingrecord.error.date.startAfterFinish");
+				super.state(false, "startDate", "auditor.auditingRecord.error.date.startAfterFinish");
 			else
-				super.state(!(object.getHoursFromStart() < 1), "startDate", "auditor.auditingrecord.error.date.shortPeriod");
+				super.state(!(object.getHoursFromStart() < 1), "startDate", "auditor.auditingRecord.error.date.shortPeriod");
 
 	}
 

@@ -17,6 +17,8 @@ auditor.auditingRecord.form.label.link = Link
 auditor.auditingRecord.form.label.correction = Correction
 auditor.audit.form.label.draftMode = Draft
 auditor.auditingrecord.label.correction = Correction
+auditor.auditingRecord.message.correction.disclaimer = Confirm the request to correct the audit.
+auditor.auditingRecord.label.confirm = Confirm
 
 
 auditor.auditingrecord.label.subject = Subject
@@ -29,5 +31,6 @@ auditor.auditingRecord.form.button.create = Create Record
 auditor.auditingRecord.form.button.publish = Publish Record
 auditor.auditingRecord.form.button.correct = Correct Record
 
+auditor.auditingRecord.correction.confirmation = This action requires confirmation.
 auditor.auditingrecord.error.date.startAfterFinish = The finish date cannot be before the start date.
 auditor.auditingrecord.error.date.shortPeriod = The duration must be at least an hour.
