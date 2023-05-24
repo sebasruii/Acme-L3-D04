@@ -63,7 +63,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 	public void bind(final TutorialSession object) {
 		assert object != null;
 
-		super.bind(object, "title", "type", "summary", "startDate", "finishDate", "link", "draftMode");
+		super.bind(object, "title", "type", "summary", "startDate", "finishDate", "link");
 	}
 
 	@Override
