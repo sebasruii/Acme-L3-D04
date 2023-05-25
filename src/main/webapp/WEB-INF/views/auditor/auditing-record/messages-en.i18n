@@ -32,5 +32,5 @@ auditor.auditingRecord.form.button.publish = Publish Record
 auditor.auditingRecord.form.button.correct = Correct Record
 
 auditor.auditingRecord.correction.confirmation = This action requires confirmation.
-auditor.auditingrecord.error.date.startAfterFinish = The finish date cannot be before the start date.
-auditor.auditingrecord.error.date.shortPeriod = The duration must be at least an hour.
+auditor.auditingRecord.error.date.startAfterFinish = The finish date cannot be before the start date.
+auditor.auditingRecord.error.date.shortPeriod = The duration must be at least an hour.

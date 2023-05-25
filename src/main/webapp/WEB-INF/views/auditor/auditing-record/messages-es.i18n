@@ -30,5 +30,5 @@ auditor.auditingRecord.form.button.publish = Publicar Registro
 auditor.auditingRecord.form.button.correct = Corregir Record
 
 auditor.auditingRecord.correction.confirmation = Esta acción requiere confirmación.
-auditor.auditingrecord.error.date.startAfterFinish = La fecha final no puede ser antes que la fecha inicial.
-auditor.auditingrecord.error.date.shortPeriod = La duración debe ser como mínimo de una hora.
+auditor.auditingRecord.error.date.startAfterFinish = La fecha final no puede ser antes que la fecha inicial.
+auditor.auditingRecord.error.date.shortPeriod = La duración debe ser como mínimo de una hora.
