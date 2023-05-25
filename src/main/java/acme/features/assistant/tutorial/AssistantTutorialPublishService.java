@@ -1,9 +1,12 @@
 
 package acme.features.assistant.tutorial;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.tutorialSessions.TutorialSession;
 import acme.entities.tutorials.Tutorial;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -67,8 +70,11 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 
 			existing = this.repository.findTutorialByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "assistant.tutorial.form.error.duplicated");
-
 		}
+
+		Collection<TutorialSession> sessions;
+		sessions = this.repository.findAllTutorialsSessionByTutorialId(object.getId());
+		super.state(!sessions.isEmpty(), "*", "assistant.tutorial.form.error.no-sessions");
 
 	}
 
