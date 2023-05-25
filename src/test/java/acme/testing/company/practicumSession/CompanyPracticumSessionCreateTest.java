@@ -36,17 +36,21 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.clickOnButton("Practicum Sessions");
 
-		super.clickOnButton("Create");
+		if (practicumRecordIndex == 4)
+			super.clickOnButton("Create exceptional session");
+		else
+			super.clickOnButton("Create");
+
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("summary", summary);
 		super.fillInputBoxIn("startDate", startDate);
 		super.fillInputBoxIn("finishDate", finishDate);
 		super.fillInputBoxIn("link", link);
 
-		if (practicumRecordIndex == 2)
+		if (practicumRecordIndex == 4) {
+			super.fillInputBoxIn("confirmation", "true");
 			super.clickOnSubmit("Create exceptional session");
-
-		else
+		} else
 			super.clickOnSubmit("Create");
 
 		super.checkListingExists();
@@ -79,13 +83,17 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.clickOnButton("Practicum Sessions");
 
-		super.clickOnButton("Create");
+		if (practicumRecordIndex == 4)
+			super.clickOnButton("Create exceptional session");
+		else
+			super.clickOnButton("Create");
+
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("summary", summary);
 		super.fillInputBoxIn("startDate", startDate);
 		super.fillInputBoxIn("finishDate", finishDate);
 		super.fillInputBoxIn("link", link);
-		if (practicumRecordIndex == 0)
+		if (practicumRecordIndex != 4)
 			super.clickOnSubmit("Create");
 		else
 			super.clickOnSubmit("Create exceptional session");

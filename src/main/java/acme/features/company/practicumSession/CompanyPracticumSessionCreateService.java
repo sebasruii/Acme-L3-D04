@@ -40,10 +40,13 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 		boolean status;
 		int practicumId;
 		Practicum practicum;
+		Company company;
 
+		company = this.repository.findCompanyById(super.getRequest().getPrincipal().getActiveRoleId());
 		practicumId = super.getRequest().getData("masterId", int.class);
 		practicum = this.repository.findPracticumById(practicumId);
-		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
+
+		status = super.getRequest().getPrincipal().hasRole(practicum.getCompany()) && company == practicum.getCompany() && practicum != null;
 		super.getResponse().setAuthorised(status);
 	}
 
