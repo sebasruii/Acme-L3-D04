@@ -29,13 +29,15 @@ public class CompanyPracticumSessionShowService extends AbstractService<Company,
 	@Override
 	public void authorise() {
 		boolean status;
-		int practicumSessionId;
 		Practicum practicum;
+		Company company;
+		int practicumSessionId;
 
+		company = this.repository.findCompanyById(super.getRequest().getPrincipal().getActiveRoleId());
 		practicumSessionId = super.getRequest().getData("id", int.class);
 		practicum = this.repository.findPracticumByPracticumSessionId(practicumSessionId);
-		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
 
+		status = super.getRequest().getPrincipal().hasRole(practicum.getCompany()) && company.getId() == practicum.getCompany().getId() && practicum != null;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -56,7 +58,7 @@ public class CompanyPracticumSessionShowService extends AbstractService<Company,
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link");
+		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link", "exceptional");
 		tuple.put("masterId", object.getPracticum().getId());
 		tuple.put("draftMode", object.getPracticum().getDraftMode());
 

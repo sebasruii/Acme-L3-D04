@@ -77,6 +77,12 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 
 		if (!super.getBuffer().getErrors().hasErrors("code"))
 			super.state(this.repository.findPracticumByCode(object.getCode()) == null || this.repository.findPracticumByCode(object.getCode()).equals(object), "code", "company.practicum.form.error.code");
+
+		if (!super.getBuffer().getErrors().hasErrors("draftMode")) {
+			final boolean draftMode = object.getDraftMode();
+			super.state(draftMode, "draftMode", "company.practicum.error.draftMode.published.update");
+		}
+
 	}
 
 	@Override
@@ -97,7 +103,7 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals");
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 

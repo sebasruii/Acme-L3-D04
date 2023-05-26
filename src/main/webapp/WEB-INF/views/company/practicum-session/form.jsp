@@ -10,6 +10,8 @@
 	<acme:input-moment code="company.practicum-session.form.label.start-date" path="startDate"/>
 	<acme:input-moment code="company.practicum-session.form.label.finish-date" path="finishDate"/>
 	<acme:input-url code="company.practicum-session.form.label.further-information-link" path="link"/>
+	<acme:input-textbox code="company.practicum-session.form.label.exceptional" path="exceptional" readonly="true"/>
+	
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
