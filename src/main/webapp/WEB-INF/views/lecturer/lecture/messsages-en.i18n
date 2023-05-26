@@ -23,5 +23,5 @@ lecturer.lectureCourse.form.button.delete = Delete lecture
 
 lecturer.lecture.lectureType-invalid = A lecture must be theoretical or hands-on
 
-lecturer.lecture.estimatedLearningTime-negative = Estimated learning time must be positive
-lecturer.lecture.estimatedLearningTime-exceded = Maximum estimated learning time is 100 hours
+lecturer.lecture.estimatedLearningTime-negative = Minimum estimated learning time is 0.01 hours
+lecturer.lecture.estimatedLearningTime-exceded = Maximum estimated learning time is 1000 hours

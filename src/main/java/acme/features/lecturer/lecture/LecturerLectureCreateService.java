@@ -56,10 +56,10 @@ public class LecturerLectureCreateService extends AbstractService<Lecturer, Lect
 			super.state(!object.getLectureType().equals(NatureType.BALANCED), "lectureType", "lecturer.lecture.lectureType-invalid");
 
 		if (!super.getBuffer().getErrors().hasErrors("estimatedLearningTime"))
-			super.state(!(object.getEstimatedLearningTime() <= 0.), "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-negative");
+			super.state(object.getEstimatedLearningTime() >= 0.01, "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-negative");
 
 		if (!super.getBuffer().getErrors().hasErrors("estimatedLearningTime"))
-			super.state(!(object.getEstimatedLearningTime() > 100.), "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-exceded");
+			super.state(object.getEstimatedLearningTime() <= 1000., "estimatedLearningTime", "lecturer.lecture.estimatedLearningTime-exceded");
 
 	}
 
