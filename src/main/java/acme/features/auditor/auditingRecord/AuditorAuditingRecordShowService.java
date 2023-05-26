@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.audits.AuditingRecord;
 import acme.framework.components.models.Tuple;
-import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Auditor;
 
@@ -57,15 +56,11 @@ public class AuditorAuditingRecordShowService extends AbstractService<Auditor, A
 	public void unbind(final AuditingRecord object) {
 		assert object != null;
 
-		final String format = "dd/MM/yyyy hh:mm";
-
 		Tuple tuple;
 
-		tuple = super.unbind(object, "subject", "assessment", "link", "draftMode", "correction");
-		tuple.put("startDate", MomentHelper.format(format, object.getStartDate()));
-		tuple.put("finishDate", MomentHelper.format(format, object.getFinishDate()));
+		tuple = super.unbind(object, "subject", "assessment", "link", "draftMode", "correction", "mark", "startDate", "finishDate");
 		tuple.put("hours", object.getHoursFromStart());
-		tuple.put("marks", object.getMark());
+		tuple.put("mark", object.getMark());
 
 		super.getResponse().setData(tuple);
 	}

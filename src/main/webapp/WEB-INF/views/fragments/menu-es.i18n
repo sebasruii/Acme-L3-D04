@@ -28,6 +28,7 @@ master.menu.authenticated.audit.list = Listar Auditorías
 master.menu.auditor = Auditor
 master.menu.auditor.list = Listar Auditorías
 master.menu.auditor.create = Crear Auditorías
+master.menu.auditor.dashboard = Panel de indicadores
 
 
 # master.menu.anonymous #######################################################
@@ -97,7 +98,7 @@ master.menu.lecturer.dashboard = Panel de indicadores
 
 # master.menu.company ###################################################
 
-master.menu.company= Prácticas
+master.menu.company= Compañía
 master.menu.company.my-practica = Mis prácticas
 master.menu.company.dashboard = Estadísticas de las Prácticas
 

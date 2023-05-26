@@ -41,6 +41,7 @@ master.menu.authenticated.note.create = Publish a note
 master.menu.auditor = Auditor
 master.menu.auditor.list = List Audits
 master.menu.auditor.create = Create Audit
+master.menu.auditor.dashboard = Dashboard
 
 # master.menu.administrator ###################################################
 
@@ -99,7 +100,7 @@ master.menu.student.studentEnrolmentList = List of Enrolments
 
 # master.menu.company ###################################################
 
-master.menu.company= Practicums
+master.menu.company= Company
 master.menu.company.dashboard = Practicum Dashboard
 
 master.menu.lecturer.list = My courses
