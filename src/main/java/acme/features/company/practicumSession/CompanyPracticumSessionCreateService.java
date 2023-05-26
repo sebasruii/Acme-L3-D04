@@ -7,6 +7,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SystemConfigurationService;
 import acme.entities.practicumSessions.PracticumSession;
 import acme.entities.practicums.Practicum;
 import acme.framework.components.models.Tuple;
@@ -24,6 +25,9 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 	// Internal state ---------------------------------------------------------
 	@Autowired
 	private CompanyPracticumSessionRepository	repository;
+
+	@Autowired
+	protected SystemConfigurationService		configurationService;
 
 	// AbstractService Interface ----------------------------------------------
 
@@ -119,12 +123,14 @@ public class CompanyPracticumSessionCreateService extends AbstractService<Compan
 	@Override
 	public void unbind(final PracticumSession PracticumSession) {
 		assert PracticumSession != null;
+		final String lang = super.getRequest().getLocale().getLanguage();
 
 		Practicum practicum;
 		Tuple tuple;
 
 		practicum = PracticumSession.getPracticum();
 		tuple = super.unbind(PracticumSession, "title", "summary", "startDate", "finishDate", "link", "exceptional");
+		tuple.put("exceptional", this.configurationService.booleanTranslated(PracticumSession.getExceptional(), lang));
 		tuple.put("masterId", practicum.getId());
 		tuple.put("draftMode", practicum.getDraftMode());
 
