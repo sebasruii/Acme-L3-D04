@@ -18,10 +18,12 @@
  student.enrolment.form.label.creditCard = Credit Card
  student.enrolment.form.label.cardHolderName = Holder Name
  student.enrolment.form.label.cardLowerNibble = Lower Nibble
+ student.enrolment.form.label.estimatedTotalTime = Estimated Total Time
  student.enrolment.form.button.finalize = Finalize
  student.enrolment.form.button.create = Create
  student.enrolment.form.button.update = Update
  student.enrolment.form.button.delete = Delete
+ student.enrolment.form.title.finalize = Finalize enrolment
 
  student.enrolment.list.label.code = Code
  student.enrolment.list.label.motivation = Motivation
@@ -30,8 +32,10 @@
  student.enrolment.list.label.student = Student
  student.enrolment.list.button.create = Create:
 
- student.enrolment.form.error.expiryDate = Expiration date's format must be DD/YY
- student.enrolment.form.error.cvc = CVC's format must be 3 numbers
  student.enrolment.form.error.card = Credit card's format must be XXXX/XXXX/XXXX/XXXX
+ student.enrolment.form.error.expiryDate.pattern = The format of expiration date must be MM/YY
+ student.enrolment.form.error.expiryDate.before = The format of expiration date's must be after the current date
+ student.enrolment.form.error.cvc = The CVC must be 3 numbers 
  student.enrolment.form.error.code = Duplicated code
  student.enrolment.form.error.holder = This field mustn't be empty
+ student.enrolment.form.button.activities = Activities
