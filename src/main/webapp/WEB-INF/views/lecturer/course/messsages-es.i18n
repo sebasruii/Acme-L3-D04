@@ -23,5 +23,5 @@ lecturer.course.form.error.unpublishedLectures = Todas las lecciones deben estar
 lecturer.course.form.error.allLecturesAreTheory = Los cursos no pueden ser puramente teóricos.
 lecturer.course.form.error.currency = Esta moneda no es aceptada por el sistema
 
-lecturer.course.form.error.max-price = El precio máximo para un curso es 1000
+lecturer.course.form.error.max-price = El precio máximo para un curso es 1000000
 
