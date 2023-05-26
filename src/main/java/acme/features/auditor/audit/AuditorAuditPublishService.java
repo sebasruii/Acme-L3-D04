@@ -71,11 +71,8 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 			existing = this.repository.findOneAuditByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "auditor.audit.form.error.duplicated");
 
-			boolean noRecords = false;
 			final List<AuditingRecord> auditRecords = this.repository.findAllAuditingRecordsByAuditId(object.getId());
-			if (auditRecords == null)
-				noRecords = true;
-			super.state(noRecords, "*", "auditor.audit.error.records.noRecords");
+			super.state(!auditRecords.isEmpty(), "*", "auditor.audit.error.records.noRecords");
 
 			boolean notPublishedRecords = false;
 			notPublishedRecords = auditRecords.stream().anyMatch(AuditingRecord::getDraftMode);
