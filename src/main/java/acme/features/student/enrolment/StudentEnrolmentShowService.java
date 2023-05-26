@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.courses.Course;
 import acme.entities.enrolment.Enrolment;
+import acme.entities.workbook.Activity;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -35,12 +36,14 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
+		int enrolmentId;
 		Enrolment enrolment;
+		final int userId;
 
-		id = super.getRequest().getData("id", int.class);
-		enrolment = this.repository.findEnrolmentById(id);
-		status = enrolment != null;
+		userId = super.getRequest().getPrincipal().getAccountId();
+		enrolmentId = super.getRequest().getData("id", int.class);
+		enrolment = this.repository.findEnrolmentById(enrolmentId);
+		status = enrolment.getStudent().getUserAccount().getId() == userId && enrolment != null;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -52,6 +55,7 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 		id = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findEnrolmentById(id);
 
+		super.getResponse().setGlobal("draftMode", enrolment.isDraftMode());
 		super.getBuffer().setData(enrolment);
 
 	}
@@ -62,18 +66,19 @@ public class StudentEnrolmentShowService extends AbstractService<Student, Enrolm
 
 		Tuple tuple;
 		Collection<Course> courses;
+		Double estimatedTotalTime;
 		SelectChoices choices;
-		courses = this.repository.findAllCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
-		Boolean finalized = false;
+		final Collection<Activity> activities;
 
-		if (object.getCardHolderName() != null && object.getCardHolderName() != null)
-			finalized = true;
-		tuple = super.unbind(object, "code", "motivation", "goals", "cardHolderName", "cardLowerNibble");
+		activities = this.repository.findManyActivitiesByEnrolmentId(object.getId());
+		estimatedTotalTime = object.workTime(activities);
+		courses = this.repository.findAllCourses();
+		choices = SelectChoices.from(courses, "code", object.getCourse());
+		tuple = super.unbind(object, "code", "motivation", "goals", "cardHolderName", "cardLowerNibble", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		super.getResponse().setData(tuple);
-		tuple.put("finalized", finalized);
 		tuple.put("objectId", object.getId());
 	}
 }
