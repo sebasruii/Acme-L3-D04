@@ -9,7 +9,7 @@ recordIndex,code,title,summary,price,link
 0,A001,test-title-01,courseAbstract-01,NotMoney,https:\www.course-01.com
 0,A001,test-title-01,courseAbstract-01,XYZ 10.00,https:\www.course-01.com
 0,A001,test-title-01,courseAbstract-01,EUR -10.00,https:\www.course-01.com
-0,A001,test-title-01,courseAbstract-01,EUR 0.00,https:\www.course-01.com
-0,A001,test-title-01,courseAbstract-01,EUR 1001.00,https:\www.course-01.com
+0,A001,test-title-01,courseAbstract-01,EUR -0.01,https:\www.course-01.com
+0,A001,test-title-01,courseAbstract-01,EUR 1000000.01,https:\www.course-01.com
 0,A001,test-title-01,courseAbstract-01,EUR 20.00,NotAURL
 0,A111,test-title-01,courseAbstract-01,EUR 20.00,https:\www.course-01.com
