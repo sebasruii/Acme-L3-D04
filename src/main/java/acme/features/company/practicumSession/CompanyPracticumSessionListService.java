@@ -2,6 +2,7 @@
 package acme.features.company.practicumSession;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -58,7 +59,7 @@ public class CompanyPracticumSessionListService extends AbstractService<Company,
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "startDate", "endDate");
+		tuple = super.unbind(object, "title", "startDate", "finishDate");
 
 		super.getResponse().setData(tuple);
 	}
@@ -74,8 +75,8 @@ public class CompanyPracticumSessionListService extends AbstractService<Company,
 
 		practicumId = super.getRequest().getData("masterId", int.class);
 		practicum = this.repository.findPracticumById(practicumId);
-		showCreate = super.getRequest().getPrincipal().hasRole(practicum.getCompany());
-		exceptionalCreate = practicum.getDraftMode();
+		showCreate = super.getRequest().getPrincipal().hasRole(practicum.getCompany()) && practicum.getDraftMode();
+		exceptionalCreate = !practicum.getDraftMode() && objects.stream().filter(x -> x.getExceptional()).collect(Collectors.toList()).isEmpty();
 
 		super.getResponse().setGlobal("masterId", practicumId);
 		super.getResponse().setGlobal("showCreate", showCreate);

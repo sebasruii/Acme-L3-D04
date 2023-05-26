@@ -47,18 +47,10 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 		assert object != null;
 
 		Date instantiation;
-
 		instantiation = MomentHelper.getCurrentMoment();
-
-		final Any any = new Any();
-
-		if (super.getRequest().getPrincipal().hasRole(any))
-			object.setNick(null);
-		else
-			object.setNick(super.getRequest().getPrincipal().getUsername());
+		object.setInstantiation(instantiation);
 
 		super.bind(object, "title", "nick", "message", "email", "link");
-		object.setInstantiation(instantiation);
 	}
 
 	@Override
@@ -69,6 +61,11 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 	@Override
 	public void perform(final Peep object) {
 		assert object != null;
+		if (object.getNick() == null || object.getNick().trim().length() == 0)
+			if (super.getRequest().getPrincipal().isAnonymous())
+				object.setNick("anonymous");
+			else
+				object.setNick(super.getRequest().getPrincipal().getUsername());
 
 		this.repository.save(object);
 	}

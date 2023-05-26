@@ -15,6 +15,8 @@
 	</jstl:choose>
 	<acme:input-money code="any.course.form.label.price" path="price"/>
 	<acme:input-url code="any.course.form.label.link" path="link"/>
+	<acme:button code="assistant.tutorial.form.button.tutorial" action="/authenticated/tutorial/list?masterId=${id}" />
+	<acme:button code="company.practicum.form.button.practicum" action="/authenticated/practicum/list?masterId=${id}"/>
 
 <acme:button code="any.course.button.audits" action="/authenticated/audit/list?courseId=${id}"/>	
 </acme:form>

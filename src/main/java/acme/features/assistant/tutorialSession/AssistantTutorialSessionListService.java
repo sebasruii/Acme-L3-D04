@@ -48,9 +48,11 @@ public class AssistantTutorialSessionListService extends AbstractService<Assista
 	public void load() {
 		Collection<TutorialSession> objects;
 		int masterId;
+		int assistantId;
 
+		assistantId = super.getRequest().getPrincipal().getActiveRoleId();
 		masterId = super.getRequest().getData("masterId", int.class);
-		objects = this.repository.findManySessionsByMasterId(masterId);
+		objects = this.repository.findManySessionsByTutorialIdAssistantId(masterId, assistantId);
 
 		super.getBuffer().setData(objects);
 	}

@@ -40,6 +40,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 	public void load() {
 		final Tutorial object = new Tutorial();
 		object.setDraftMode(true);
+		object.setEstimatedTotalTime("0");
 		super.getBuffer().setData(object);
 	}
 
@@ -53,8 +54,6 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 			super.state(existing == null, "code", "assistant.tutorial.form.error.duplicated");
 		}
 
-		if (object.getCourse() != null && object.getCourse().isDraftMode())
-			super.state(!object.getCourse().isDraftMode(), "course", "assistant.tutorial.error.course.draft");
 	}
 
 	@Override
@@ -64,7 +63,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		final int courseId = super.getRequest().getData("course", int.class);
 		final Course course = this.repository.findCourseById(courseId);
 
-		super.bind(object, "code", "title", "summary", "goals", "draftMode");
+		super.bind(object, "code", "title", "summary", "goals");
 		final Assistant assistant = this.repository.findAssistantById(super.getRequest().getPrincipal().getActiveRoleId());
 		object.setAssistant(assistant);
 		object.setCourse(course);
@@ -85,7 +84,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		final List<Course> courses = this.repository.findAllPublishedCourses();
 		final SelectChoices choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode");
+		tuple = super.unbind(object, "code", "title", "summary", "goals");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 

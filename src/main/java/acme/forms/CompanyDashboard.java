@@ -1,6 +1,8 @@
 
 package acme.forms;
 
+import java.util.Map;
+
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +16,7 @@ public class CompanyDashboard extends AbstractForm {
 
 	// Attributes ----------------------------------------------------------
 
-	private int					totalPracticums;
+	private Map<String, Long>	numPracticumPerMonth;
 	private Statistics			practicumSessionStatistics;
 	private Statistics			practicumStatistics;
 

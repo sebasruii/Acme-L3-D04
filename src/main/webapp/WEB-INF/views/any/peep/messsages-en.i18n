@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.peep.list.label.intantiation = Creation Date
+any.peep.list.label.instantiation = Creation Date
 any.peep.list.label.title = Title
 any.peep.list.label.nick = Nick
 any.peep.list.button.publish = Publish

@@ -101,8 +101,7 @@ master.menu.student.studentEnrolmentList = List of Enrolments
 # master.menu.company ###################################################
 
 master.menu.company= Practicums
-master.menu.company.practicum.list-mine = List my practicum
-master.menu.company.practicum.list-all = List all practicum
+master.menu.company.dashboard = Practicum Dashboard
 
 master.menu.lecturer.list = My courses
 master.menu.lecturer.create = Create a Course
@@ -116,7 +115,8 @@ master.menu.anonymous.peep = Peeps
 
 # master.menu.practicum ##########################################################
 master.menu.practicum= Practicum
-authenticated.practicum.form.button.list= Practicum
+authenticated.practicum.form.button.list= List Practicums
+authenticated.practicum.form.label.course= Course
 
 master.menu.lecturer.dashboard = Dashboard
 master.menu.lecturer.course.list = My courses

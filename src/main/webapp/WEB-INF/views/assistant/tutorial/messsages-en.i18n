@@ -13,13 +13,17 @@ assistant.tutorial.list.label.summary = Summary
 assistant.tutorial.list.label.code = Code
 assistant.tutorial.list.label.goals = Goals
 assistant.tutorial.list.label.course = Course
+assistant.tutorial.list.label.estimatedTotalTime = Estimated Time
 
 assistant.tutorial.label.draftMode = Draft Mode
 assistant.tutorial.form.label.course = Course
 
+assistant.tutorial.list.button.create = Create
 assistant.tutorial.form.button.create = Create
 assistant.tutorial.form.button.delete = Delete
 assistant.tutorial.form.button.update = Update
 assistant.tutorial.form.button.publish = Publish
 assistant.tutorial.form.button.tutorials = Tutorials
 assistant.tutorial.form.button.tutorialSessions = Tutorial Session
+
+assistant.tutorial.form.error.duplicated=This code is already in use
