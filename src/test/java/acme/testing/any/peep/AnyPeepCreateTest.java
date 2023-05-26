@@ -29,7 +29,7 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, nick);
 
@@ -46,7 +46,7 @@ public class AnyPeepCreateTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/peep/create-positive2.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Positive(final int recordIndex, final String title, final String message, final String email, final String link) {
+	public void test101Positive(final int recordIndex, final String title, final String message, final String email, final String link) {
 		// HINT: Testea que si se crea un peep siendo anónimo se pone como nick anonymous al dejar el campo en blanco
 
 		super.clickOnMenu("Peeps");
@@ -61,7 +61,7 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, "anonymous");
 
@@ -73,11 +73,11 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("email", email);
 		super.checkInputBoxHasValue("link", link);
 
-		super.signOut();
 	}
 
+	@ParameterizedTest
 	@CsvFileSource(resources = "/any/peep/create-positive3.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test300Positive(final int recordIndex, final String title, final String message, final String email, final String link) {
+	public void test102Positive(final int recordIndex, final String title, final String message, final String email, final String link) {
 		// HINT: Testea que si se crea un peep siendo un usuario autenticado se pone como nick el nombre de usuario al dejar el campo en blanco
 
 		super.signIn("company1", "company1");
@@ -94,7 +94,7 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, "company1");
 
