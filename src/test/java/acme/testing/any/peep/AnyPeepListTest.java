@@ -11,17 +11,16 @@ public class AnyPeepListTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/peep/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int recordIndex, final String code, final String instantiation, final String title, final String nick) {
+	public void test100Positive(final int recordIndex, final String instantiation, final String title, final String nick) {
 
 		super.clickOnMenu("Peeps");
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(1, "asc");
 
 		super.checkColumnHasValue(recordIndex, 0, instantiation);
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, nick);
 
-		super.signOut();
 	}
 
 	@Test
