@@ -41,6 +41,7 @@ master.menu.authenticated.note.create = Publish a note
 master.menu.auditor = Auditor
 master.menu.auditor.list = List Audits
 master.menu.auditor.create = Create Audit
+master.menu.auditor.dashboard = Dashboard
 
 # master.menu.administrator ###################################################
 

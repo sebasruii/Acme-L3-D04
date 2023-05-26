@@ -43,7 +43,6 @@ public class AuditorAuditListService extends AbstractService<Auditor, Audit> {
 		final Tuple tuple = super.unbind(object, "code", "conclusion");
 		tuple.put("courseCode", object.getCourse().getCode());
 		tuple.put("course", object.getCourse().getTitle());
-		tuple.put("draft", object.isDraftMode() ? "No" : "Yes");
 		super.getResponse().setData(tuple);
 	}
 

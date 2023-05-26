@@ -13,6 +13,7 @@
 package acme.features.authenticated.audit;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -46,5 +47,14 @@ public interface AuthenticatedAuditRepository extends AbstractRepository {
 
 	@Query("select a from Audit a where a.auditor.id = :id")
 	Collection<Audit> findAllAuditsByAuditorId(int id);
+
+	@Query("select audit from Audit audit where audit.draftMode = false and audit.course.id = :courseId")
+	List<Audit> findAllReleasedAuditsByCourseId(int courseId);
+
+	@Query("select audit from Audit audit where audit.id = :id")
+	Audit findAuditById(int id);
+
+	@Query("select ar.mark from AuditingRecord ar where ar.draftMode = false and ar.audit.id = :id")
+	List<String> findAllReleasedMarksByAuditId(int id);
 
 }

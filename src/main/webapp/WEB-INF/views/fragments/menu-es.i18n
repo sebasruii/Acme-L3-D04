@@ -28,6 +28,7 @@ master.menu.authenticated.audit.list = Listar Auditorías
 master.menu.auditor = Auditor
 master.menu.auditor.list = Listar Auditorías
 master.menu.auditor.create = Crear Auditorías
+master.menu.auditor.dashboard = Panel de indicadores
 
 
 # master.menu.anonymous #######################################################
