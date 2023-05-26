@@ -49,6 +49,10 @@ public class Tutorial extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+	protected String			estimatedTotalTime;
+
+	// Derived attributes -----------------------------------------------------
+
 	// Relationships ----------------------------------------------------------
 	@ManyToOne(optional = false)
 	@Valid

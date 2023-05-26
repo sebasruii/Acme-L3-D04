@@ -55,7 +55,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	public void bind(final Tutorial object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "summary", "goals", "draftMode");
+		super.bind(object, "code", "title", "summary", "goals");
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 		assert object != null;
 
 		Tuple tuple;
-		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode");
+		tuple = super.unbind(object, "code", "title", "summary", "goals");
 
 		super.getResponse().setData(tuple);
 	}

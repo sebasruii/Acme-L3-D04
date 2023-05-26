@@ -1,12 +1,16 @@
 key,key:lecturer,code,title,summary,price,link,draft-mode
 course-01,lecturer-01,A111,title-01,courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-02,lecturer-01,AA111,title-01,courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-03,lecturer-01,AAA111,title-01,courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-04,lecturer-01,A112,t,courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-05,lecturer-01,A113,ti,courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-06,lecturer-01,A114,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend.",courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-07,lecturer-01,A115,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend",courseAbstract-01,EUR 20.00,https:\\www.course-01.com,false
-course-08,lecturer-01,B111,title-01,c,EUR 20.00,https:\\www.course-01.com,false
-course-09,lecturer-01,B112,title-01,co,EUR 20.00,https:\\www.course-01.com,false
-course-10,lecturer-01,B113,title-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros.",EUR 20.00,https:\\www.course-01.com,false
-course-11,lecturer-01,B114,title-01,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros",EUR 20.00,https:\\www.course-01.com,false
+course-02,lecturer-01,AA111,title-02,courseAbstract-02,EUR 20.00,https:\\www.course-01.com,true
+course-03,lecturer-01,AAA111,title-03,courseAbstract-03,EUR 20.00,https:\\www.course-01.com,false
+course-04,lecturer-01,A112,t,courseAbstract-04,EUR 20.00,https:\\www.course-01.com,true
+course-05,lecturer-01,A113,ti,courseAbstract-05,EUR 20.00,https:\\www.course-01.com,false
+course-06,lecturer-01,A114,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend.",courseAbstract-06,EUR 20.00,https:\\www.course-01.com,true
+course-07,lecturer-01,A115,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend",courseAbstract-07,EUR 20.00,https:\\www.course-01.com,false
+course-08,lecturer-02,B111,title-08,c,EUR 20.00,https:\\www.course-01.com,true
+course-09,lecturer-02,B112,title-09,co,EUR 20.00,https:\\www.course-01.com,false
+course-10,lecturer-02,B113,title-10,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros.",EUR 20.00,https:\\www.course-01.com,true
+course-11,lecturer-02,B114,title-11,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros",EUR 20.00,https:\\www.course-01.com,false
+course-12,lecturer-02,B115,<title>ExampleHTML</title>,courseAbstract-12,EUR 20.00,https:\\www.course-01.com,true
+course-13,lecturer-02,B116,무지개,courseAbstract-13,EUR 20.00,https:\\www.course-01.com,false
+course-14,lecturer-02,B117,title-14,<title>ExampleHTML</title>,EUR 20.00,https:\\www.course-01.com,true
+course-15,lecturer-02,B118,title-15,무지개,EUR 20.00,https:\\www.course-01.com,false

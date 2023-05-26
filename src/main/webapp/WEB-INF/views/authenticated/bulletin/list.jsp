@@ -17,7 +17,6 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.bulletin.list.label.instantiation" path="instantiation" width="20%"/>
-	<acme:list-column code="authenticated.bulletin.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="authenticated.bulletin.list.label.critical" path="critical" width="20%"/>
+	<acme:list-column code="authenticated.bulletin.list.label.title" path="title" width="40%"/>
 	<acme:list-column code="authenticated.bulletin.list.label.link" path="link" width="40%"/>
 </acme:list>
