@@ -5,7 +5,11 @@ import java.util.Map;
 
 import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractForm;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class AdministratorDashboard extends AbstractForm {
 
 	protected static final long		serialVersionUID	= 1L;
