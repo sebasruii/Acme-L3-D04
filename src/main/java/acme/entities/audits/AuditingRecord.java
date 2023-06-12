@@ -45,10 +45,10 @@ public class AuditingRecord extends AbstractEntity {
 	@PastOrPresent
 	protected Date				finishDate;
 
-	@NotNull
-	protected Boolean			draftMode;
+	protected boolean			draftMode;
 
-	protected Boolean			correction;
+	protected boolean			correction;
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
