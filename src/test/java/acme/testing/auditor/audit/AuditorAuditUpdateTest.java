@@ -80,7 +80,7 @@ public class AuditorAuditUpdateTest extends TestHarness {
 
 		audits = this.repository.findManyAuditsByAuditorUsername("auditor1");
 		for (final Audit a : audits)
-			if (a.getDraftMode()) {
+			if (a.isDraftMode()) {
 				param = String.format("id=%d", a.getId());
 
 				super.checkLinkExists("Sign in");

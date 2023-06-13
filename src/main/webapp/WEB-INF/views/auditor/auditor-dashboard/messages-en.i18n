@@ -1,5 +1,6 @@
 auditor.dashboard.form.title.general-indicators = General indicators 
-auditor.dashboard.form.label.total-number-of-audits =  Total number of audits
+auditor.dashboard.form.label.total-number-of-theory-audits =  Total number of theory audits
+auditor.dashboard.form.label.total-number-of-hands-on-audits =  Total number of hands-on audits
 auditor.dashboard.form.label.average-number-of-auditing-records =  Average number of Auditing Records in Audits
 auditor.dashboard.form.label.minimum-number-of-auditing-records = Minimum number of Auditing Records in Audits
 auditor.dashboard.form.label.maximum-number-of-auditing-records = Maximum number of Auditing Records in Audits

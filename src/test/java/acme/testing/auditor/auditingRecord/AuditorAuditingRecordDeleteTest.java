@@ -48,7 +48,7 @@ public class AuditorAuditingRecordDeleteTest extends TestHarness {
 		super.signIn("auditor1", "auditor1");
 		records = this.repository.findAuditingRecordsByAuditorUsername("auditor1");
 		for (final AuditingRecord record : records)
-			if (!record.getAudit().isDraftMode() && record.getDraftMode()) {
+			if (!record.getAudit().isDraftMode() && record.isDraftMode()) {
 				param = String.format("auditId=%d", record.getAudit().getId());
 
 				super.checkLinkExists("Sign in");
@@ -76,7 +76,7 @@ public class AuditorAuditingRecordDeleteTest extends TestHarness {
 		super.signIn("auditor1", "auditor1");
 		records = this.repository.findAuditingRecordsByAuditorUsername("auditor1");
 		for (final AuditingRecord record : records)
-			if (!record.getAudit().isDraftMode() && record.getDraftMode()) {
+			if (!record.getAudit().isDraftMode() && record.isDraftMode()) {
 				params = String.format("auditId=%d", record.getAudit().getId());
 				super.request("/auditor/auditing-record/delete", params);
 			}
@@ -91,7 +91,7 @@ public class AuditorAuditingRecordDeleteTest extends TestHarness {
 		super.signIn("auditor2", "auditor2");
 		records = this.repository.findAuditingRecordsByAuditorUsername("auditor1");
 		for (final AuditingRecord record : records)
-			if (!record.getAudit().isDraftMode() && record.getDraftMode()) {
+			if (!record.getAudit().isDraftMode() && record.isDraftMode()) {
 				params = String.format("auditId=%d", record.getAudit().getId());
 				super.request("/auditor/auditing-record/delete", params);
 			}

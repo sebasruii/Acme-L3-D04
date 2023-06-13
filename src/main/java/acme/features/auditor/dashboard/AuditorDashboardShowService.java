@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.forms.AuditorDashboard;
+import acme.forms.Statistics;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Auditor;
@@ -32,17 +33,23 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		id = super.getRequest().getPrincipal().getActiveRoleId();
 
 		AuditorDashboard dashboard;
-		Double totalNumberOfAudits;
+
+		final Integer totalNumberOfTheoryAudits;
+		final Integer totalNumberOfHandsOnAudits;
+		final Statistics auditingRecordStatistics;
 		Double averageNumberOfAuditingRecords;
 		Double deviationOfAuditingRecords;
 		Double minimumNumberOfAuditingRecords;
 		Double maximumNumberOfAuditingRecords;
+
+		final Statistics timeStatistics;
 		Double averageTimeOfAuditingRecords;
 		Double timeDeviationOfAuditingRecords;
 		Double minimumTimeOfAuditingRecords;
 		Double maximumTimeOfAuditingRecords;
 
-		totalNumberOfAudits = this.repository.totalNumberOfAudits(id);
+		totalNumberOfTheoryAudits = this.repository.totalNumberOfTheoryAudits(id);
+		totalNumberOfHandsOnAudits = this.repository.totalNumberOfHandsOnAudits(id);
 		averageNumberOfAuditingRecords = this.repository.averageNumberOfAuditingRecords(id);
 		minimumNumberOfAuditingRecords = this.repository.minimumNumberOfAuditingRecords(id);
 		maximumNumberOfAuditingRecords = this.repository.maximumNumberOfAuditingRecords(id);
@@ -52,16 +59,32 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		minimumTimeOfAuditingRecords = this.repository.minimumTimeOfAuditingRecords(id);
 		maximumTimeOfAuditingRecords = this.repository.maximumTimeOfAuditingRecords(id);
 
+		auditingRecordStatistics = new Statistics();
+		auditingRecordStatistics.setCount(null);
+		auditingRecordStatistics.setAverage(averageNumberOfAuditingRecords);
+		if (deviationOfAuditingRecords.isNaN())
+			auditingRecordStatistics.setStDev(null);
+		else
+			auditingRecordStatistics.setStDev(deviationOfAuditingRecords);
+		auditingRecordStatistics.setMinimum(minimumNumberOfAuditingRecords);
+		auditingRecordStatistics.setMaximum(maximumNumberOfAuditingRecords);
+
+		timeStatistics = new Statistics();
+		timeStatistics.setCount(null);
+		timeStatistics.setAverage(averageTimeOfAuditingRecords);
+		if (timeDeviationOfAuditingRecords.isNaN())
+			timeStatistics.setStDev(null);
+		else
+			timeStatistics.setStDev(timeDeviationOfAuditingRecords);
+
+		timeStatistics.setMinimum(minimumTimeOfAuditingRecords);
+		timeStatistics.setMaximum(maximumTimeOfAuditingRecords);
+
 		dashboard = new AuditorDashboard();
-		dashboard.setTotalNumberOfAudits(totalNumberOfAudits);
-		dashboard.setAverageNumberOfAuditingRecords(averageNumberOfAuditingRecords);
-		dashboard.setMinimumNumberOfAuditingRecords(minimumNumberOfAuditingRecords);
-		dashboard.setMaximumNumberOfAuditingRecords(maximumNumberOfAuditingRecords);
-		dashboard.setDeviationOfAuditingRecords(deviationOfAuditingRecords);
-		dashboard.setAverageTimeOfAuditingRecords(averageTimeOfAuditingRecords);
-		dashboard.setTimeDeviationOfAuditingRecords(timeDeviationOfAuditingRecords);
-		dashboard.setMinimumTimeOfAuditingRecords(minimumTimeOfAuditingRecords);
-		dashboard.setMaximumTimeOfAuditingRecords(maximumTimeOfAuditingRecords);
+		dashboard.setTotalNumberOfTheoryAudits(totalNumberOfTheoryAudits);
+		dashboard.setTotalNumberOfHandsOnAudits(totalNumberOfHandsOnAudits);
+		dashboard.setAuditingRecordStatistics(auditingRecordStatistics);
+		dashboard.setTimeStatistics(timeStatistics);
 
 		super.getBuffer().setData(dashboard);
 	}
@@ -70,8 +93,7 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 	public void unbind(final AuditorDashboard object) {
 		Tuple tuple;
 
-		tuple = super.unbind(object, "totalNumberOfAudits", "averageNumberOfAuditingRecords", "minimumNumberOfAuditingRecords", "maximumNumberOfAuditingRecords", "deviationOfAuditingRecords", "averageTimeOfAuditingRecords",
-			"timeDeviationOfAuditingRecords", "minimumTimeOfAuditingRecords", "maximumTimeOfAuditingRecords");
+		tuple = super.unbind(object, "totalNumberOfTheoryAudits", "totalNumberOfHandsOnAudits", "auditingRecordStatistics", "timeStatistics");
 
 		super.getResponse().setData(tuple);
 	}
