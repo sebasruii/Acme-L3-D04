@@ -11,7 +11,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -38,11 +38,11 @@ public class AuditingRecord extends AbstractEntity {
 	protected String			assessment;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
+	@Past
 	protected Date				startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@PastOrPresent
+	@Past
 	protected Date				finishDate;
 
 	protected boolean			draftMode;
