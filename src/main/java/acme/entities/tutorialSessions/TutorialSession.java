@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotBlank;
@@ -57,14 +58,18 @@ public class TutorialSession extends AbstractEntity {
 	@URL
 	protected String			link;
 
-	@NotNull
-	protected boolean			draftMode;
-
 	// Derived attributes -----------------------------------------------------
+
+
+	@Transient
+	public Boolean isDraftMode() {
+		return this.tutorial.isDraftMode();
+	}
+
 
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Tutorial			tutorial;
+	protected Tutorial tutorial;
 }

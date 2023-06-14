@@ -1,15 +1,15 @@
-key,title,summary,type,start-date,finish-date,link,key:tutorial,draftMode
-tutorialSession-01,t,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-02,ti,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-03,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,False
-tutorialSession-04,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,False
-tutorialSession-05,"サンプルテキスト",summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-06,"<script>alert('exampleJS');</script>",summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-07,title1,s,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-08,title1,su,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-09,title1,this is a summary with a 99 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,HANDS_ON,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,False
-tutorialSession-10,title1,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,BALANCED,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,False
-tutorialSession-11,title1,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01,True
-tutorialSession-12,title1,summary1,HANDS_ON,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-17,True
-tutorialSession-13,title1,summary1,BALANCED,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-17,False
-tutorialSession-14,title1,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-17,True
+key,title,summary,type,start-date,finish-date,link,key:tutorial
+tutorialSession-01,t,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-02,ti,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-03,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-04,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-05,サンプルテキスト,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-06,<script>alert('exampleJS');</script>,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-07,title1,s,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-08,title1,su,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-09,title1,this is a summary with a 99 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,HANDS_ON,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-10,title1,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,BALANCED,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-11,title1,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-12,title1,summary1,HANDS_ON,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-17
+tutorialSession-13,title1,summary1,BALANCED,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-17
+tutorialSession-14,title1,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-17

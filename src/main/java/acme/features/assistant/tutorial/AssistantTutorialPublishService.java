@@ -6,8 +6,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.courses.Course;
 import acme.entities.tutorialSessions.TutorialSession;
 import acme.entities.tutorials.Tutorial;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
@@ -90,8 +92,15 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	public void unbind(final Tutorial object) {
 		assert object != null;
 
+		Collection<Course> courses;
+		SelectChoices choices;
 		Tuple tuple;
-		tuple = super.unbind(object, "code", "title", "summary", "goals");
+
+		courses = this.repository.findAllPublishedCourses();
+		choices = SelectChoices.from(courses, "code", object.getCourse());
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode");
+		tuple.put("course", choices.getSelected().getKey());
+		tuple.put("courses", choices);
 
 		super.getResponse().setData(tuple);
 	}

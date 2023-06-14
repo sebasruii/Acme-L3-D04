@@ -111,7 +111,6 @@ public class AssistantTutorialSessionPublishService extends AbstractService<Assi
 		tenPercent = actuallyTime * 0.1;
 		estimatedTotalTime = actuallyTime + "±" + tenPercent;
 
-		object.setDraftMode(false);
 		tutorial.setEstimatedTotalTime(estimatedTotalTime);
 		this.tutorialRepository.save(tutorial);
 		this.repository.save(object);

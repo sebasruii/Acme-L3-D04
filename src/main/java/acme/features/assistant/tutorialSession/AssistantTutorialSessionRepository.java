@@ -16,7 +16,7 @@ public interface AssistantTutorialSessionRepository extends AbstractRepository {
 	@Query("select t from Tutorial t where t.id = :id")
 	Tutorial findOneTutorialById(int id);
 
-	@Query("select s from TutorialSession s where s.tutorial.id = :tutorialId and (s.tutorial.assistant.id = :assistantId or s.draftMode = false)")
+	@Query("select s from TutorialSession s where s.tutorial.id = :tutorialId and (s.tutorial.assistant.id = :assistantId or s.tutorial.draftMode = false)")
 	Collection<TutorialSession> findManySessionsByTutorialIdAssistantId(int tutorialId, int assistantId);
 
 	@Query("select s.tutorial from TutorialSession s where s.id = :id")
