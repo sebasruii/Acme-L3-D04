@@ -1,0 +1,12 @@
+recordIndex,title,summary,estimatedLearningTime,body,lectureType,link
+0,,lecture-abstract-01,2.50,lecture-body-01,THEORY,https:\\www.lecture-01.com
+0,01234567890123456789012345678901234567890123456789012345678901234567890123456,lecture-abstract-01,2.50,lecture-body-01,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,,2.50,lecture-body-01,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891,2.50,lecture-body-01,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,lecture-abstract-01,-2.50,lecture-body-01,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,lecture-abstract-01,,lecture-body-01,THEORY,https:\\www.lecture-01.com,false
+0,test-lecture-title-01,lecture-abstract-01,1001,lecture-body-01,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,lecture-abstract-01,2.50,,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,lecture-abstract-01,2.50,01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891,THEORY,https:\\www.lecture-01.com
+0,test-lecture-title-01,lecture-abstract-01,2.50,lecture-body-01,BALANCED,https:\\www.lecture-01.com
+0,test-lecture-title-01,lecture-abstract-01,2.50,lecture-body-01,THEORY,notAURL

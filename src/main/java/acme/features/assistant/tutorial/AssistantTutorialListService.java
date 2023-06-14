@@ -41,7 +41,7 @@ public class AssistantTutorialListService extends AbstractService<Assistant, Tut
 		final int id;
 
 		id = super.getRequest().getPrincipal().getActiveRoleId();
-		object = this.repository.findTutorialsByAssistantId(id);
+		object = this.repository.findTutorialsByAssistantIdDraftF(id);
 
 		super.getBuffer().setData(object);
 	}

@@ -22,4 +22,4 @@ lecturer.course.form.error.emptyLectures = The course does not have any lectures
 lecturer.course.form.error.unpublishedLectures = All lectures must be published before publishing a course.
 lecturer.course.form.error.allLecturesAreTheory = Purely theoretical courses cannot be published.
 lecturer.course.form.error.currency = The currency is not supported by the system.
-lecturer.course.form.error.max-price = Maximum price for a course is 1000
+lecturer.course.form.error.max-price = Maximum price for a course is 1000000
