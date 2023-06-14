@@ -1,9 +1,12 @@
 
 package acme.features.auditor.dashboard;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.audits.AuditingRecord;
 import acme.forms.AuditorDashboard;
 import acme.forms.Statistics;
 import acme.framework.components.models.Tuple;
@@ -83,8 +86,14 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		dashboard = new AuditorDashboard();
 		dashboard.setTotalNumberOfTheoryAudits(totalNumberOfTheoryAudits);
 		dashboard.setTotalNumberOfHandsOnAudits(totalNumberOfHandsOnAudits);
-		dashboard.setAuditingRecordStatistics(auditingRecordStatistics);
-		dashboard.setTimeStatistics(timeStatistics);
+		final List<AuditingRecord> auditingRecords = this.repository.findAllAuditingRecordsByAuditorId(id);
+		if (auditingRecords.isEmpty()) {
+			dashboard.setAuditingRecordStatistics(null);
+			dashboard.setTimeStatistics(null);
+		} else {
+			dashboard.setAuditingRecordStatistics(auditingRecordStatistics);
+			dashboard.setTimeStatistics(timeStatistics);
+		}
 
 		super.getBuffer().setData(dashboard);
 	}
