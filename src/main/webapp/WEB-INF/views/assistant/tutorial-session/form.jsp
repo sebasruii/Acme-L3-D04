@@ -20,9 +20,10 @@
 
 
 	<jstl:choose>
-	<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}"> 			<acme:submit code="assistant.tutorialSession.form.button.update" action="/assistant/tutorial-session/update" />
-			<acme:submit code="assistant.tutorialSession.form.button.publish"
-				action="/assistant/tutorial-session/publish" />
+		<jstl:when
+			test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:submit code="assistant.tutorialSession.form.button.update"
+				action="/assistant/tutorial-session/update" />
 			<acme:submit code="assistant.tutorialSession.form.button.delete"
 				action="/assistant/tutorial-session/delete" />
 		</jstl:when>

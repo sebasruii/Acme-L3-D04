@@ -11,6 +11,7 @@ import acme.entities.tutorialSessions.TutorialSession;
 import acme.entities.tutorials.Tutorial;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Assistant;
 
@@ -83,6 +84,17 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	@Override
 	public void perform(final Tutorial object) {
 		assert object != null;
+		long TotalTime = 0L;
+		final String estimatedTotalTime;
+		double tenPercent = 0.0;
+
+		final Collection<TutorialSession> cts = this.repository.findAllTutorialsSessionByTutorialId(object.getId());
+		for (final TutorialSession ts : cts)
+			TotalTime += MomentHelper.computeDuration(ts.getStartDate(), ts.getFinishDate()).toHours();
+
+		tenPercent = 0.1 * TotalTime;
+		estimatedTotalTime = "" + TotalTime + " ±" + tenPercent + " hours";
+		object.setEstimatedTotalTime(estimatedTotalTime);
 
 		object.setDraftMode(false);
 		this.repository.save(object);

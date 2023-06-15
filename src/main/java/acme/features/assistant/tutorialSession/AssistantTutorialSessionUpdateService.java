@@ -64,6 +64,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		assert object != null;
 
 		super.bind(object, "title", "type", "summary", "startDate", "finishDate", "link");
+
 	}
 
 	@Override
@@ -75,16 +76,20 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			Date finishDate;
 			Date inADayFromNow;
 			Date inFiveHourFromStart;
+			Date inOneHourFromStart;
 
 			startDate = object.getStartDate();
 			finishDate = object.getFinishDate();
-			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1439, ChronoUnit.MINUTES);
-			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 299, ChronoUnit.MINUTES);
+			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1l, ChronoUnit.DAYS);
+			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 300, ChronoUnit.MINUTES);
+			inOneHourFromStart = MomentHelper.deltaFromMoment(startDate, 59, ChronoUnit.MINUTES);
 
 			if (!super.getBuffer().getErrors().hasErrors("startDate"))
 				super.state(MomentHelper.isAfter(startDate, inADayFromNow), "startDate", "assistant.session-tutorial.error.start-1Day-after-now");
 			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
-				super.state(MomentHelper.isAfter(finishDate, inFiveHourFromStart), "finishDate", "assistant.session-tutorial.error.end-5Hours-after-start");
+				super.state(MomentHelper.isAfter(finishDate, inOneHourFromStart), "finishDate", "assistant.session-tutorial.error.end-1Hours-after-start");
+			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+				super.state(MomentHelper.isBeforeOrEqual(finishDate, inFiveHourFromStart), "finishDate", "assistant.session-tutorial.error.end-5Hours-before-start");
 		}
 	}
 
@@ -104,10 +109,11 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 
 		choices = SelectChoices.from(NatureType.class, object.getType());
 
-		tuple = super.unbind(object, "title", "type", "summary", "startDate", "finishDate", "link", "draftMode");
+		tuple = super.unbind(object, "title", "type", "summary", "startDate", "finishDate", "link");
 
 		tuple.put("types", choices);
 		tuple.put("masterId", object.getTutorial().getId());
+		tuple.put("draftMode", object.isDraftMode());
 
 		super.getResponse().setData(tuple);
 	}
