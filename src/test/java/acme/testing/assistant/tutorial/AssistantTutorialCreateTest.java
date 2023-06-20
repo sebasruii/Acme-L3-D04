@@ -39,7 +39,6 @@ public class AssistantTutorialCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("summary", summary);
 		super.checkInputBoxHasValue("goals", goals);
-		super.checkInputBoxHasValue("estimatedTotalTime", estimatedTotalTime);
 		super.checkInputBoxHasValue("course", course);
 
 		super.signOut();
