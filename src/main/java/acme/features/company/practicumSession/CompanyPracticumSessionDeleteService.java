@@ -37,7 +37,7 @@ public class CompanyPracticumSessionDeleteService extends AbstractService<Compan
 		practicumSessionId = super.getRequest().getData("id", int.class);
 		practicum = this.repository.findPracticumByPracticumSessionId(practicumSessionId);
 
-		status = super.getRequest().getPrincipal().hasRole(practicum.getCompany()) && company == practicum.getCompany() && practicum != null;
+		status = super.getRequest().getPrincipal().hasRole(practicum.getCompany()) && company == practicum.getCompany() && practicum != null && practicum.getDraftMode();
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -56,7 +56,7 @@ public class CompanyPracticumSessionDeleteService extends AbstractService<Compan
 	public void bind(final PracticumSession object) {
 		assert object != null;
 
-		super.bind(object, "title", "summary", "startDate", "endDate", "link", "exceptional");
+		super.bind(object, "title", "summary", "startDate", "finishDate", "link", "exceptional");
 	}
 
 	@Override
@@ -77,7 +77,7 @@ public class CompanyPracticumSessionDeleteService extends AbstractService<Compan
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "title", "summary", "startDate", "endDate", "link", "exceptional");
+		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link", "exceptional");
 
 		super.getResponse().setData(tuple);
 	}
