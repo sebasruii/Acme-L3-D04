@@ -14,27 +14,44 @@
 
  <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
  <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
  <acme:form>
  			<acme:input-textbox code="student.enrolment.form.label.code" path="code"/>
  			<acme:input-textbox code="student.enrolment.form.label.motivation" path="motivation"/>
  			<acme:input-textbox code="student.enrolment.form.label.goals" path="goals"/>
- 			<acme:input-select code="student.enrolment.form.label.course" path="course" choices="${courses}"/>	
- 			<acme:input-textbox code="student.enrolment.form.label.expiryDate" path="expiryDate" placeholder="MM/YY"/>
- 			<acme:input-textbox code="student.enrolment.form.label.cvc" path="cvc" placeholder="XXX"/>
- 			<acme:input-textbox code="student.enrolment.form.label.creditCard" path="creditCard" placeholder="XXXX/XXXX/XXXX/XXXX"/>
- 			<acme:input-textbox code="student.enrolment.form.label.cardHolderName" path="cardHolderName"/>
- 			<acme:input-textbox code="student.enrolment.form.label.cardLowerNibble" path="cardLowerNibble" readonly="true"/>
+ 			<acme:input-select code="student.enrolment.form.label.course" path="course" choices="${courses}"/>
+ 			<acme:input-textbox code="student.enrolment.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>	
 
+	<jstl:if test="${_command != 'create'}">
+		<br>	
+		<h3>
+			<acme:message code="student.enrolment.form.title.finalize"/>
+		</h3>	
+			<acme:input-textbox code="student.enrolment.form.label.cardHolderName" path="cardHolderName"/>	
+			<jstl:if test="${draftMode}">
+				<acme:input-textbox code="student.enrolment.form.label.creditCard" path="creditCard" placeholder="XXXX/XXXX/XXXX/XXXX"/>
+				<acme:input-textbox code="student.enrolment.form.label.expiryDate" path="expiryDate" placeholder="MM/YY"/>
+				<acme:input-textbox code="student.enrolment.form.label.cvc" path="cvc" placeholder="XXX"/>
+			</jstl:if>
+			<jstl:if test="${!draftMode}">
+				<acme:input-textbox code="student.enrolment.form.label.cardLowerNibble" path="cardLowerNibble"/>
+			</jstl:if>
+	</jstl:if>
+	
  	<jstl:choose>
- 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|update')}">		
- 			<acme:submit code="student.enrolment.form.button.update" action="/student/enrolment/update"/>
- 			<acme:submit code="student.enrolment.form.button.delete" action="/student/enrolment/delete"/>
- 			<acme:submit code="student.enrolment.form.button.finalize" action="/student/enrolment/finalize"/>
+ 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|finalize')}">	
+			<c:if test="${draftMode}">
+				<acme:submit code="student.enrolment.form.button.update" action="/student/enrolment/update"/>
+				<acme:submit code="student.enrolment.form.button.delete" action="/student/enrolment/delete"/>
+				<acme:submit code="student.enrolment.form.button.finalize" action="/student/enrolment/finalize"/>
+			</c:if>	
  		</jstl:when>
- 		
  		<jstl:when test="${_command == 'create'}">
  			<acme:submit code="student.enrolment.form.button.create" action="/student/enrolment/create"/>
  		</jstl:when>
- 	</jstl:choose>		
+ 	</jstl:choose>
+ 	<jstl:if test="${ _command == 'show' }" >
+		<acme:button code="student.enrolment.form.button.activities" action="/student/activity/list?enrolmentId=${id}"/>
+	</jstl:if>		
  </acme:form>

@@ -8,5 +8,8 @@ any.course.form.label.summary = Resumen
 any.course.form.label.price = Precio
 any.course.form.label.link = Más información
 any.course.form.label.courseType = Tipo de curso
-assistant.tutorial.form.button.tutorial = Tutorias
-company.practicum.form.button.practicum = Ir a las prácticas
+
+company.practicum.form.button.practicum=Practicas
+assistant.tutorial.form.button.tutorial=Tutorias
+
+any.course.button.audits = Auditorías

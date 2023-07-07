@@ -8,6 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-audit.label.code = Código
-audit.label.conclusion = Conclusión
-audit.label.auditor = Auditor
+authenticated.audit.form.label.code = Código
+authenticated.audit.form.label.auditor = Auditor
+authenticated.audit.form.label.course = Curso
+authenticated.audit.form.label.conclusion = Conclusión
+authenticated.audit.form.label.strongPoints = Puntos fuertes
+authenticated.audit.form.label.weakPoints = Puntos débiles

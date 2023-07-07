@@ -4,7 +4,6 @@ package acme.features.lecturer.course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import acme.entities.configuration.Configuration;
 import acme.entities.courses.Course;
 import acme.framework.components.models.Tuple;
@@ -76,8 +75,8 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("price")) {
-			super.state(object.getPrice().getAmount() >= 0.01, "price", "lecturer.course.form.error.negative-price");
-			super.state(object.getPrice().getAmount() <= 1000, "price", "lecturer.course.form.error.max-price");
+			super.state(object.getPrice().getAmount() >= 0, "price", "lecturer.course.form.error.negative-price");
+			super.state(object.getPrice().getAmount() <= 1000000, "price", "lecturer.course.form.error.max-price");
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("price"))

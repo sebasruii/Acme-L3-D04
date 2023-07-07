@@ -26,7 +26,6 @@ company.practicum.list.label.goals = Goals
 
 company.practicum.list.button.create = Create
 company.practicum.list.button.publish = Publish
-
 company.practicum.form.error.code-uniqueness = The code is repeated and it must be unique
 company.practicum.form.button.practicum-sessions = Practicum Sessions
 company.practicum.form.label.practicum-code = Code
@@ -34,3 +33,8 @@ company.practicum.list.label.practicum-code = Code
 company.practicum.form.label.practicum-title = Title
 company.practicum.list.label.practicum-title = Title
 company.practicum.form.label.estimatedTotalTime= Estimated total time
+
+company.practicum.list.label.course-code = Course code
+company.practicum-session.form.label.exceptional= Exceptional Practicum Session
+company.practicum.form.error.noPracticumSessions= Practicum must have at least one practicum session for being published
+company.practicum.error.draftMode.published.update= A published practicum can not be updated

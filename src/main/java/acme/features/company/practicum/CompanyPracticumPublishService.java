@@ -76,6 +76,9 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 	@Override
 	public void validate(final Practicum object) {
 		assert object != null;
+
+		final Collection<PracticumSession> practicumSessions = this.repository.findPracticumSessionsByPracticumId(object.getId());
+		super.state(!practicumSessions.isEmpty(), "*", "company.practicum.form.error.noPracticumSessions");
 	}
 
 	@Override
@@ -88,7 +91,7 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 		final Collection<PracticumSession> pss = this.repository.findPracticumSessionsByPracticumId(object.getId());
 		for (final PracticumSession ps : pss)
 			TotalTime += MomentHelper.computeDuration(ps.getStartDate(), ps.getFinishDate()).toHours();
-			
+
 		tenPercent = 0.1 * TotalTime;
 		estimatedTotalTime = "" + TotalTime + "±" + tenPercent;
 		object.setEstimatedTotalTime(estimatedTotalTime);
@@ -107,7 +110,7 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "title", "summary", "goals");
+		tuple = super.unbind(object, "code", "title", "summary", "goals", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 
