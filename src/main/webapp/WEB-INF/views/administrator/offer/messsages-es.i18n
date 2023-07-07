@@ -18,3 +18,6 @@ administrator.offer.form.label.link = Link
 administrator.offer.form.button.create = Crear
 administrator.offer.form.button.update = Actualizar
 administrator.offer.form.button.delete = Eliminar
+
+administrator.offer.error.start-1Day-after-now = La fecha de inicio debe ser al menos un dia despues del momento de instanciacion
+administrator.offer.error.end-7Days-after-start = La fecha de final debe ser al menos 7 dias despues de la fecha de inicio

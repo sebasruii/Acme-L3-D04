@@ -1,0 +1,9 @@
+recordIndex,code,title,summary,goals,draftMode,estimatedTotalTime,course
+2,A,title1,summary1,goals1,True,0,B111
+2,0002,title1,summary1,goals1,False,0,A111
+2,AAAA003,title1,summary1,goals1,True,0,A111
+2,A00004,title1,summary1,goals1,True,0,A111
+2,A005,,summary1,goals1,True,0,A111
+2,A006,ti,,goals1,True,0,A111
+2,A007,title1 with 76 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,,True,0,AA111
+2,A012,title1,this is a summary with a 101 character to test pppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,False,0,AA111
