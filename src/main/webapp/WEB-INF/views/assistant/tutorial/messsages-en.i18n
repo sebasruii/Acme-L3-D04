@@ -28,4 +28,4 @@ assistant.tutorial.form.button.tutorials = Tutorials
 assistant.tutorial.form.button.tutorialSessions = Tutorial Session
 
 assistant.tutorial.form.error.duplicated=This code is already in use
-assistant.tutorial.form.error.no-sessions=This tutorial has not session
+assistant.tutorial.form.error.no-sessions=This tutorial has no sessions

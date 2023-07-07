@@ -1,8 +1,8 @@
 key,title,summary,type,start-date,finish-date,link,key:tutorial
 tutorialSession-01,t,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
-tutorialSession-02,ti,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
-tutorialSession-03,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
-tutorialSession-04,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
+tutorialSession-02,ti,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-22
+tutorialSession-03,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,HANDS_ON,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-22
+tutorialSession-04,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,BALANCED,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-22
 tutorialSession-05,サンプルテキスト,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
 tutorialSession-06,<script>alert('exampleJS');</script>,summary1,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-01
 tutorialSession-07,title1,s,THEORY,2023/08/01 23:00,2023/08/02 23:00,https:\\www.lecture-01.com,tutorial-03

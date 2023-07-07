@@ -1,6 +1,7 @@
 
 package acme.testing.assistant.tutorialSession;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,45 +41,21 @@ public class AssistantTutorialSessionListTest extends TestHarness {
 
 		super.signOut();
 	}
-	//
-	//		@Test
-	//		public void test200Negative() {
-	//			// HINT: there's no negative test case for this listing, since it doesn't
-	//			// HINT+ involve filling in any forms.
-	//		}
-	//
-	//		@Test
-	//		public void test300Hacking() {
-	//			// HINT: this test tries to list the duties of a job that is unpublished
-	//			// HINT+ using a principal that didn't create it. 
-	//
-	//			Collection<Practicum> practicums;
-	//			String param;
-	//
-	//			practicums = this.repository.findManyPracticumsByCompanyUsername("Company1");
-	//			for (final Practicum practicum : practicums)
-	//				if (practicum.getDraftMode()) {
-	//					param = String.format("masterId=%d", practicum.getId());
-	//
-	//					super.checkLinkExists("Sign in");
-	//					super.request("/company/practicum-session/list", param);
-	//					super.checkPanicExists();
-	//
-	//					super.signIn("administrator1", "administrator1");
-	//					super.request("/company/practicum-session/list", param);
-	//					super.checkPanicExists();
-	//					super.signOut();
-	//
-	//					super.signIn("company2", "company2");
-	//					super.request("/company/practicum-session/list", param);
-	//					super.checkPanicExists();
-	//					super.signOut();
-	//
-	//					super.signIn("student1", "student1");
-	//					super.request("/company/practicum-session/list", param);
-	//					super.checkPanicExists();
-	//					super.signOut();
-	//				}
-	//		}
+
+	//			@Test
+	//			public void test200Negative() {
+	//				// HINT: there's no negative test case for this listing, since it doesn't
+	//				// HINT+ involve filling in any forms.
+	//			}
+
+	@Test
+	public void test300Hacking() {
+		// HINT: this test tries to list the duties of a job that is unpublished
+		// HINT+ using a principal that didn't create it. 
+
+		super.checkLinkExists("Sign in");
+		super.request("/assistant/tutorial/list");
+		super.checkPanicExists();
+	}
 
 }
