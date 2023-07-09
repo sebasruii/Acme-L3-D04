@@ -96,7 +96,7 @@ public class AuditorAuditingRecordUpdateTest extends TestHarness {
 
 		records = this.repository.findAuditingRecordsByAuditorUsername("auditor1");
 		for (final AuditingRecord record : records)
-			if (record.getDraftMode()) {
+			if (record.isDraftMode()) {
 				param = String.format("id=%d", record.getId());
 
 				super.checkLinkExists("Sign in");

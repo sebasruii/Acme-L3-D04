@@ -21,7 +21,7 @@ master.menu.sign-out = Sign out
 master.menu.authenticated = Authenticated
 master.menu.authenticated.bulletin.list = List Bulletins
 master.menu.authenticated.auditor.create = Become an Auditor
-master.menu.authenticated.auditor.update = Update profile
+master.menu.authenticated.auditor.update = Update auditor profile
 master.menu.authenticated.audit.list = List Audits
 
 # master.menu.anonymous #######################################################
