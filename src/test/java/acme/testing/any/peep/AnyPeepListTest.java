@@ -15,10 +15,10 @@ public class AnyPeepListTest extends TestHarness {
 
 		super.clickOnMenu("Peeps");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(recordIndex, 0, instantiation);
-		super.checkColumnHasValue(recordIndex, 1, title);
+		super.checkColumnHasValue(recordIndex, 1, instantiation);
+		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 2, nick);
 
 	}

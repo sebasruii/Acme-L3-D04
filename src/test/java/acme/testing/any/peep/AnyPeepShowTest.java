@@ -20,7 +20,7 @@ public class AnyPeepShowTest extends TestHarness {
 		// HINT+ one of them, and checks that the form has the expected data.
 
 		super.clickOnMenu("Peeps");
-		super.sortListing(1, "asc");
+		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 

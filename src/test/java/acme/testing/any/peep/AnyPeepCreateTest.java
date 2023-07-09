@@ -22,15 +22,14 @@ public class AnyPeepCreateTest extends TestHarness {
 
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("nick", nick);
-		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("email", email);
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
-		super.sortListing(0, "desc");
-		super.checkColumnHasValue(recordIndex, 1, title);
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 2, nick);
 
 		super.clickOnListingRecord(recordIndex);
@@ -54,15 +53,14 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnButton("Publish");
 
 		super.fillInputBoxIn("title", title);
-		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("email", email);
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
-		super.sortListing(0, "desc");
-		super.checkColumnHasValue(recordIndex, 1, title);
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 2, "anonymous");
 
 		super.clickOnListingRecord(recordIndex);
@@ -87,15 +85,14 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnButton("Publish");
 
 		super.fillInputBoxIn("title", title);
-		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("email", email);
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
-		super.sortListing(0, "desc");
-		super.checkColumnHasValue(recordIndex, 1, title);
+		super.sortListing(0, "asc");
+		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 2, "company1");
 
 		super.clickOnListingRecord(recordIndex);
@@ -119,7 +116,6 @@ public class AnyPeepCreateTest extends TestHarness {
 		super.clickOnButton("Publish");
 		super.checkFormExists();
 
-		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("email", email);
