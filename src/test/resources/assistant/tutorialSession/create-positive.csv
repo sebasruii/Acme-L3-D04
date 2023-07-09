@@ -1,0 +1,15 @@
+tutorialRecordIndex,tutorialSessionRecordIndex,title,summary,type,startDate,finishDate,link
+0,0,tA,this is a summary with a 99 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,HANDS_ON,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,1,tB,summary1,BALANCED,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,2,tC,summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,3,td,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,BALANCED,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,4,te,summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,5,tf,summary1,HANDS_ON,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,6,tg,summary1,BALANCED,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,7,th,summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,0,t,summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,9,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,10,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,0,"<script>alert('exampleJS');</script>",summary1,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com,tutorial-01
+0,12,tx,s,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com
+0,13,tz,su,THEORY,2023/08/01 20:00,2023/08/01 23:00,https:\\www.lecture-01.com

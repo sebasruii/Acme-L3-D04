@@ -1,22 +1,24 @@
 key,code,title,summary,goals,key:assistant,key:course,draftMode,estimatedTotalTime
-tutorial-01,A111,title1,summary1,goals1,assistant-01,course-01,True,0
-tutorial-02,BB222,title1,summary1,goals1,assistant-01,course-01,True,0
-tutorial-03,ZZZ444,title1,summary1,goals1,assistant-01,course-01,True,0
-tutorial-04,AZZ444,t,summary1,goals1,assistant-01,course-01,True,0
-tutorial-05,BZZ444,ti,summary1,goals1,assistant-01,course-01,True,0
-tutorial-06,CZZ444,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,goals1,assistant-01,course-01,True,0
-tutorial-07,DZZ444,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,goals1,assistant-01,course-01,True,0
-tutorial-08,HZZ444,サンプルテキスト,summary1,goals1,assistant-01,course-01,False,0
-tutorial-09,JZZ444,<script>alert('exampleJS');</script>,summary1,goals1,assistant-01,course-01,False,0
-tutorial-10,IZZ444,title1,s,goals1,assistant-01,course-01,False,0
-tutorial-11,KZZ444,title1,su,goals1,assistant-01,course-01,False,0
-tutorial-12,LZZ444,title1,this is a summary with a 99 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,assistant-01,course-01,False,0
-tutorial-13,XZZ444,title1,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,assistant-01,course-01,False,nu0ll
-tutorial-14,ZAZ444,title1,サンプルテキスト,goals1,assistant-01,course-01,False,0
-tutorial-15,ZSZ444,title1,<script>alert('exampleJS');</script>,goals1,assistant-01,course-01,False,0
-tutorial-16,ZDZ444,title1,summary1,g,assistant-02,course-01,False,0
-tutorial-17,ZFZ444,title1,summary1,go,assistant-02,course-01,False,0
-tutorial-18,ZGZ444,title1,summary1,goal1 with 99 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,assistant-01,course-01,False,0
-tutorial-19,ZHZ444,title1,summary1,goal1 with 100 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,assistant-01,course-01,False,0
-tutorial-20,ZJZ444,title1,summary1,サンプルテキスト,assistant-01,course-01,False,0
+tutorial-01,A111,title1,summary1,goals1,assistant-01,course-01,False,0
+tutorial-02,AZZ444,title1,summary1,goals1,assistant-01,course-01,True,0
+tutorial-03,BB222,title1,summary1,goals1,assistant-01,course-02,True,0
+tutorial-04,BZZ444,t,summary1,goals1,assistant-01,course-01,True,0
+tutorial-05,CZZ444,ti,summary1,goals1,assistant-01,course-01,True,0
+tutorial-06,DZZ444,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,goals1,assistant-01,course-01,True,0
+tutorial-07,HZZ444,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,goals1,assistant-01,course-01,True,0
+tutorial-08,IZZ444,サンプルテキスト,summary1,goals1,assistant-01,course-02,True,0
+tutorial-09,JZZ444,<script>alert('exampleJS');</script>,summary1,goals1,assistant-01,course-01,True,0
+tutorial-10,JZZ666,title1,s,goals1,assistant-01,course-01,True,0
+tutorial-11,KZZ444,title1,su,goals1,assistant-01,course-01,True,0
+tutorial-12,LZZ444,title1,this is a summary with a 99 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,assistant-01,course-01,True,0
+tutorial-13,XZZ444,title1,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,assistant-01,course-01,True,0
+tutorial-14,ZAZ444,title1,サンプルテキスト,goals1,assistant-01,course-01,True,0
+tutorial-15,ZSZ444,title1,<script>alert('exampleJS');</script>,goals1,assistant-01,course-01,True,0
+tutorial-16,ZDZ444,title1,summary1,g,assistant-02,course-01,True,0
+tutorial-17,ZFZ444,title1,summary1,go,assistant-02,course-01,True,0
+tutorial-18,ZGZ444,title1,summary1,goal1 with 99 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,assistant-01,course-01,True,0
+tutorial-19,ZHZ444,title1,summary1,goal1 with 100 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,assistant-01,course-01,True,0
+tutorial-20,ZJZ444,title1,summary1,サンプルテキスト,assistant-01,course-01,True,0
 tutorial-21,ZKZ444,title1,summary1,<script>alert('exampleJS');</script>,assistant-02,course-01,False,0
+tutorial-22,ZKK555,title1,summary1,goal,assistant-02,course-02,False,0
+tutorial-23,ZDZ666,title1,summary1,g,assistant-02,course-02,True,0

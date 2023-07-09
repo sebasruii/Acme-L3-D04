@@ -27,3 +27,4 @@ assistant.tutorial.form.button.tutorials = Tutorias
 assistant.tutorial.form.button.tutorialSessions = Sesiones de la Tutoria
 
 assistant.tutorial.form.error.duplicated=Este código ya esta en uso
+assistant.tutorial.form.error.no-sessions=Este tutorial no tiene sessiones 

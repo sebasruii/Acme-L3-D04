@@ -1,0 +1,22 @@
+recordIndex,code,motivation,goals,course
+0,,motivation1,goal1,A111
+0,T,motivation1,goal1,A111
+0,0,motivation1,goal1,A111
+0,03,motivation1,goal1,A111
+0,033,motivation1,goal1,A111
+0,T0,motivation1,goal1,A111
+0,T03,motivation1,goal1,A111
+0,T0341,motivation1,goal1,A111
+0,TT,motivation1,goal1,A111
+0,TT0,motivation1,goal1,A111
+0,TT03,motivation1,goal1,A111
+0,TT0341,motivation1,goal1,A111
+0,TTT,motivation1,goal1,A111
+0,TTT0,motivation1,goal1,A111
+0,TTT03,motivation1,goal1,A111
+0,TTTT0341,motivation1,goal1,A111
+0,badcode,motivation1,goal1,A111
+0,T037,,goal1,A111
+0,T038,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum.",goal1,A111
+0,T039,motivation1,,A111
+0,T040,motivation1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum.",A111

@@ -38,11 +38,13 @@ public class StudentEnrolmentDeleteService extends AbstractService<Student, Enro
 		int enrolmentId;
 		Enrolment enrolment;
 		Student student;
+		final int userId;
 
+		userId = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("id", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
 		student = enrolment == null ? null : enrolment.getStudent();
-		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.isDraftMode();
+		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == userId;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -97,7 +99,7 @@ public class StudentEnrolmentDeleteService extends AbstractService<Student, Enro
 		Tuple tuple;
 
 		courses = this.repository.findNotInDraftCourses();
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 		tuple = super.unbind(object, "code", "motivation", "goals", "course");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);

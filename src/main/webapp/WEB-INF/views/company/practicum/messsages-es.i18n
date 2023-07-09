@@ -37,3 +37,9 @@ company.practicum.form.label.practicum-title = Título
 company.practicum.list.label.practicum-title = Título
 
 company.practicum.form.label.estimatedTotalTime= Tiempo total estimado
+
+company.practicum.list.label.course-code = Código del curso
+company.practicum-session.form.label.exceptional= Sesión de prácticas exceptional
+
+company.practicum.form.error.noPracticumSessions= La práctica debe tener al menos una sesión para ser publicada
+company.practicum.error.draftMode.published.update= Una práctica publicada no puede ser actualizada

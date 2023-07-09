@@ -11,6 +11,7 @@
 assistant.tutorial.list.label.title = Title
 assistant.tutorial.list.label.summary = Summary
 assistant.tutorial.list.label.code = Code
+
 assistant.tutorial.list.label.goals = Goals
 assistant.tutorial.list.label.course = Course
 assistant.tutorial.list.label.estimatedTotalTime = Estimated Time
@@ -27,3 +28,4 @@ assistant.tutorial.form.button.tutorials = Tutorials
 assistant.tutorial.form.button.tutorialSessions = Tutorial Session
 
 assistant.tutorial.form.error.duplicated=This code is already in use
+assistant.tutorial.form.error.no-sessions=This tutorial has no sessions

@@ -1,16 +1,18 @@
 key,key:student,key:course,code,motivation,goals,draft-mode,card-holder-name,card-lower-nibble
-enrolment-01,student-01,course-01,ABC001,motivation1,"goal1, goal2, goal3",false,abcdef,1234
-enrolment-02,student-02,course-02,AB002,motivation1,"goal1, goal2, goal3",true,,
-enrolment-03,student-01,course-02,A003,motivation1,"goal1, goal2, goal3",false,ejidha,2345
-enrolment-04,student-02,course-01,A004,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo li","goal1, goal2, goal3",true,,
-enrolment-05,student-01,course-01,A005,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo l","goal1, goal2, goal3",true,,
-enrolment-06,student-02,course-02,A006,m,"goal1, goal2, goal3",true,,
-enrolment-07,student-01,course-01,A007,mo,"goal1, goal2, goal3",true,,
-enrolment-08,student-02,course-02,A008,"<script>alert(""Hello!"");</script>","goal1, goal2, goal3",true,,
-enrolment-09,student-01,course-01,A009,Ð·Ð´Ñ€Ð°Ð²Ñ�ÑÐ²ÑƒÐ¹ÑÐµ,"goal1, goal2, goal3",true,,
-enrolment-10,student-01,course-02,A010,motivation1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m",true,,
-enrolment-11,student-01,course-01,A011,motivation2,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.",true,,
-enrolment-12,student-02,course-02,A012,motivation3,g,true,,
-enrolment-13,student-01,course-02,A013,motivation4,go,false,agwbry,5678
-enrolment-14,student-02,course-01,A014,motivation5,"<script>alert(""Hello!"");</script>",true,,
-enrolment-15,student-02,course-02,A015,motivation6,ä½ å¥½,true,,
+enrolment-01,student-01,course-01,EF001,motivation1,"goal1, goal2, goal3",false,abcdef,1234
+enrolment-02,student-01,course-01,EFG001,motivation1,"goal1, goal2, goal3",false,abcdef,1234
+enrolment-03,student-01,course-02,EF002,motivation1,"goal1, goal2, goal3",true,,
+enrolment-04,student-01,course-02,E003,motivation1,"goal1, goal2, goal3",true,,
+enrolment-05,student-02,course-01,E004,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo li","goal1, goal2, goal3",true,,
+enrolment-06,student-01,course-01,E005,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo l","goal1, goal2, goal3",true,,
+enrolment-07,student-02,course-02,E006,m,"goal1, goal2, goal3",true,,
+enrolment-08,student-01,course-01,E007,mo,"goal1, goal2, goal3",true,,
+enrolment-09,student-02,course-02,E008,"<script>alert(""Hello!"");</script>","goal1, goal2, goal3",true,,
+enrolment-10,student-01,course-01,E009,Ð·Ð´Ñ€Ð°Ð²Ñ�ÑÐ²ÑƒÐ¹ÑÐµ,"goal1, goal2, goal3",true,,
+enrolment-11,student-01,course-02,E010,motivation1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m",true,,
+enrolment-12,student-01,course-01,E011,motivation2,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.",true,,
+enrolment-13,student-01,course-02,E012,motivation3,g,true,,
+enrolment-14,student-01,course-02,E013,motivation4,go,true,,
+enrolment-15,student-01,course-01,E014,motivation5,"<script>alert(""Hello!"");</script>",true,,
+enrolment-16,student-01,course-02,E015,motivation6,ä½ å¥½,true,,
+enrolment-17,student-01,course-02,E016,motivation1,"goal1, goal2, goal3",true,,

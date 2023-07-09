@@ -1,0 +1,11 @@
+enrolmentRecordIndex,activityRecordIndex,title,summary,activityType,startDate,finishDate,link
+9,0,,summary1,HANDS_ON,2022/01/04 09:00,2022/01/05 12:00,https://www.us.es/
+9,0,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.",summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,0,title1,,HANDS_ON,2022/01/04 09:00,2022/01/05 12:00,https://www.us.es/
+9,0,title1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum.",HANDS_ON,2022/01/04 09:00,2022/01/05 12:00,https://www.us.es/
+9,0,title1,summary1,,2022/01/04 09:00,2022/01/05 12:00,https://www.us.es/
+9,0,title1,summary1,HANDS_ON,,2022/01/04 11:00,https://www.us.es/
+9,0,title1,summary1,HANDS_ON,2022/01/03 08:00,,https://www.us.es/
+9,0,title1,summary1,HANDS_ON,2022/01/04 11:00,2022/01/03 08:00,https://www.us.es/
+9,0,title1,summary1,HANDS_ON,2022/00/00 00:01,2000/01/01 00:10,https://www.us.es/
+9,0,title1,summary1,HANDS_ON,2022/01/03 08:00,2022/00/00 11:00,https://www.us.es/

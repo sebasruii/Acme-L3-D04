@@ -77,7 +77,7 @@ master.menu.user-account = Account
 master.menu.user-account.general-data = General data
 master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.become-assistant = Become a assistant
+master.menu.user-account.become-assistant = Become an assistant
 master.menu.user-account.update-assistant = Update you assistant role
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
@@ -100,7 +100,7 @@ master.menu.student.studentEnrolmentList = List of Enrolments
 
 # master.menu.company ###################################################
 
-master.menu.company= Practicums
+master.menu.company= Company
 master.menu.company.dashboard = Practicum Dashboard
 
 master.menu.lecturer.list = My courses

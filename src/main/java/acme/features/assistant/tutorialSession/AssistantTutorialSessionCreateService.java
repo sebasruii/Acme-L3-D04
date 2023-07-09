@@ -44,7 +44,7 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		tutorial = this.repository.findOneTutorialById(masterId);
-		status = tutorial != null && !tutorial.isDraftMode() && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant());
+		status = tutorial != null && tutorial.isDraftMode() && super.getRequest().getPrincipal().hasRole(tutorial.getAssistant());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -59,7 +59,6 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 		tutorial = this.repository.findOneTutorialById(masterId);
 
 		object = new TutorialSession();
-		object.setDraftMode(true);
 		object.setTutorial(tutorial);
 
 		super.getBuffer().setData(object);
@@ -81,16 +80,20 @@ public class AssistantTutorialSessionCreateService extends AbstractService<Assis
 			Date finishDate;
 			Date inADayFromNow;
 			Date inFiveHourFromStart;
+			Date inOneHourFromStart;
 
 			startDate = object.getStartDate();
 			finishDate = object.getFinishDate();
-			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1, ChronoUnit.DAYS);
-			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 5, ChronoUnit.HOURS);
+			inADayFromNow = MomentHelper.deltaFromCurrentMoment(1l, ChronoUnit.DAYS);
+			inFiveHourFromStart = MomentHelper.deltaFromMoment(startDate, 300, ChronoUnit.MINUTES);
+			inOneHourFromStart = MomentHelper.deltaFromMoment(startDate, 59, ChronoUnit.MINUTES);
 
 			if (!super.getBuffer().getErrors().hasErrors("startDate"))
 				super.state(MomentHelper.isAfter(startDate, inADayFromNow), "startDate", "assistant.session-tutorial.error.start-1Day-after-now");
 			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
-				super.state(MomentHelper.isAfter(finishDate, inFiveHourFromStart), "finishDate", "assistant.session-tutorial.error.end-5Hours-after-start");
+				super.state(MomentHelper.isAfter(finishDate, inOneHourFromStart), "finishDate", "assistant.session-tutorial.error.end-1Hours-after-start");
+			if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+				super.state(MomentHelper.isBeforeOrEqual(finishDate, inFiveHourFromStart), "finishDate", "assistant.session-tutorial.error.end-5Hours-before-start");
 		}
 
 	}

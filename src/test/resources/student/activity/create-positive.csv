@@ -1,0 +1,24 @@
+enrolmentRecordIndex,activityRecordIndex,title,summary,activityType,startDate,finishDate,link
+9,0,<script>alert('exampleJS');</script>,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,1,<title>ExampleHTML</title>,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,2,1示例文本,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,3,T,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,4,T1,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,5,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo li",summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,6,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo l",summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,7,title1,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,8,title1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m",HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,9,title1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.",HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,10,title1,T,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,11,title1,T1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,12,title1,<title>ExampleHTML</title>,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,13,title1,示例文本,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,14,title1,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,15,title1,summary1,THEORY,2022/01/03 08:00,2022/01/04 11:00,https://www.us.es/
+9,16,title1,summary1,HANDS_ON,2000/01/01 00:01,2022/01/04 11:00,https://www.us.es/
+9,17,title1,summary1,HANDS_ON,2000/01/01 00:10,2022/01/04 11:00,https://www.us.es/
+9,18,title1,summary1,HANDS_ON,2022/01/03 08:00,2100/12/31 23:58,https://www.us.es/
+9,19,title1,summary1,HANDS_ON,2022/01/03 08:00,2100/12/31 23:48,https://www.us.es/
+9,20,title1,summary1,HANDS_ON,2000/01/01 00:01,2100/12/31 23:58,https://www.us.es/
+9,21,title1,summary1,HANDS_ON,2000/01/01 00:01,2000/01/01 00:10,https://www.us.es/
+9,22,title1,summary1,HANDS_ON,2022/01/03 08:00,2022/01/04 11:00,null

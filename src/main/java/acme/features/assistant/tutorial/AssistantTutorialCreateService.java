@@ -50,8 +50,16 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
-			existing = this.repository.findTutorialByCode(object.getCode());
-			super.state(existing == null, "code", "assistant.tutorial.form.error.duplicated");
+			if (!super.getBuffer().getErrors().hasErrors("course")) {
+				final Course selectedCourse = object.getCourse();
+				super.state(!selectedCourse.isDraftMode(), "course", "assistant.tutorial.error.not-published");
+			}
+
+			if (!super.getBuffer().getErrors().hasErrors("code")) {
+				existing = this.repository.findTutorialByCode(object.getCode());
+				super.state(existing == null, "code", "assistant.tutorial.form.error.duplicated");
+			}
+
 		}
 
 	}

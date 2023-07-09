@@ -61,14 +61,20 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 
 	@Override
 	public void validate(final Offer object) {
-		final boolean validInstantiationStartDate;
-		final boolean validStartFinishDate;
+		final Date instantiationDate;
+		final Date startDate;
+		final Date finishDate;
 
+		instantiationDate = object.getInstantiation();
+		startDate = object.getStartDate();
+		finishDate = object.getFinishDate();
 		//Custom restrictions
-		validInstantiationStartDate = MomentHelper.isLongEnough(object.getInstantiation(), object.getStartDate(), 1, ChronoUnit.DAYS);
-		validStartFinishDate = MomentHelper.isLongEnough(object.getStartDate(), object.getFinishDate(), 7, ChronoUnit.DAYS);
+		if (!super.getBuffer().getErrors().hasErrors("startDate"))
+			super.state(MomentHelper.isLongEnough(instantiationDate, startDate, 1440, ChronoUnit.MINUTES), "startDate", "administrator.offer.error.start-1Day-after-now");
+		if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+			super.state(MomentHelper.isLongEnough(startDate, finishDate, 10080, ChronoUnit.MINUTES), "finishDate", "administrator.offer.error.end-7Days-after-start");
 
-		assert object != null && validInstantiationStartDate == true && validStartFinishDate == true;
+		assert object != null;
 	}
 
 	@Override

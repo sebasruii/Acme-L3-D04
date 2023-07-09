@@ -19,6 +19,8 @@ assistant.tutorialSession.form.label.link = Link
 assistant.tutorialSession.form.label.draftMode = Modo Borrador
 
 assistant.tutorialSession.list.label.title = Titulo
+assistant.tutorialSession.list.label.startDate = Fecha inicio
+assistant.tutorialSession.list.label.finishDate = Fecha final
 assistant.tutorialSession.list.label.type = Tipo
 assistant.tutorialSession.list.button.create = Crear
 assistant.tutorialSession.form.button.create = Crear
@@ -27,4 +29,5 @@ assistant.tutorialSession.form.button.publish = Publicar
 assistant.tutorialSession.form.button.delete = Borrar
 
 assistant.session-tutorial.error.start-1Day-after-now=La sesion debe crearse con al menos un día de antelación
-assistant.session-tutorial.error.end-5Hours-after-start=La sesión debe durar al menos cinco horas
+assistant.session-tutorial.error.end-1Hours-after-start=La sesion debe durar al menos 1 hora
+assistant.session-tutorial.error.end-5Hours-before-start=La sesion no puede durar mas de 5 horas
