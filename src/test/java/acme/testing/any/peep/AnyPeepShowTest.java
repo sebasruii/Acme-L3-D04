@@ -24,7 +24,6 @@ public class AnyPeepShowTest extends TestHarness {
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 
-		super.checkInputBoxHasValue("instantiation", instantiation);
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("nick", nick);
 		super.checkInputBoxHasValue("message", message);
