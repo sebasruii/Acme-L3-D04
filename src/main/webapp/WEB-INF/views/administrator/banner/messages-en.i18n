@@ -23,6 +23,6 @@
  administrator.banner.form.button.create = Create banner
  administrator.banner.form.button.update = Update banner
  administrator.banner.form.button.delete = Delete banner
-
- administrator.banner.form.error.endPeriod-too-soon = The finish date must be one week after start date or more
  
+ administrator.banner.error.start-before-now = The start date must be after instantiation
+ administrator.banner.error.end-after-start= The finish date must be one week ahead the start date 

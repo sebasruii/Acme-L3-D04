@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -73,29 +74,29 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		assert object != null;
 
 		final String card = super.getRequest().getData("creditCard", String.class);
-		if (!card.matches("^\\d{4}\\/\\d{4}\\/\\d{4}\\/\\d{4}$"))
-			throw new IllegalArgumentException("student.enrolment.form.error.card");
-
+		if (!StudentEnrolmentFinalizeService.validateCreditCard(card))
+			super.state(false, "creditCard", "student.enrolment.form.error.card");
 		if (!super.getBuffer().getErrors().hasErrors("cardHolderName"))
 			super.state(!object.getCardHolderName().isEmpty(), "cardHolderName", "student.enrolment.form.error.holder");
 
 		final String cvc = super.getRequest().getData("cvc", String.class);
 		if (!cvc.matches("^\\d{3}$"))
-			throw new IllegalArgumentException("student.enrolment.form.error.cvc");
+			super.state(false, "cvc", "student.enrolment.form.error.cvc");
 
 		final String expiryDate = super.getRequest().getData("expiryDate", String.class);
-		final DateFormat format = new SimpleDateFormat("MM/yy");
+		final Locale local = super.getRequest().getLocale();
+		final String localString = local.equals(Locale.ENGLISH) ? "yy/MM" : "MM/yy";
+		final DateFormat formate = new SimpleDateFormat(localString);
 		try {
-			final Date date = format.parse(expiryDate);
-			final int month = Integer.parseInt(expiryDate.split("/")[0]);
-
+			final Date date = formate.parse(expiryDate);
+			final int i = local.equals(Locale.ENGLISH) ? 1 : 0;
+			final int month = Integer.parseInt(expiryDate.split("/")[i]);
 			if (month < 1 || month > 12)
 				super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.month");
-
 			if (MomentHelper.isBefore(date, MomentHelper.getCurrentMoment()))
-				throw new IllegalArgumentException("student.enrolment.form.error.expiryDate");
+				super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.before");
 		} catch (final ParseException e) {
-			throw new IllegalArgumentException("student.enrolment.form.error.expiryDate");
+			super.state(false, "expiryDate", "student.enrolment.form.error.expiryDate.pattern");
 		}
 	}
 
@@ -104,8 +105,8 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		assert object != null;
 
 		object.setDraftMode(false);
-		final String card = super.getRequest().getData("creditCard", String.class);
-
+		String card = super.getRequest().getData("creditCard", String.class);
+		card = card.replaceAll("\\D", "");
 		object.setCardLowerNibble(card.substring(card.length() - 4));
 		object.setCardHolderName(super.getRequest().getData("cardHolderName", String.class));
 
@@ -120,6 +121,7 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		final String creditCard = "";
 		final String cvc = "";
 		final String expiryDate = "";
+		final Double estimatedTotalTime = 0.0;
 		Collection<Course> courses;
 		Tuple tuple;
 
@@ -131,8 +133,34 @@ public class StudentEnrolmentFinalizeService extends AbstractService<Student, En
 		tuple.put("creditCard", creditCard);
 		tuple.put("cvc", cvc);
 		tuple.put("expiryDate", expiryDate);
+		tuple.put("estimatedTotalTime", estimatedTotalTime);
 		tuple.put("draftMode", object.isDraftMode());
 
 		super.getResponse().setData(tuple);
+	}
+
+	public static boolean validateCreditCard(String cardNumber) {
+		cardNumber = cardNumber.replaceAll("\\D", "");
+
+		if (!cardNumber.matches("\\d+") || cardNumber.isEmpty())
+			return false;
+
+		int sum = 0;
+		boolean alternate = false;
+
+		for (int i = cardNumber.length() - 1; i >= 0; i--) {
+			int digit = Integer.parseInt(cardNumber.substring(i, i + 1));
+
+			if (alternate) {
+				digit *= 2;
+				if (digit > 9)
+					digit = digit % 10 + 1;
+			}
+
+			sum += digit;
+			alternate = !alternate;
+		}
+
+		return sum % 10 == 0;
 	}
 }

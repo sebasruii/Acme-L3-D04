@@ -37,5 +37,12 @@
 	<acme:footer-logo logo="images/logo.png">
 		<acme:footer-copyright code="master.company.name"/>
 	</acme:footer-logo>		
+	
+	<a href="${banner.link}">
+			<img src="${banner.imageLink}" alt="${banner.slogan}" style="width: 30%;"/>
+	</a>
+	<div style="flex: 0 1 470px; font-weight: 600;">
+			<acme:print value="${banner.slogan}" />
+	</div>
 
 </acme:footer-panel>

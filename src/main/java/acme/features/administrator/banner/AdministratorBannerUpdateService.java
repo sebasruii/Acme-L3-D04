@@ -33,7 +33,9 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		status = super.getRequest().getPrincipal().hasRole(Administrator.class);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -43,7 +45,9 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findBannerById(id);
-
+		Date instantiationMoment;
+		instantiationMoment = MomentHelper.getCurrentMoment();
+		object.setInstantiation(instantiationMoment);
 		super.getBuffer().setData(object);
 	}
 
@@ -58,22 +62,34 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 	public void validate(final Banner object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("finishDate")) {
-			Date minimumFinishDate;
+		Date instantiationMoment;
+		instantiationMoment = MomentHelper.getCurrentMoment();
+		object.setInstantiation(instantiationMoment);
 
-			minimumFinishDate = MomentHelper.deltaFromMoment(object.getStartDate(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfterOrEqual(object.getFinishDate(), minimumFinishDate), "finishDate", "administrator.banner.form.error.finishDate-too-soon");
+		if (!super.getBuffer().getErrors().hasErrors("startDate") || !super.getBuffer().getErrors().hasErrors("finishDate")) {
+
+			Date start;
+			Date startCondition;
+			Date end;
+			Date inAWeekFromStart;
+
+			startCondition = object.getInstantiation();
+			start = object.getStartDate();
+			end = object.getFinishDate();
+
+			inAWeekFromStart = MomentHelper.deltaFromMoment(start, AdministratorBannerCreateService.oneWeek, ChronoUnit.WEEKS);
+
+			if (!super.getBuffer().getErrors().hasErrors("startDate")) {
+				super.state(MomentHelper.isAfter(start, startCondition), "startDate", "administrator.banner.error.start-before-now");
+				if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+					super.state(MomentHelper.isAfter(end, inAWeekFromStart), "finishDate", "administrator.banner.error.end-after-start");
+			}
 		}
 	}
 
 	@Override
 	public void perform(final Banner object) {
 		assert object != null;
-
-		Date currentMoment;
-
-		currentMoment = MomentHelper.getCurrentMoment();
-		object.setInstantiation(currentMoment);
 
 		this.repository.save(object);
 	}

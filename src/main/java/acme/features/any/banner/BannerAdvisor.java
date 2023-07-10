@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import acme.entities.banner.Banner;
 
 @ControllerAdvice
-public class AnyBannerAdvisor {
+public class BannerAdvisor {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyBannerRepository repository;
+	private BannerRepository repository;
 
 	// Constructors -----------------------------------------------------------
 
@@ -21,13 +21,7 @@ public class AnyBannerAdvisor {
 	@ModelAttribute("banner")
 	public Banner getBanner() {
 		Banner result;
-
-		try {
-			result = this.repository.findRandomBanner();
-		} catch (final Throwable oops) {
-			result = null;
-		}
-
+		result = this.repository.findRandomBanner();
 		return result;
 	}
 }

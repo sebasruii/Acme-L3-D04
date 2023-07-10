@@ -1,6 +1,8 @@
 
 package acme.forms;
 
+import java.util.Map;
+
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,14 +13,14 @@ public class StudentDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long	serialVersionUID	= 1L;
+	protected static final long		serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
-	private Integer				totalActivities;
+	private Map<String, Integer>	totalActivitiesByType;
 
-	private Statistics			ActivityTime;
+	private Statistics				activityTime;
 
-	private Statistics			LearningTime;
+	private Statistics				learningTime;
 
 }

@@ -10,13 +10,13 @@
 
  administrator.banner.list.label.startDate = Fecha de inicio
  administrator.banner.list.label.finishDate = Fecha de fin
- administrator.banner.list.label.instantiation = Instanciación
+ administrator.banner.list.label.instantiation = InstanciaciÃ³n
  administrator.banner.list.label.slogan = Eslogan
  administrator.banner.list.button.create = Crear cartel
  
  administrator.banner.form.label.startDate = Fecha de inicio
  administrator.banner.form.label.finishDate = Fecha de fin
- administrator.banner.form.label.instantiation = Instanciación
+ administrator.banner.form.label.instantiation = InstanciaciÃ³n
  administrator.banner.form.label.imageLink = URL imagen
  administrator.banner.form.label.slogan = Eslogan
  administrator.banner.form.label.link = Enlace Web
@@ -24,5 +24,6 @@
  administrator.banner.form.button.update = Actualizar cartel
  administrator.banner.form.button.delete = Eliminar cartel
  
- administrator.banner.form.error.endPeriod-too-soon = La fecha de fin debe ser una semana después de las fecha de inicio o más
+ administrator.banner.error.start-before-now = La fecha de inicio debe ser posterior a la Ãºltima fecha de actualizaciÃ³n
+ administrator.banner.error.end-after-start= La fecha de fin debe ser una semana posterior a la de inicio
  

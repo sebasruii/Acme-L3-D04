@@ -24,8 +24,8 @@
  	<acme:input-moment code="student.activity.form.label.finishDate" path="finishDate"/>
  	<acme:input-url code="student.activity.form.label.link" path="link"/>
  	<jstl:choose>	
- 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|update')}">	
- 			<c:if test="${draftMode}">
+ 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">	
+ 			<c:if test="${!draftMode}">
  				<acme:submit code="student.activity.form.button.update" action="/student/activity/update"/>
  				<acme:submit code="student.activity.form.button.delete" action="/student/activity/delete"/>
  			</c:if>

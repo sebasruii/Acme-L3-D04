@@ -23,4 +23,4 @@ student.activity.form.button.create = Create
 student.activity.list.label.title = Title
 student.activity.list.label.activityType = Activity Type
 student.activity.list.button.create = Create
-student.workbook.form.error.validPeriod = Finish Date must be after Start Date
+student.workbook.form.error.end-before-start = Finish Date must be after Start Date

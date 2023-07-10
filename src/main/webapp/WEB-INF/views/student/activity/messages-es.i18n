@@ -23,4 +23,4 @@ student.activity.form.button.create = Crear
 student.activity.list.label.title = Titulo
 student.activity.list.label.activityType = Tipo de actividad
 student.activity.list.button.create = Crear
-student.workbook.form.error.validPeriod = La fecha final debe ser despues de la fecha de inicio
+student.workbook.form.error.end-before-start = La fecha final debe ser despues de la fecha de inicio

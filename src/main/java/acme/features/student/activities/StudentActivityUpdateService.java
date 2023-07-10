@@ -34,18 +34,16 @@ public class StudentActivityUpdateService extends AbstractService<Student, Activ
 	@Override
 	public void authorise() {
 		Activity activity;
-		int id;
+		int userId;
 		Enrolment enrolment;
 		int enrolmentId;
-		Student student;
 		boolean status;
 
-		id = super.getRequest().getPrincipal().getAccountId();
+		userId = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("id", int.class);
 		activity = this.repository.findActivityById(enrolmentId);
 		enrolment = activity.getEnrolment();
-		student = enrolment == null ? null : enrolment.getStudent();
-		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == id;
+		status = !enrolment.isDraftMode() && enrolment.getStudent().getUserAccount().getId() == userId;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -71,7 +69,7 @@ public class StudentActivityUpdateService extends AbstractService<Student, Activ
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("finishDate")) {
 			final boolean validPeriod = MomentHelper.isAfter(object.getFinishDate(), object.getStartDate());
-			super.state(validPeriod, "endDisplayPeriod", "student.workbook.form.error.end-before-start");
+			super.state(validPeriod, "finishDate", "student.workbook.form.error.end-before-start");
 		}
 	}
 
