@@ -84,7 +84,7 @@ public class CompanyPracticumSessionCreateTest extends TestHarness {
 		super.clickOnButton("Practicum Sessions");
 
 		if (practicumRecordIndex == 4)
-			super.clickOnButton("Create exceptional session");
+			super.clickOnButton(" Create exceptional session");
 		else
 			super.clickOnButton("Create");
 

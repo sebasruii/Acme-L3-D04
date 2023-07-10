@@ -47,6 +47,7 @@ public class Practicum extends AbstractEntity {
 	@Valid
 	protected Company			company;
 
+	@NotNull
 	protected Boolean			draftMode;
 
 	// Derived attributes -----------------------------------------------------
