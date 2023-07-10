@@ -38,13 +38,11 @@ public class StudentActivityCreateService extends AbstractService<Student, Activ
 		int enrolmentId;
 		Student student;
 		boolean status;
-		final int userId;
 
-		userId = super.getRequest().getPrincipal().getAccountId();
 		enrolmentId = super.getRequest().getData("enrolmentId", int.class);
 		enrolment = this.repository.findEnrolmentById(enrolmentId);
 		student = enrolment == null ? null : enrolment.getStudent();
-		status = (enrolment != null || super.getRequest().getPrincipal().hasRole(student)) && enrolment.getStudent().getUserAccount().getId() == userId && enrolment.isDraftMode();
+		status = enrolment != null && super.getRequest().getPrincipal().hasRole(student) && !enrolment.isDraftMode();
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -70,7 +68,7 @@ public class StudentActivityCreateService extends AbstractService<Student, Activ
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("endPeriod")) {
 			final boolean validPeriod = MomentHelper.isAfter(object.getFinishDate(), object.getStartDate());
-			super.state(validPeriod, "finishDate", "student.activity.form.error.validPeriod");
+			super.state(validPeriod, "finishDate", "student.workbook.form.error.end-before-start");
 		}
 
 	}

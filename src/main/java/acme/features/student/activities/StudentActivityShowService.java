@@ -34,11 +34,16 @@ public class StudentActivityShowService extends AbstractService<Student, Activit
 	public void authorise() {
 		boolean status;
 
-		final int activityId = super.getRequest().getData("id", int.class);
-		final Activity activity = this.repository.findActivityById(activityId);
-		final int id = super.getRequest().getPrincipal().getAccountId();
+		Activity activity;
+		Enrolment enrolment;
+		int userId;
+		int enrolmentId;
+		userId = super.getRequest().getPrincipal().getAccountId();
+		enrolmentId = super.getRequest().getData("id", int.class);
+		activity = this.repository.findActivityById(enrolmentId);
+		enrolment = activity.getEnrolment();
+		status = enrolment.getStudent().getUserAccount().getId() == userId && !enrolment.isDraftMode();
 
-		status = activity.getEnrolment().getStudent().getUserAccount().getId() == id;
 		super.getResponse().setAuthorised(status);
 	}
 

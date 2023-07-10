@@ -25,6 +25,7 @@ student.enrolment.form.button.create = Crear
 student.enrolment.form.button.update = Actualizar
 student.enrolment.form.button.delete = Borrar
 student.enrolment.form.title.finalize = Finalizar matrícula
+student.enrolment.form.expiryDate.placeholder = MM/YY
 
 student.enrolment.list.label.code = Código
 student.enrolment.list.label.motivation = Motivaciones
@@ -34,9 +35,11 @@ student.enrolment.list.label.student = Estudiante
 student.enrolment.list.button.create = Crear
 
 student.enrolment.form.error.card = La tarjeta de crédito debe ser XXXX/XXXX/XXXX/XXXX
-student.enrolment.form.error.expiryDate.pattern = La fecha de caducidad debe ser MM/YY
+student.enrolment.form.error.expiryDate.pattern = EL formato de la fecha debe ser MM/YY
+student.enrolment.form.error.expiryDate.month = EL formato de la fecha debe ser una fecha real
 student.enrolment.form.error.expiryDate.before = Tu tarjeta esta caducada
 student.enrolment.form.error.cvc = El CVC tiene que tener 3 números
 student.enrolment.form.error.code = Código duplicado
 student.enrolment.form.error.holder = Este campo no puede estar vacío
+
 student.enrolment.form.button.activities = Actividades

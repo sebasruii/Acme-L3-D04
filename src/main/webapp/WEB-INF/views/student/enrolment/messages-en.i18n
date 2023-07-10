@@ -24,6 +24,7 @@
  student.enrolment.form.button.update = Update
  student.enrolment.form.button.delete = Delete
  student.enrolment.form.title.finalize = Finalize enrolment
+ student.enrolment.form.expiryDate.placeholder = YY/MM
 
  student.enrolment.list.label.code = Code
  student.enrolment.list.label.motivation = Motivation
@@ -33,7 +34,8 @@
  student.enrolment.list.button.create = Create:
 
  student.enrolment.form.error.card = Credit card's format must be XXXX/XXXX/XXXX/XXXX
- student.enrolment.form.error.expiryDate.pattern = The format of expiration date must be MM/YY
+ student.enrolment.form.error.expiryDate.pattern = Date's format must be YY/MM
+ student.enrolment.form.error.expiryDate.month = Date's format must be a real date
  student.enrolment.form.error.expiryDate.before = The format of expiration date's must be after the current date
  student.enrolment.form.error.cvc = The CVC must be 3 numbers 
  student.enrolment.form.error.code = Duplicated code

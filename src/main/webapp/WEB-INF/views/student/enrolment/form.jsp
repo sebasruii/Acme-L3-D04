@@ -21,9 +21,10 @@
  			<acme:input-textbox code="student.enrolment.form.label.motivation" path="motivation"/>
  			<acme:input-textbox code="student.enrolment.form.label.goals" path="goals"/>
  			<acme:input-select code="student.enrolment.form.label.course" path="course" choices="${courses}"/>
- 			<acme:input-textbox code="student.enrolment.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>	
+ 			
 
 	<jstl:if test="${_command != 'create'}">
+		<acme:input-textbox code="student.enrolment.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>	
 		<br>	
 		<h3>
 			<acme:message code="student.enrolment.form.title.finalize"/>
@@ -31,7 +32,7 @@
 			<acme:input-textbox code="student.enrolment.form.label.cardHolderName" path="cardHolderName"/>	
 			<jstl:if test="${draftMode}">
 				<acme:input-textbox code="student.enrolment.form.label.creditCard" path="creditCard" placeholder="XXXX/XXXX/XXXX/XXXX"/>
-				<acme:input-textbox code="student.enrolment.form.label.expiryDate" path="expiryDate" placeholder="MM/YY"/>
+				<acme:input-textbox code="student.enrolment.form.label.expiryDate" path="expiryDate" placeholder="student.enrolment.form.expiryDate.placeholder"/>
 				<acme:input-textbox code="student.enrolment.form.label.cvc" path="cvc" placeholder="XXX"/>
 			</jstl:if>
 			<jstl:if test="${!draftMode}">
@@ -46,12 +47,13 @@
 				<acme:submit code="student.enrolment.form.button.delete" action="/student/enrolment/delete"/>
 				<acme:submit code="student.enrolment.form.button.finalize" action="/student/enrolment/finalize"/>
 			</c:if>	
+			<jstl:if test="${!draftMode}" >
+				<acme:button code="student.enrolment.form.button.activities" action="/student/activity/list?enrolmentId=${id}"/>
+			</jstl:if>
  		</jstl:when>
  		<jstl:when test="${_command == 'create'}">
  			<acme:submit code="student.enrolment.form.button.create" action="/student/enrolment/create"/>
  		</jstl:when>
  	</jstl:choose>
- 	<jstl:if test="${ _command == 'show' }" >
-		<acme:button code="student.enrolment.form.button.activities" action="/student/activity/list?enrolmentId=${id}"/>
-	</jstl:if>		
+ 			
  </acme:form>

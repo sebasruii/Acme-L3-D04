@@ -21,7 +21,7 @@
 	<acme:list-column code="student.activity.list.label.activityType" path="activityType"/>
 </acme:list>
 <jstl:if test="${_command == 'list'}">
-	<c:if test="${draftMode}">
+	<c:if test="${!draftMode}">
 		<acme:button code="student.activity.list.button.create" action="/student/activity/create?enrolmentId=${enrolmentId}"/>
 	</c:if>
 </jstl:if>
