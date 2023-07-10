@@ -33,7 +33,7 @@
  student.enrolment.list.label.student = Student
  student.enrolment.list.button.create = Create:
 
- student.enrolment.form.error.card = Credit card's format must be XXXX/XXXX/XXXX/XXXX
+ student.enrolment.form.error.card = Credit card's format is not valid
  student.enrolment.form.error.expiryDate.pattern = Date's format must be YY/MM
  student.enrolment.form.error.expiryDate.month = Date's format must be a real date
  student.enrolment.form.error.expiryDate.before = The format of expiration date's must be after the current date

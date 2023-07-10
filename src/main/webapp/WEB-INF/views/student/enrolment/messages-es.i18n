@@ -34,7 +34,7 @@ student.enrolment.list.label.course = Curso
 student.enrolment.list.label.student = Estudiante
 student.enrolment.list.button.create = Crear
 
-student.enrolment.form.error.card = La tarjeta de crédito debe ser XXXX/XXXX/XXXX/XXXX
+student.enrolment.form.error.card = La tarjeta de crédito no es valida
 student.enrolment.form.error.expiryDate.pattern = EL formato de la fecha debe ser MM/YY
 student.enrolment.form.error.expiryDate.month = EL formato de la fecha debe ser una fecha real
 student.enrolment.form.error.expiryDate.before = Tu tarjeta esta caducada
