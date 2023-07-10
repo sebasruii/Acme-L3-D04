@@ -40,6 +40,34 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 		super.signOut();
 	}
 
+	@ParameterizedTest
+	@CsvFileSource(resources = "/auditor/auditing_record/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200negative(final int recordRecordIndex, final String subject, final String assessment, final String startDate, final String finishDate, final String mark, final String link, final int recordAuditIndex) {
+
+		super.signIn("auditor1", "auditor1");
+
+		super.clickOnMenu("Auditor", "List Audits");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordAuditIndex);
+		super.clickOnButton("Auditing Records");
+
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordRecordIndex);
+
+		super.checkFormExists();
+		super.fillInputBoxIn("subject", subject);
+		super.fillInputBoxIn("assessment", assessment);
+		super.fillInputBoxIn("startDate", startDate);
+		super.fillInputBoxIn("finishDate", finishDate);
+		super.fillInputBoxIn("mark", mark);
+		super.fillInputBoxIn("link", link);
+		super.clickOnSubmit("Publish Record");
+		super.checkErrorsExist();
+		super.signOut();
+	}
+
 	@Test
 	public void test300hacking() {
 		Collection<AuditingRecord> records;
@@ -47,7 +75,7 @@ public class AuditorAuditingRecordPublishTest extends TestHarness {
 
 		records = this.repository.findAuditingRecordsByAuditorUsername("auditor1");
 		for (final AuditingRecord record : records)
-			if (record.getDraftMode()) {
+			if (record.isDraftMode()) {
 				params = String.format("id=%d", record.getId());
 
 				super.checkLinkExists("Sign in");
