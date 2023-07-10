@@ -1,0 +1,22 @@
+practicumRecordIndex,practicumSessionRecordIndex,title,summary,start-date,finish-date,link
+0,1,,summary-01,2024/01/01 08:00,2024/02/08 09:00,https://www.google.com
+0,2,title-01,,2024/01/01 08:00,2024/02/08 09:00,https://www.google.com
+0,3,title-01,summary-01,,2024/02/08 09:00,https://www.google.com
+0,4,title-01,summary-01,2024/01/01 08:00,,https://www.google.com
+0,5,    ,summary-01,2024/01/01 08:00,2024/02/08 09:00,https://www.google.com
+0,6,title-01,    ,2024/01/01 08:00,2024/02/08 09:00,https://www.google.com
+0,7,Probando un titulo que tenga como maximo 76 caracteres para el campo title..,summary-02,2024/01/01 08:00,2024/02/07 09:00,
+0,8,Probando un titulo que tenga como maximo 77 caracteres para el campo title...,summary-03,2024/01/01 08:00,2024/03/07 09:00,https://www.google.com
+0,9,title-01,Esto es un resumen de maximo 101 caracteres para abstractPracticum el campo summary del archivo csv..,2024/01/01 08:00,2024/06/07 09:00,https://www.google.com
+0,10,title-01,Esto es un resumen de maximo 102 caracteres para abstractPracticum el campo summary del archivo csv...,2024/01/01 08:00,2024/06/07 09:00,https://www.google.com
+0,11,title-01,summary-01,2024/01/08,2024/02/08 09:00,https://www.google.com
+0,12,title-01,summary-01,2024/01/01 08:00,2024/02/08,https://www.google.com
+0,11,title-01,summary-01,1999/01/01 08:00,2024/02/08 09:00,https://www.google.com
+0,12,title-01,summary-01,2022/01/01 08:00,2024/02/08 09:00,https://www.google.com
+0,13,title-01,summary-01,2022/07/30 00:00,2024/02/08 09:00,https://www.google.com
+0,14,title-01,summary-01,2022/08/06 00:00,2024/02/08 09:00,https://www.google.com
+0,15,title-01,summary-01,2023/08/01 00:00,2023/08/07 23:59,https://www.google.com
+0,16,title-01,summary-01,2024/01/01 08:00,2024/02/08 09:00,WKETI
+0,17,title-01,summary-01,2024/01/01 08:00,1999/02/08 09:00,https://www.google.com
+0,17,title-01,summary-01,2024/01/01 08:00,2024/01/02 09:00,https://www.google.com
+4,17,title-01,summary-01,2024/01/01 08:00,2024/02/08 09:00,https://www.google.com

@@ -19,9 +19,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<name>Acme-L3-D04</name>
-	<description>Third deliverable</description>
+	<description>Fourth deliverable</description>
 
 	<groupId>Acme</groupId>	
+
 	<artifactId>Acme-L3-D04</artifactId>
 	<version>23.4.1</version>
 

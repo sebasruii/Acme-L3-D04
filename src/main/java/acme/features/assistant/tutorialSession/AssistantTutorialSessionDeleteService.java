@@ -85,6 +85,7 @@ public class AssistantTutorialSessionDeleteService extends AbstractService<Assis
 
 		tuple = super.unbind(object, "title", "type", "summary", "startDate", "finishDate", "link");
 		tuple.put("types", choices);
+		tuple.put("draftMode", object.isDraftMode());
 		tuple.put("masterId", object.getTutorial().getId());
 
 		super.getResponse().setData(tuple);

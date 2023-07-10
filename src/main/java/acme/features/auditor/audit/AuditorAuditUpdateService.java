@@ -65,7 +65,7 @@ public class AuditorAuditUpdateService extends AbstractService<Auditor, Audit> {
 		courseId = super.getRequest().getData("course", int.class);
 		course = this.repository.findCourseById(courseId);
 
-		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
+		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints");
 		object.setCourse(course);
 	}
 
@@ -87,6 +87,7 @@ public class AuditorAuditUpdateService extends AbstractService<Auditor, Audit> {
 	public void perform(final Audit object) {
 		assert object != null;
 
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 

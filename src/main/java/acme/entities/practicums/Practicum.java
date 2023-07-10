@@ -27,7 +27,7 @@ public class Practicum extends AbstractEntity {
 
 	// Attributes ------------------------------------------------------------
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{1,3}\\d{4}$", message = "{validation.code1}")
+	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$", message = "{validation.code1}")
 	protected String			code;
 
 	@NotBlank

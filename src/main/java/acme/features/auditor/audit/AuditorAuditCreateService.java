@@ -39,7 +39,9 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 
 	@Override
 	public void load() {
-		final Audit object = new Audit();
+		Audit object;
+
+		object = new Audit();
 		object.setDraftMode(true);
 		super.getBuffer().setData(object);
 	}
@@ -50,9 +52,6 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 			final boolean existing = this.repository.existsAuditWithCode(object.getCode(), object.getId());
 			super.state(!existing, "code", "auditor.audit.error.code.duplicated");
 		}
-
-		if (object.getCourse() != null && object.getCourse().isDraftMode())
-			super.state(!object.getCourse().isDraftMode(), "course", "auditor.audit.error.course.draft");
 	}
 
 	@Override
@@ -62,7 +61,7 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 		final int courseId = super.getRequest().getData("course", int.class);
 		final Course course = this.repository.findCourseById(courseId);
 
-		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
+		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints");
 		final Auditor auditor = this.repository.findOneAuditorById(super.getRequest().getPrincipal().getActiveRoleId());
 		object.setAuditor(auditor);
 		object.setCourse(course);
@@ -71,7 +70,7 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 	@Override
 	public void perform(final Audit object) {
 		assert object != null;
-
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 
@@ -83,7 +82,7 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 		final List<Course> courses = this.repository.findAllPublishedCourses();
 		final SelectChoices choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
+		tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 

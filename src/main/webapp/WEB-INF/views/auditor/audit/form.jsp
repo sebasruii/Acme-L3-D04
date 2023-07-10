@@ -13,8 +13,6 @@
 	<jstl:if test="${_command != 'create' && marks != null}">
 		<acme:input-textbox code="auditor.audit.label.marks" path="marks" readonly="true"/>
 	</jstl:if>
-	<acme:input-checkbox code="auditor.audit.label.draftMode" path="draftMode" />
-
 
 	<jstl:choose>	 
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">

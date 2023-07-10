@@ -1,0 +1,20 @@
+recordIndex,code,title,summary,price,link
+0,A001,test-title-01,courseAbstract-01,EUR 20.00,https:\www.course-01.com
+1,A002,t,courseAbstract-04,EUR 20.00,https:\www.course-01.com
+2,A003,te,courseAbstract-04,EUR 20.00,https:\www.course-01.com
+3,A004,123456789012345678901234567890123456789012345678901234567890123456789012345,courseAbstract-05,EUR 20.00,https:\www.course-01.com
+4,A005,12345678901234567890123456789012345678901234567890123456789012345678901234,courseAbstract-06,EUR 20.00,https:\www.course-01.com
+5,A006,<title>ExampleHTML</title>,courseAbstract-01,EUR 20.00,https:\www.course-01.com
+6,A007,무지개,courseAbstract-01,EUR 20.00,https:\www.course-01.com
+7,A008,test-title-02,c,EUR 20.00,https:\www.course-01.com
+8,A009,test-title-03,co,EUR 20.00,https:\www.course-01.com
+9,A010,test-title-04,1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,EUR 20.00,https:\www.course-01.com
+10,A011,test-title-05,123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789,EUR 20.00,https:\www.course-01.com
+11,A012,test-title-06,<title>ExampleHTML</title>,EUR 20.00,https:\www.course-01.com
+12,A013,test-title-07,무지개,EUR 20.00,https:\www.course-01.com
+13,A014,test-title-08,courseAbstract-01,EUR 0.00,https:\www.course-01.com
+14,A015,test-title-09,courseAbstract-01,EUR 0.01,https:\www.course-01.com
+15,A016,test-title-10,courseAbstract-01,"EUR 1,000,000.00",https:\www.course-01.com
+16,A017,test-title-11,courseAbstract-01,"EUR 999,999.99",https:\www.course-01.com
+17,A018,test-title-01,courseAbstract-01,EUR 20.00,
+18,A019,test-title-01,courseAbstract-01,EUR 20.00,https:\www.course-01.com

@@ -9,25 +9,21 @@
 	<acme:input-select code="assistant.tutorialSession.form.label.type"
 		path="type" choices="${types}" />
 	<acme:input-textarea
-		code="assistant.tutorialSession.form.label.summary"
-		path="summary" />
+		code="assistant.tutorialSession.form.label.summary" path="summary" />
 	<acme:input-moment
-		code="assistant.tutorialSession.form.label.startDate"
-		path="startDate" />
+		code="assistant.tutorialSession.form.label.startDate" path="startDate" />
 	<acme:input-moment
-		code="assistant.tutorialSession.form.label.finishDate" path="finishDate" />
-	<acme:input-url
-		code="assistant.tutorialSession.form.label.link"
+		code="assistant.tutorialSession.form.label.finishDate"
+		path="finishDate" />
+	<acme:input-url code="assistant.tutorialSession.form.label.link"
 		path="link" />
 
 
 	<jstl:choose>
 		<jstl:when
-			test="${acme:anyOf(_command, 'show|update|publish') && draftMode == true}">
+			test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="assistant.tutorialSession.form.button.update"
 				action="/assistant/tutorial-session/update" />
-			<acme:submit code="assistant.tutorialSession.form.button.publish"
-				action="/assistant/tutorial-session/publish" />
 			<acme:submit code="assistant.tutorialSession.form.button.delete"
 				action="/assistant/tutorial-session/delete" />
 		</jstl:when>

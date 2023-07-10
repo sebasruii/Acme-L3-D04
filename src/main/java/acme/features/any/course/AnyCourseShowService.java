@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.NatureType.NatureType;
 import acme.entities.courses.Course;
 import acme.framework.components.accounts.Any;
+import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
@@ -59,6 +60,8 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 		int numTheoryLectures;
 		int numHandsOnLectures;
 
+		final boolean status = super.getRequest().getPrincipal().hasRole(Authenticated.class);
+
 		numTheoryLectures = this.repository.numberOfTheoryLecturesPerCourse(object.getId());
 		numHandsOnLectures = this.repository.numberOfHandsOnLecturesPerCourse(object.getId());
 
@@ -71,6 +74,7 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 
 		tuple = super.unbind(object, "code", "title", "summary", "price", "link", "draftMode");
 		tuple.put("courseType", nature);
+		tuple.put("status", status);
 		super.getResponse().setData(tuple);
 	}
 }

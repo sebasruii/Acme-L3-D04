@@ -18,3 +18,6 @@ administrator.offer.form.label.link = Link
 administrator.offer.form.button.create = Create
 administrator.offer.form.button.update = Update
 administrator.offer.form.button.delete = Delete
+
+administrator.offer.error.start-1Day-after-now = The start date must be at least one day after the moment of instantiation
+administrator.offer.error.end-7Days-after-start = The end date must be at least 7 days after the start date

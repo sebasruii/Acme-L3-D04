@@ -44,6 +44,10 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 		AuditingRecord object;
 
 		object = new AuditingRecord();
+		/*
+		 * object.setStartDate(MomentHelper.getCurrentMoment());
+		 * object.setFinishDate(MomentHelper.getCurrentMoment());
+		 */
 		super.getBuffer().setData(object);
 	}
 
@@ -67,15 +71,16 @@ public class AuditorAuditingRecordCreateService extends AbstractService<Auditor,
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("startDate"))
 			if (!MomentHelper.isBefore(object.getStartDate(), object.getFinishDate()))
-				super.state(false, "startDate", "auditor.auditingrecord.error.date.startAfterFinish");
+				super.state(false, "startDate", "auditor.auditingRecord.error.date.startAfterFinish");
 			else
-				super.state(!(object.getHoursFromStart() < 1), "startDate", "auditor.auditingrecord.error.date.shortPeriod");
+				super.state(!(object.getHoursFromStart() < 1), "startDate", "auditor.auditingRecord.error.date.shortPeriod");
 
 	}
 
 	@Override
 	public void perform(final AuditingRecord object) {
 		assert object != null;
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 

@@ -4,6 +4,7 @@ package acme.features.company.practicumSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SystemConfigurationService;
 import acme.entities.practicumSessions.PracticumSession;
 import acme.entities.practicums.Practicum;
 import acme.framework.components.models.Tuple;
@@ -14,7 +15,10 @@ import acme.roles.Company;
 public class CompanyPracticumSessionShowService extends AbstractService<Company, PracticumSession> {
 
 	@Autowired
-	protected CompanyPracticumSessionRepository repository;
+	protected CompanyPracticumSessionRepository	repository;
+
+	@Autowired
+	protected SystemConfigurationService		configurationService;
 
 
 	@Override
@@ -29,13 +33,15 @@ public class CompanyPracticumSessionShowService extends AbstractService<Company,
 	@Override
 	public void authorise() {
 		boolean status;
-		int practicumSessionId;
 		Practicum practicum;
+		Company company;
+		int practicumSessionId;
 
+		company = this.repository.findCompanyById(super.getRequest().getPrincipal().getActiveRoleId());
 		practicumSessionId = super.getRequest().getData("id", int.class);
 		practicum = this.repository.findPracticumByPracticumSessionId(practicumSessionId);
-		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
 
+		status = super.getRequest().getPrincipal().hasRole(practicum.getCompany()) && company.getId() == practicum.getCompany().getId() && practicum != null;
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -53,10 +59,12 @@ public class CompanyPracticumSessionShowService extends AbstractService<Company,
 	@Override
 	public void unbind(final PracticumSession object) {
 		assert object != null;
-
 		Tuple tuple;
 
+		final String lang = super.getRequest().getLocale().getLanguage();
+
 		tuple = super.unbind(object, "title", "summary", "startDate", "finishDate", "link");
+		tuple.put("exceptional", this.configurationService.booleanTranslated(object.getExceptional(), lang));
 		tuple.put("masterId", object.getPracticum().getId());
 		tuple.put("draftMode", object.getPracticum().getDraftMode());
 

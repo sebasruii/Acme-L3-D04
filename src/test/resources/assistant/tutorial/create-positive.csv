@@ -1,0 +1,20 @@
+recordIndex,code,title,summary,goals,draftMode,estimatedTotalTime,course
+0,A001,title1,summary1,goals1,True,0,A111
+1,A002,title1,summary1,goals1,False,0,A111
+2,A003,title1,summary1,goals1,True,0,A111
+3,A004,title1,summary1,goals1,True,0,A111
+4,A005,t,summary1,goals1,True,0,A111
+5,A006,ti,summary1,goals1,True,0,A111
+6,A007,title1 with 74 characters pppppppppppppppppppppppppppppppppppppppppppppppp,summary1,goals1,True,0,AAA111
+7,A008,title1 with 75 characters ppppppppppppppppppppppppppppppppppppppppppppppppp,summary1,goals1,True,0,AAA111
+8,A009,<script>alert('exampleJS');</script>,summary1,goals1,False,0,AAA111
+9,A010,title1,s,goals1,False,0,AAA111
+10,A011,title1,su,goals1,False,0,AAA111
+11,A012,title1,this is a summary with a 99 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,False,0,AAA111
+12,A013,title1,this is a summary with a 100 character to test ppppppppppppppppppppppppppppppppppppppppppppppppppppp,goals1,False,0,AAA111
+13,A014,title1,<script>alert('exampleJS');</script>,goals1,False,0,AAA111
+14,A015,title1,summary1,g,True,0,AAA111
+15,A016,title1,summary1,go,False,0,AAA111
+16,A017,title1,summary1,goal1 with 99 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,False,0,AAA111
+18,AA018,title1,summary1,goal1 with 100 characters pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp,False,0,AAA111
+19,AAA019,title1,summary1,<script>alert('exampleJS');</script>,False,0,AAA111

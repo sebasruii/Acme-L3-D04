@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import acme.entities.practicumSessions.PracticumSession;
 import acme.entities.practicums.Practicum;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Company;
 
 @Repository
 public interface CompanyPracticumSessionRepository extends AbstractRepository {
@@ -24,5 +25,8 @@ public interface CompanyPracticumSessionRepository extends AbstractRepository {
 
 	@Query("select ps from PracticumSession ps where ps.id = :id")
 	PracticumSession findPracticumSessionById(int id);
+
+	@Query("select c from Company c where c.id = :id")
+	Company findCompanyById(int id);
 
 }

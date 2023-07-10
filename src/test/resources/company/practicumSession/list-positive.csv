@@ -1,0 +1,4 @@
+practicumRecordIndex,reference,practicumSessionRecordIndex,title,start-date,finish-date
+0,A111,0,T,2024/01/01 08:00,2024/01/07 09:00
+1,CCC333,0,Probando un titulo que tenga como maximo 74 caracteres para el campo title,2024/03/01 08:00,2024/03/07 09:00
+1,CCC333,1,Probando un titulo que tenga como maximo 75 caracteres para el campo title.,2024/04/01 08:00,2024/04/07 09:00

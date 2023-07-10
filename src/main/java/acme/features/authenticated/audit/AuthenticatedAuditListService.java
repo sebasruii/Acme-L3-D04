@@ -14,40 +14,41 @@ import acme.framework.services.AbstractService;
 @Service
 public class AuthenticatedAuditListService extends AbstractService<Authenticated, Audit> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	protected AuthenticatedAuditRepository repository;
-
-	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void check() {
-		boolean status;
-		status = super.getRequest().hasData("masterId", int.class);
+		final boolean status = super.getRequest().hasData("courseId", int.class);
 		super.getResponse().setChecked(status);
 	}
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final boolean status = super.getRequest().getPrincipal().hasRole(Authenticated.class);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		final Collection<Audit> objects;
-		int masterId;
-		masterId = super.getRequest().getData("masterId", int.class);
-		//objects = this.repository.findAllAuditsByCourseId(masterId);
-		//super.getBuffer().setData(objects);
+		Collection<Audit> objects;
+		final int id = super.getRequest().getData("courseId", int.class);
+
+		objects = this.repository.findAllReleasedAuditsByCourseId(id);
+
+		super.getBuffer().setData(objects);
 	}
 
 	@Override
 	public void unbind(final Audit object) {
 		assert object != null;
+
 		Tuple tuple;
+
 		tuple = super.unbind(object, "code", "conclusion");
+		tuple.put("auditor", object.getAuditor().getIdentity().getFullName());
+
 		super.getResponse().setData(tuple);
 	}
 

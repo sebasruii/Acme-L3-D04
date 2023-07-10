@@ -1,0 +1,6 @@
+recordIndex,title,summary,estimatedLearningTime,body,lectureType,link
+4,lecture-title-06,12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,3.50,lecture-body-06-updated,HANDS_ON,https:\\www.lecture-01.com
+4,lecture-title-06,lecture-abstract-06-updated,3.50,12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,HANDS_ON,https:\\www.lecture-01.com
+4,lecture-title-06,lecture-abstract-06-updated,101,lecture-body-06-updated,HANDS_ON,https:\\www.lecture-01.com
+4,lecture-title-06,lecture-abstract-06-updated,3.50,lecture-body-06-updated,BALANCED,https:\\www.lecture-01.com
+4,lecture-title-06,lecture-abstract-06-updated,3.50,lecture-body-06-updated,HANDS_ON,notAURL
