@@ -41,10 +41,9 @@ public class Audit extends AbstractEntity {
 	@Length(max = 100)
 	protected String			weakPoints;
 
-	@NotNull
-	protected Boolean			draftMode;
+	protected boolean			draftMode;
 
-	protected int				mark;
+	protected String			mark;
 
 	@NotNull
 	@Valid
@@ -55,10 +54,5 @@ public class Audit extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Auditor			auditor;
-
-
-	public Boolean isDraftMode() {
-		return this.getDraftMode();
-	}
 
 }

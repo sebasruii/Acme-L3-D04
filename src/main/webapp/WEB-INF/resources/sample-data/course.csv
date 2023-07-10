@@ -6,7 +6,7 @@ course-04,lecturer-01,A112,t,courseAbstract-04,EUR 20.00,https:\\www.course-01.c
 course-05,lecturer-01,A113,ti,courseAbstract-05,EUR 20.00,https:\\www.course-01.com,false
 course-06,lecturer-01,A114,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend.",courseAbstract-06,EUR 20.00,https:\\www.course-01.com,true
 course-07,lecturer-01,A115,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend",courseAbstract-07,EUR 20.00,https:\\www.course-01.com,false
-course-08,lecturer-02,B111,title-08,c,EUR 20.00,https:\\www.course-01.com,true
+course-08,lecturer-02,B111,title-08,c,EUR 20.00,https:\\www.course-01.com,false
 course-09,lecturer-02,B112,title-09,co,EUR 20.00,https:\\www.course-01.com,false
 course-10,lecturer-02,B113,title-10,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros.",EUR 20.00,https:\\www.course-01.com,true
 course-11,lecturer-02,B114,title-11,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tempor neque, eget luctus neque eros",EUR 20.00,https:\\www.course-01.com,false

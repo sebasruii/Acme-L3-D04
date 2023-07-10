@@ -11,13 +11,8 @@ public class AuditorDashboard extends AbstractForm {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	Double						totalNumberOfAudits;
-	Double						averageNumberOfAuditingRecords;
-	Double						deviationOfAuditingRecords;
-	Double						minimumNumberOfAuditingRecords;
-	Double						maximumNumberOfAuditingRecords;
-	Double						averageTimeOfAuditingRecords;
-	Double						timeDeviationOfAuditingRecords;
-	Double						minimumTimeOfAuditingRecords;
-	Double						maximumTimeOfAuditingRecords;
+	private Integer				totalNumberOfTheoryAudits;
+	private Integer				totalNumberOfHandsOnAudits;
+	private Statistics			auditingRecordStatistics;
+	private Statistics			timeStatistics;
 }

@@ -31,7 +31,7 @@ public class AuditorAuditingRecordPublishService extends AbstractService<Auditor
 
 		boolean status;
 		final AuditingRecord ar = this.repository.findOneAuditingRecordById(super.getRequest().getData("id", int.class));
-		status = super.getRequest().getPrincipal().hasRole(ar.getAudit().getAuditor());
+		status = super.getRequest().getPrincipal().hasRole(ar.getAudit().getAuditor()) && ar.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -59,9 +59,9 @@ public class AuditorAuditingRecordPublishService extends AbstractService<Auditor
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("finishDate"))
 			if (!MomentHelper.isBefore(object.getStartDate(), object.getFinishDate()))
-				super.state(false, "startDate", "auditor.auditingrecord.error.date.startAfterFinish");
+				super.state(false, "startDate", "auditor.auditingRecord.error.date.startAfterFinish");
 			else
-				super.state(!(object.getHoursFromStart() < 1), "startDate", "auditor.auditingrecord.error.date.shortPeriod");
+				super.state(!(object.getHoursFromStart() < 1), "startDate", "auditor.auditingRecord.error.date.shortPeriod");
 
 	}
 
